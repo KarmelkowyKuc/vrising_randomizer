@@ -1,0 +1,221 @@
+Awolf 19
+
+kelly 23
+rufus 23
+grayson 23
+
+
+
+Jamila 78
+Teleport Self chunk:6,18
+
+Woodcarver 78
+Teleport Self chunk:4,19
+
+Alchemist 79
+Teleport Self chunk:5,19
+
+Dantos 85
+Console.MultiCommand givecombatpresetandallunlocks Dantos ; Teleport Self chunk:5,21 
+
+Megara 91
+Teleport Self chunk:6,21 
+
+
+giveset BlackfangBossBrutal
+giveset BoneSet -10
+giveset ReinforcedBoneSet -20
+giveset ClothSet -30
+giveset Ilves -36
+giveset CopperSet -41
+giveset CottonSet_Lvl47 -47
+giveset CottonSet -50
+giveset CottonSet_IronWeapons -53
+giveset CottonSet_Lvl56 -53
+giveset IronSet -61
+giveset CursedForest -63
+giveset DarkSilverWeapons
+giveset DarkSilverSet -74
+givecombatpresetandallunlocks T07_Blackfangbosses_Brutal -78
+giveset SanguineSet_NoWeapons -81
+giveset SanguineSet -84
+givecombatpresetandallunlocks T08_ShardBossReadyLowPower  -88 shat weapons jews
+
+
+giveset MagicSourceT08 - all pendants
+
+givecombatpresetandallunlocks Megara_Brutal 
+
+giveset Coating
+giveset Consumables
+
+Console.MultiCommand 
+
+Console.Alias ready Console.MultiCommand adminauth; teleport self chunk:8,10; give "[Name]Blood Essence - Item_BloodEssence_T01 - Guid: 862477668" 40; give "[Name]Stone - Item_Ingredient_Stone - Guid: -1531666018" 420;
+
+
+Console.Alias b0 Console.MultiCommand giveset ReinforcedBoneSet; Teleport Self chunk:10,10 
+
+12,10 rudy
+
+11,11 nachilus
+13,11 kelly
+
+gear Console.MultiCommand 
+next Console.MultiCommand 
+
+goboss
+#lvl23
+stone rudy kelly
+#lvl30
+rufus swine
+#lvl33 
+clive
+#lvl35
+fisher
+#lvl38
+polora bear nick
+#lvl40
+quincy
+#lvl43
+deamon
+#lvl47
+tristan nun vincent
+#lvl49
+horse
+#lvl50
+Kriig maja leandra
+#lvl53
+bane glass bless
+#lvl56
+tera frost icecrossbow
+#lvl58
+arena
+#lvl60
+sword jade raziel
+#lvl61
+octavian
+#63
+iva domina
+#64
+angram
+#66
+spider ben faulrot
+#67
+toad wolfman 
+#68
+cyril
+#69
+magnus
+#73
+french harpy elemen
+#77
+prof
+#78
+jamila wood
+#79
+alch witch claw
+#82
+gold volt
+#85
+belmont dantos
+#87
+styx crusher velancia
+#89
+solarus talzur
+#91
+adam morgana
+#94
+drac
+
+
+generatebloodpotion 
+consumeblood bloodtype_brute 23
+generatejewel AB_Chaos_Void_AbilityGroup 0
+
+"[Name]Blood Essence - Item_BloodEssence_T01 - Guid: 862477668"
+
+
+TeleportToNearestUnitOfType
+TeleportToNearestUnitOfType vblood
+
+tp_stone Teleport Self chunk:10,10
+tp_rufus TeleportToNearestUnitOfType CHAR_Bandit_Foreman_VBlood
+tp_kelly Teleport Self chunk:13,11
+
+tp_swine TeleportToNearestUnitOfType CHAR_Undead_BishopOfDeath_VBlood
+tp_polora TeleportToNearestUnitOfType CHAR_Poloma_VBlood
+tp_clive TeleportToNearestUnitOfType CHAR_Bandit_Bomber_VBlood
+tp_bear TeleportToNearestUnitOfType CHAR_Forest_Bear_Dire_Vblood
+tp_grayson TeleportToNearestUnitOfType CHAR_Bandit_Stalker_VBlood
+tp_fisher TeleportToNearestUnitOfType CHAR_Bandit_Fisherman_VBlood
+tp_quincy TeleportToNearestUnitOfType CHAR_Bandit_Tourok_VBlood
+
+tp_tera TeleportToNearestUnitOfType CHAR_Geomancer_Human_VBlood
+tp_iva TeleportToNearestUnitOfType CHAR_Gloomrot_Iva_VBlood
+tp_adam TeleportToNearestUnitOfType CHAR_Gloomrot_Monster_VBlood
+tp_angram TeleportToNearestUnitOfType CHAR_Gloomrot_Purifier_VBlood
+tp_volt TeleportToNearestUnitOfType CHAR_Gloomrot_RailgunSergeant_VBlood
+tp_prof TeleportToNearestUnitOfType CHAR_Gloomrot_TheProfessor_VBlood
+tp_domina TeleportToNearestUnitOfType CHAR_Gloomrot_Voltage_VBlood
+tp_harpy TeleportToNearestUnitOfType CHAR_Harpy_Matriarch_VBlood
+
+tp_horror TeleportToNearestUnitOfType CHAR_Manticore_VBlood
+tp_raziel TeleportToNearestUnitOfType CHAR_Militia_BishopOfDunley_VBlood
+tp_horse TeleportToNearestUnitOfType CHAR_Militia_Fabian_VBlood
+tp_glass TeleportToNearestUnitOfType CHAR_Militia_Glassblower_VBlood
+tp_vinc TeleportToNearestUnitOfType CHAR_Militia_Guard_VBlood
+tp_octav TeleportToNearestUnitOfType CHAR_Militia_Leader_VBlood
+tp_nun TeleportToNearestUnitOfType CHAR_Militia_Nun_VBlood
+tp_maja TeleportToNearestUnitOfType CHAR_Militia_Scribe_VBlood
+tp_bless TeleportToNearestUnitOfType CHAR_Militia_Longbowman_LightArrow_Vblood 
+
+tp_spider TeleportToNearestUnitOfType CHAR_Spider_Queen_Vblood
+tp_arena TeleportToNearestUnitOfType CHAR_Undead_ArenaChampion_Vblood
+tp_leandr TeleportToNearestUnitOfType CHAR_Undead_BishopOfShadows_Vblood
+tp_cyril TeleportToNearestUnitOfType CHAR_Undead_CursedSmith_Vblood
+tp_assas TeleportToNearestUnitOfType CHAR_Undead_Infiltrator_Vblood
+tp_nick TeleportToNearestUnitOfType CHAR_Undead_Priest_Vblood
+tp_mine TeleportToNearestUnitOfType CHAR_Undead_Leader_Vblood
+tp_faul TeleportToNearestUnitOfType CHAR_Undead_ZealousCultist_VBlood 
+
+
+tp_sir TeleportToNearestUnitOfType CHAR_ChurchOfLight_Overseer_VBlood
+tp_french TeleportToNearestUnitOfType CHAR_ChurchOfLight_Sommelier_VBlood
+tp_marywin TeleportToNearestUnitOfType CHAR_ArchMage_VBlood
+tp_azar TeleportToNearestUnitOfType CHAR_ChurchOfLight_Cardinal_VBlood
+tp_styx TeleportToNearestUnitOfType CHAR_BatVampire_VBlood
+tp_frog TeleportToNearestUnitOfType CHAR_Cursed_ToadKing_VBlood
+tp_witch TeleportToNearestUnitOfType CHAR_Cursed_Witch_VBlood
+tp_gorecrusher TeleportToNearestUnitOfType CHAR_Cursed_MountainBeast_VBlood
+tp_solarus TeleportToNearestUnitOfType CHAR_ChurchOfLight_Paladin_VBlood
+
+tp_carver TeleportToNearestUnitOfType CHAR_Blackfang_CarverBoss_VBlood
+tp_jamila TeleportToNearestUnitOfType CHAR_Blackfang_Livith_VBlood
+tp_alch TeleportToNearestUnitOfType CHAR_Blackfang_Lucie_VBlood
+tp_morgana TeleportToNearestUnitOfType CHAR_Blackfang_Morgana_VBlood
+tp_morgana TeleportToNearestUnitOfType CHAR_Blackfang_Valyr_VBlood
+
+tp_val TeleportToNearestUnitOfType CHAR_Vampire_BloodKnight_VBlood
+tp_drac TeleportToNearestUnitOfType CHAR_Vampire_Dracula_VBlood
+tp_sword TeleportToNearestUnitOfType CHAR_Vampire_HighLord_VBlood
+tp_iceranger TeleportToNearestUnitOfType CHAR_Vampire_IceRanger_VBlood
+
+tp_jade TeleportToNearestUnitOfType CHAR_VHunter_Jade_VBlood
+tp_tri TeleportToNearestUnitOfType CHAR_VHunter_Leader_VBlood
+
+tp_claw TeleportToNearestUnitOfType CHAR_Winter_Yeti_VBlood
+tp_frost TeleportToNearestUnitOfType CHAR_Wendigo_VBlood
+tp_deamon TeleportToNearestUnitOfType CHAR_Village_Tailor_VBlood
+tp_ben TeleportToNearestUnitOfType CHAR_Villager_CursedWanderer_VBlood
+tp_belmont TeleportToNearestUnitOfType CHAR_VHunter_CastleMan
+
+give_rf_armour Console.MultiCommand give "[Prefab]Item_Boots_T02_BoneReinforced - Guid: 1241831522" ; give "[Name]Plated Boneguard Boots - Item_Boots_T02_BoneReinforced - Guid: 1241831522" ; give "[Name]Plated Boneguard Chestguard - Item_Chest_T02_BoneReinforced - Guid: -958936382" ; give "[Name]Plated Boneguard Gloves - Item_Gloves_T02_BoneReinforced - Guid: 1746537832" ; give "[Name]Blood Bone Ring - Item_MagicSource_General_T02_BloodBoneRing - Guid: -652069131" ;
+give_rf_sword give "[Prefab]Item_Weapon_Sword_T02_Bone_Reinforced - Guid: -796306296" 
+give_rf_axe give "[Prefab]Item_Weapon_Axes_T02_Bone_Reinforced - Guid: -1391446205" 
+give_rf_mace give "[Prefab]Item_Weapon_Mace_T02_Bone_Reinforced - Guid: -1998017941" 
+give_rf_spear give "[Prefab]Item_Weapon_Spear_T02_Bone_Reinforced - Guid: 1244180446" 
+give_rf_crossbow give "[Prefab]Item_Weapon_Crossbow_T02_Bone_Reinforced - Guid: 898159697"
+give_vermin give "[Name]Vermin Salve - Item_Consumable_Salve_Vermin - Guid: -1885959251"
+
+

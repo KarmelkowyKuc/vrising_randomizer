@@ -1,22 +1,30 @@
 BaaaProfile
 #
 #
-ready Console.MultiCommand adminauth; teleport self chunk:8,10; give "[Name]Blood Essence - Item_BloodEssence_T01 - Guid: 862477668" 40; give "[Name]Stone - Item_Ingredient_Stone - Guid: -1531666018" 420;
-base Console.MultiCommand teleport self chunk:8,10;
+ready Console.MultiCommand adminauth; teleport self chunk:8,10; give "[Name]Blood Essence - Item_BloodEssence_T01 - Guid: 862477668" 540; give "[Name]Stone - Item_Ingredient_Stone - Guid: -1531666018" 420; give "[Prefab]Item_NewBag_T03 - Guid: -261654929" ; givespell2;
+base Console.MultiCommand teleport self chunk:8,10; givespell2; gear;
 goboss nextboss
-gear Console.MultiCommand give_rf_armour; give_rf_axe; give_vermin 10; Console.RemoveAlias gear;
+gear Console.MultiCommand give_rf_armour; give_rf_all; give_vermin 10; Console.RemoveAlias gear;
 nextboss tp_stone
 repeat tp_stone
-tp_stone Console.MultiCommand Teleport Self chunk:10,10; Console.RemoveAlias nextboss; Console.Alias nextboss tp_rufus; Console.RemoveAlias repeat; Console.Alias repeat tp_stone;
-tp_rufus Console.MultiCommand TeleportToNearestUnitOfType CHAR_Bandit_Foreman_VBlood; Console.RemoveAlias nextboss; Console.Alias nextboss tp_kelly; Console.RemoveAlias repeat; Console.Alias repeat tp_rufus;
-tp_kelly Console.MultiCommand Teleport Self chunk:13,11; Console.RemoveAlias nextboss; Console.Alias nextboss tp_swine;  Console.RemoveAlias repeat; Console.Alias repeat tp_kelly; Console.RemoveAlias gear; Console.Alias gear Console.MultiCommand give_gdigger;
-tp_swine TeleportToNearestUnitOfType CHAR_Undead_BishopOfDeath_VBlood
-tp_polora TeleportToNearestUnitOfType CHAR_Poloma_VBlood
-tp_clive TeleportToNearestUnitOfType CHAR_Bandit_Bomber_VBlood
-tp_bear TeleportToNearestUnitOfType CHAR_Forest_Bear_Dire_Vblood
-tp_grayson TeleportToNearestUnitOfType CHAR_Bandit_Stalker_VBlood
-tp_fisher TeleportToNearestUnitOfType CHAR_Bandit_Fisherman_VBlood
-tp_quincy TeleportToNearestUnitOfType CHAR_Bandit_Tourok_VBlood
+givespell jewel_lvl
+givespell2 Console.Multicommand jewel_lvl; jewel_lvl;
+givespell3 Console.Multicommand jewel_lvl; jewel_lvl; jewel_lvl;
+jewel_lvl GenerateJewelAtUnitLevel 55 0.0
+give_color GenerateJewelAtUnitLevel 100 0.0
+tp_stone Console.MultiCommand Teleport Self chunk:10,10; Console.RemoveAlias nextboss; Console.Alias nextboss tp_rufus; Console.RemoveAlias repeat; Console.Alias repeat Teleport Self chunk:10,10;
+tp_rufus Console.MultiCommand TeleportToNearestUnitOfType CHAR_Bandit_Foreman_VBlood; Console.RemoveAlias nextboss; Console.Alias nextboss tp_kelly; Console.RemoveAlias repeat; Console.Alias repeat TeleportToNearestUnitOfType CHAR_Bandit_Foreman_VBlood;
+tp_kelly Console.MultiCommand Teleport Self chunk:13,11; Console.RemoveAlias nextboss; Console.Alias nextboss tp_swine;  Console.RemoveAlias repeat; Console.Alias repeat Teleport Self chunk:13,11; Console.RemoveAlias gear; Console.Alias gear Console.MultiCommand give_copper_all; give_cloth_armour;
+tp_swine Console.MultiCommand TeleportToNearestUnitOfType CHAR_Undead_BishopOfDeath_VBlood; Console.RemoveAlias nextboss; Console.Alias nextboss tp_grayson;  Console.RemoveAlias repeat; Console.Alias repeat TeleportToNearestUnitOfType CHAR_Undead_BishopOfDeath_VBlood; Console.RemoveAlias gear; Console.Alias gear give_gdigger;
+tp_grayson Console.MultiCommand TeleportToNearestUnitOfType CHAR_Bandit_Stalker_VBlood; Console.RemoveAlias nextboss; Console.Alias nextboss tp_clive;  Console.RemoveAlias repeat; Console.Alias repeat TeleportToNearestUnitOfType CHAR_Bandit_Stalker_VBlood;
+tp_clive Console.MultiCommand TeleportToNearestUnitOfType CHAR_Bandit_Bomber_VBlood; Console.RemoveAlias nextboss; Console.Alias nextboss tp_fish;  Console.RemoveAlias repeat; Console.Alias repeat TeleportToNearestUnitOfType CHAR_Bandit_Bomber_VBlood; Console.RemoveAlias gear; Console.Alias gear give_rcopper_all;
+tp_fish Console.MultiCommand TeleportToNearestUnitOfType CHAR_Bandit_Fisherman_VBlood;  Console.RemoveAlias nextboss; Console.Alias nextboss tp_bear;  Console.RemoveAlias repeat; Console.Alias repeat teleport_fish; Console.RemoveAlias gear; Console.Alias gear Console.MultiCommand give_ring_all; give_vermin 10; give_brew_p; give_brew_s;
+teleport_fish Console.MultiCommand Teleport self chunk:14,12; tp_fish;
+tp_bear Console.MultiCommand TeleportToNearestUnitOfType CHAR_Forest_Bear_Dire_Vblood; Console.RemoveAlias nextboss; Console.Alias nextboss tp_nick;  Console.RemoveAlias repeat; Console.Alias repeat TeleportToNearestUnitOfType CHAR_Forest_Bear_Dire_Vblood;
+tp_nick Console.MultiCommand TeleportToNearestUnitOfType CHAR_Undead_Priest_Vblood; Console.RemoveAlias nextboss; Console.Alias nextboss tp_polora;  Console.RemoveAlias repeat; Console.Alias repeat TeleportToNearestUnitOfType CHAR_Undead_Priest_Vblood; Console.RemoveAlias gear; Console.Alias gear give_cloth_all_armour;
+tp_polora Console.MultiCommand teleport_polora; Console.RemoveAlias nextboss; Console.Alias nextboss tp_quincy;  Console.RemoveAlias repeat; Console.Alias repeat teleport_polora;
+teleport_polora Console.MultiCommand  TeleportToNearestUnitOfType CHAR_Poloma_VBlood; TeleportToChunkWaypoint 6,12;
+tp_quincy Console.MultiCommand TeleportToNearestUnitOfType CHAR_Bandit_Tourok_VBlood;
 tp_tera TeleportToNearestUnitOfType CHAR_Geomancer_Human_VBlood
 tp_iva TeleportToNearestUnitOfType CHAR_Gloomrot_Iva_VBlood
 tp_adam TeleportToNearestUnitOfType CHAR_Gloomrot_Monster_VBlood
@@ -39,7 +47,6 @@ tp_arena TeleportToNearestUnitOfType CHAR_Undead_ArenaChampion_Vblood
 tp_leandr TeleportToNearestUnitOfType CHAR_Undead_BishopOfShadows_Vblood
 tp_cyril TeleportToNearestUnitOfType CHAR_Undead_CursedSmith_Vblood
 tp_assas TeleportToNearestUnitOfType CHAR_Undead_Infiltrator_Vblood
-tp_nick TeleportToNearestUnitOfType CHAR_Undead_Priest_Vblood
 tp_mine TeleportToNearestUnitOfType CHAR_Undead_Leader_Vblood
 tp_faul TeleportToNearestUnitOfType CHAR_Undead_ZealousCultist_VBlood 
 tp_sir TeleportToNearestUnitOfType CHAR_ChurchOfLight_Overseer_VBlood
@@ -68,14 +75,130 @@ tp_deamon TeleportToNearestUnitOfType CHAR_Village_Tailor_VBlood
 tp_ben TeleportToNearestUnitOfType CHAR_Villager_CursedWanderer_VBlood
 tp_belmont TeleportToNearestUnitOfType CHAR_VHunter_CastleMan
 give_rf_armour Console.MultiCommand give "[Name]Plated Boneguard Leggings - Item_Legs_T02_BoneReinforced - Guid: -2036196416"  ; give "[Name]Plated Boneguard Boots - Item_Boots_T02_BoneReinforced - Guid: 1241831522" ; give "[Name]Plated Boneguard Chestguard - Item_Chest_T02_BoneReinforced - Guid: -958936382" ; give "[Name]Plated Boneguard Gloves - Item_Gloves_T02_BoneReinforced - Guid: 1746537832" ; give "[Name]Blood Bone Ring - Item_MagicSource_General_T02_BloodBoneRing - Guid: -652069131" ;
+give_cloth_armour Console.MultiCommand give "[Prefab]Item_Boots_T03_Cloth - Guid: -1354920908" ; give "[Name]Nightstalker Leggings - Item_Legs_T03_Cloth - Guid: 1925394440"; give "[Name]Nightstalker Vest - Item_Chest_T03_Cloth - Guid: -957963240"; give "[Name]Nightstalker Gloves - Item_Gloves_T03_Cloth - Guid: -1183157751";
+give_cloth_r_gl give "[Prefab]Item_Gloves_T04_Copper_Rogue - Guid: 181112381" 
+give_cloth_r_bo give "[Prefab]Item_Boots_T04_Copper_Rogue - Guid: 1101206623"  
+give_cloth_r_ch give "[Prefab]Item_Chest_T04_Copper_Rogue - Guid: 763326246" 
+give_cloth_r_le give "[Prefab]Item_Legs_T04_Copper_Rogue - Guid: -90702575"
+give_clothr_armour Console.MultiCommand give_cloth_r_gl; give_cloth_r_bo; give_cloth_r_ch; give_cloth_r_le;
+give_cloth_b_gl give "[Prefab]Item_Gloves_T04_Copper_Brute - Guid: -258808647" 
+give_cloth_b_bo give "[Prefab]Item_Boots_T04_Copper_Brute - Guid: -1359494169"  
+give_cloth_b_ch give "[Prefab]Item_Chest_T04_Copper_Brute - Guid: -112921782" 
+give_cloth_b_le give "[Prefab]Item_Legs_T04_Copper_Brute - Guid: -2095610608" 
+give_clothb_armour Console.MultiCommand give_cloth_b_gl; give_cloth_b_bo; give_cloth_b_ch; give_cloth_b_le;
+give_cloth_s_gl give "[Prefab]Item_Gloves_T04_Copper_Scholar - Guid: -399521517" 
+give_cloth_s_bo give "[Prefab]Item_Boots_T04_Copper_Scholar - Guid: 1204352435"  
+give_cloth_s_ch give "[Prefab]Item_Chest_T04_Copper_Scholar - Guid: -2100321922" 
+give_cloth_s_le give "[Prefab]Item_Legs_T04_Copper_Scholar - Guid: 1458279255"
+give_cloths_armour Console.MultiCommand give_cloth_s_gl; give_cloth_s_bo; give_cloth_s_ch; give_cloth_s_le;
+give_cloth_w_gl give "[Prefab]Item_Gloves_T04_Copper_Warrior - Guid: -752418019" 
+give_cloth_w_bo give "[Prefab]Item_Boots_T04_Copper_Warrior - Guid: -15390086"  
+give_cloth_w_ch give "[Prefab]Item_Chest_T04_Copper_Warrior - Guid: 1809631067" 
+give_cloth_w_le give "[Prefab]Item_Legs_T04_Copper_Warrior - Guid: -1993947781"
+give_clothw_armour Console.MultiCommand give_cloth_w_gl; give_cloth_w_bo; give_cloth_w_ch; give_cloth_w_le;
+give_cloth_all_armour Console.MultiCommand give_clothr_armour; give_clothb_armour; give_cloths_armour; give_clothw_armour;
+give_cotton_armour Console.MultiCommand give "[Name]Hollowfang Boots - Item_Boots_T05_Cotton - Guid: -1837769884"; give "[Name]Hollowfang Chestguard - Item_Chest_T05_Cotton - Guid: -604941435"; give "[Name]Hollowfang Gloves - Item_Gloves_T05_Cotton - Guid: -406808302"; give "[Name]Hollowfang Leggings - Item_Legs_T05_Cotton - Guid: 12127911";
+give_cotton_r_bo give "[Prefab]Item_Boots_T04_Copper_Rogue - Guid: 1101206623"  
+give_cotton_r_ch give "[Prefab]Item_Chest_T04_Copper_Rogue - Guid: 763326246" 
+give_cotton_r_gl give "[Prefab]Item_Gloves_T04_Copper_Rogue - Guid: 181112381" 
+give_cotton_r_le give "[Prefab]Item_Legs_T04_Copper_Rogue - Guid: -90702575"
+give_cottonr_armour Console.MultiCommand give_cotton_r_bo; give_cotton_r_ch; give_cotton_r_gl; give_cotton_r_le;
+give_cotton_b_bo give "[Prefab]Item_Boots_T06_Iron_Brute - Guid: -1329744719"  
+give_cotton_b_ch give "[Prefab]Item_Chest_T06_Iron_Brute - Guid: -1641042717"
+give_cotton_b_gl give "[Prefab]Item_Gloves_T06_Iron_Brute - Guid: -327754127" 
+give_cotton_b_le give "[Prefab]Item_Legs_T06_Iron_Brute - Guid: 680112231"
+give_cottonb_armour Console.MultiCommand give_cotton_b_bo; give_cotton_b_ch; give_cotton_b_gl; give_cotton_b_le;
+give_cotton_s_bo give "[Prefab]Item_Boots_T06_Iron_Scholar - Guid: 138060378"   
+give_cotton_s_ch give "[Prefab]Item_Chest_T06_Iron_Scholar - Guid: -2127687996"
+give_cotton_s_gl give "[Prefab]Item_Gloves_T06_Iron_Scholar - Guid: 1247389106" 
+give_cotton_s_le give "[Prefab]Item_Legs_T06_Iron_Scholar - Guid: -454576348" 
+give_cottons_armour Console.MultiCommand give_cotton_s_bo; give_cotton_s_ch; give_cotton_s_gl; give_cotton_s_le;
+give_cotton_w_bo give "[Prefab]Item_Boots_T06_Iron_Warrior - Guid: 666433583"   
+give_cotton_w_ch give "[Prefab]Item_Chest_T06_Iron_Warrior - Guid: -2102875089"
+give_cotton_w_gl give "[Prefab]Item_Gloves_T06_Iron_Warrior - Guid: 1067300584" 
+give_cotton_w_le give "[Prefab]Item_Legs_T06_Iron_Warrior - Guid: 206495029" 
+give_cottonw_armour Console.MultiCommand give_cotton_w_bo; give_cotton_w_ch; give_cotton_w_gl; give_cotton_w_le;
+give_cotton_all_armour Console.MultiCommand give_cottonr_armour; give_cottonb_armour; give_cottons_armour; give_cottonw_armour;
+give_silk_armour Console.MultiCommand give "[Name]Dawnthorn Boots - Item_Boots_T07_Silk - Guid: 560446510" ; give "[Name]Dawnthorn Chestguard - Item_Chest_T07_Silk - Guid: -930514044" ; give "[Name]Dawnthorn Gloves - Item_Gloves_T07_Silk - Guid: 2055058719" ; give "[Name]Dawnthorn Leggings - Item_Legs_T07_Silk - Guid: -1555051415" ;
+give_silk_w_bo give "[Prefab]Item_Boots_T08_DarkSilver_Warrior - Guid: 1395895315"  
+give_silk_w_ch give "[Prefab]Item_Chest_T08_DarkSilver_Warrior - Guid: 750788905" 
+give_silk_w_gl give "[Prefab]Item_Gloves_T08_DarkSilver_Warrior - Guid: -1296203752" 
+give_silk_w_le give "[Prefab]Item_Legs_T08_DarkSilver_Warrior - Guid: -481041545" 
+give_silkw_armour Console.MultiCommand give_silk_w_bo; give_silk_w_ch; give_silk_w_gl; give_silk_w_le;
+give_silk_r_bo give "[Prefab]Item_Boots_T08_DarkSilver_Rogue - Guid: -1921018689" 
+give_silk_r_ch give "[Prefab]Item_Chest_T08_DarkSilver_Rogue - Guid: 1871735757" 
+give_silk_r_gl give "[Prefab]Item_Gloves_T08_DarkSilver_Rogue - Guid: -1752332712" 
+give_silk_r_le give "[Prefab]Item_Legs_T08_DarkSilver_Rogue - Guid: -262114802" 
+give_silkr_armour Console.MultiCommand give_silk_r_bo; give_silk_r_ch; give_silk_r_gl; give_silk_r_le;
+give_silk_b_bo give "[Prefab]Item_Boots_T08_DarkSilver_Brute - Guid: -1023762087"
+give_silk_b_ch give "[Prefab]Item_Chest_T08_DarkSilver_Brute - Guid: -1279475298"
+give_silk_b_gl give "[Prefab]Item_Gloves_T08_DarkSilver_Brute - Guid: 998240678"  
+give_silk_b_le give "[Prefab]Item_Legs_T08_DarkSilver_Brute - Guid: -1385786654" 
+give_silkb_armour Console.MultiCommand give_silk_b_bo; give_silk_b_ch; give_silk_b_gl; give_silk_b_le;
+give_silk_s_bo give "[Prefab]Item_Boots_T08_DarkSilver_Scholar - Guid: 1469185034" 
+give_silk_s_ch give "[Prefab]Item_Chest_T08_DarkSilver_Scholar - Guid: -919709436" 
+give_silk_s_gl give "[Prefab]Item_Gloves_T08_DarkSilver_Scholar - Guid: 1508214166"
+give_silk_s_le give "[Prefab]Item_Legs_T08_DarkSilver_Scholar - Guid: 703230071" 
+give_silks_armour Console.MultiCommand give_silk_s_bo; give_silk_s_ch; give_silk_s_gl; give_silk_s_le;
+give_silk_all_armour Console.MultiCommand give_silkw_armour; give_silkb_armour; give_silks_armour; give_silkr_armour;
+give_drac_b_bo give "[Prefab]Item_Boots_T09_Dracula_Brute - Guid: 1646489863" 
+give_drac_b_ch give "[Prefab]Item_Chest_T09_Dracula_Brute - Guid: 1033753207" 
+give_drac_b_gl give "[Prefab]Item_Gloves_T09_Dracula_Brute - Guid: 1039083725"
+give_drac_b_le give "[Prefab]Item_Legs_T09_Dracula_Brute - Guid: 993033515" 
+give_dracb_armour Console.MultiCommand give_drac_b_bo; give_drac_b_ch; give_drac_b_gl; give_drac_b_le;
+give_drac_r_bo give "[Prefab]Item_Boots_T09_Dracula_Rogue - Guid: 1855323424" 
+give_drac_r_ch give "[Prefab]Item_Chest_T09_Dracula_Rogue - Guid: 933057100" 
+give_drac_r_gl give "[Prefab]Item_Gloves_T09_Dracula_Rogue - Guid: -1826382550"
+give_drac_r_le give "[Prefab]Item_Legs_T09_Dracula_Rogue - Guid: -345596442" 
+give_dracr_armour Console.MultiCommand give_drac_r_bo; give_drac_r_ch; give_drac_r_gl; give_drac_r_le;
+give_drac_s_bo give "[Prefab]Item_Boots_T09_Dracula_Scholar - Guid: 1531721602" 
+give_drac_s_ch give "[Prefab]Item_Chest_T09_Dracula_Scholar - Guid: 114259912" 
+give_drac_s_gl give "[Prefab]Item_Gloves_T09_Dracula_Scholar - Guid: -1899539896"
+give_drac_s_le give "[Prefab]Item_Legs_T09_Dracula_Scholar - Guid: 1592149279" 
+give_dracs_armour Console.MultiCommand give_drac_s_bo; give_drac_s_ch; give_drac_s_gl; give_drac_s_le;
+give_drac_w_bo give "[Prefab]Item_Boots_T09_Dracula_Warrior - Guid: -382349289" 
+give_drac_w_ch give "[Prefab]Item_Chest_T09_Dracula_Warrior - Guid: 1392314162" 
+give_drac_w_gl give "[Prefab]Item_Gloves_T09_Dracula_Warrior - Guid: 1982551454"
+give_drac_w_le give "[Prefab]Item_Legs_T09_Dracula_Warrior - Guid: 205207385" 
+give_dracw_armour Console.MultiCommand give_drac_w_bo; give_drac_w_ch; give_drac_w_gl; give_drac_w_le;
 give_rf_sword give "[Prefab]Item_Weapon_Sword_T02_Bone_Reinforced - Guid: -796306296" 
 give_rf_axe give "[Prefab]Item_Weapon_Axes_T02_Bone_Reinforced - Guid: -1391446205" 
 give_rf_mace give "[Prefab]Item_Weapon_Mace_T02_Bone_Reinforced - Guid: -1998017941" 
 give_rf_spear give "[Prefab]Item_Weapon_Spear_T02_Bone_Reinforced - Guid: 1244180446" 
 give_rf_crossbow give "[Prefab]Item_Weapon_Crossbow_T02_Bone_Reinforced - Guid: 898159697"
+give_rf_all Console.Multicommand give_rf_sword; give_rf_axe; give_rf_spear; give_rf_crossbow; give_rf_mace;
 give_vermin give "[Name]Vermin Salve - Item_Consumable_Salve_Vermin - Guid: -1885959251"
-give_gdigger give "[Name]Gravedigger Ring - Item_MagicSource_General_T03_GravediggerRing - Guid: -1588051702" 
-
-
-
-
+give_gdigger give "[Name]Gravedigger Ring - Item_MagicSource_General_T03_GravediggerRing - Guid: -1588051702"
+give_brew_p give "[Name]Brew of Ferocity - Item_Consumable_PhysicalPowerPotion_T01 - Guid: -269326085" 
+give_brew_s give "[Name]Enchanted Brew - Item_Consumable_SpellPowerPotion_T01 - Guid: 248289327" 
+give_copper_sword give "[Name]Copper Sword - Item_Weapon_Sword_T03_Copper - Guid: -2037272000" 
+give_copper_axe give "[Name]Copper Axes - Item_Weapon_Axe_T03_Copper - Guid: 518802008" 
+give_copper_cros give "[Name]Copper Crossbow - Item_Weapon_Crossbow_T03_Copper - Guid: -1277074895" 
+give_copper_bow give "[Name]Copper Longbow - Item_Weapon_Longbow_T03_Copper - Guid: 532033005" 
+give_copper_mace give "[Name]Copper Mace - Item_Weapon_Mace_T03_Copper - Guid: -331345186" 
+give_copper_spear give "[Name]Copper Spear - Item_Weapon_Spear_T03_Copper - Guid: 1370755976" 
+give_copper_all Console.Multicommand give_copper_sword; give_copper_axe; give_copper_cros; give_copper_mace; give_copper_bow; give_copper_spear;
+give_rcopper_sword give "[Name]Merciless Copper Sword - Item_Weapon_Sword_T04_Copper_Reinforced - Guid: -1219959051" 
+give_rcopper_axe give "[Name]Merciless Copper Axes - Item_Weapon_Axe_T04_Copper_Reinforced - Guid: -491969324" 
+give_rcopper_cros give "[Name]Merciless Copper Crossbow - Item_Weapon_Crossbow_T04_Copper_Reinforced - Guid: -1636801169" 
+give_rcopper_bow give "[Name]Merciless Copper Longbow - Item_Weapon_Longbow_T04_Copper_Reinforced - Guid: 352247730" 
+give_rcopper_mace give "[Name]Merciless Copper Mace - Item_Weapon_Mace_T04_Copper_Reinforced - Guid: 343324920" 
+give_rcopper_spear give "[Name]Merciless Copper Spear - Item_Weapon_Spear_T04_Copper_Reinforced - Guid: 790210443" 
+give_rcopper_all Console.Multicommand give_rcopper_sword; give_rcopper_axe; give_rcopper_cros; give_rcopper_mace; give_rcopper_bow; give_rcopper_spear;
+give_ring_red give "[Prefab]Item_MagicSource_General_T04_RubyRing - Guid: 341837267" 
+give_ring_gre give "[Prefab]Item_MagicSource_General_T04_EmberChain - Guid: 50824544" 
+give_ring_pin give "[Prefab]Item_MagicSource_General_T04_SorcererRing - Guid: -1184863500" 
+give_ring_tea give "[Prefab]Item_MagicSource_General_T04_MistSignet - Guid: -886916793" 
+give_ring_yel give "[Prefab]Item_MagicSource_General_T04_Duskwatcher - Guid: -809059551" 
+give_ring_blu give "[Prefab]Item_MagicSource_General_T04_FrozenEye - Guid: 336922685" 
+give_ring_all Console.Multicommand give_ring_red; give_ring_gre; give_ring_pin; give_ring_tea; give_ring_yel; give_ring_blu;
+cbb ConsumeBlood BloodType_Brute 
+cbc ConsumeBlood BloodType_Corruption 
+cbw ConsumeBlood BloodType_Warrior
+cbs ConsumeBlood BloodType_Scholar
+cbd ConsumeBlood BloodType_Draculin
+cbcr ConsumeBlood BloodType_Creature
+cbn ConsumeBlood BloodType_None
+cbn ConsumeBlood BloodType_Worker
+cbr ConsumeBlood BloodType_Rogue
+cbm ConsumeBlood BloodType_Mutant

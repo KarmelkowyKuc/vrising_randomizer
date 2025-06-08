@@ -46,3 +46,16 @@ TODO:
 5) add python twitch layout (ChromaKeying).
 
 6) make a video about it
+
+=============================================================================
+
+Weapon randomizers:
+
+Copper
+
+https://wheelofnames.com/tp4-f7f
+
+Blood
+
+https://wheelofnames.com/6gv-98s
+

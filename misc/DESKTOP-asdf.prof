@@ -1,7 +1,7 @@
 BaaaProfile
 #
 #
-ready Console.MultiCommand teleport self WorldPosition -1500 0 -1233; give "[Name]Blood Essence - Item_BloodEssence_T01 - Guid: 862477668" 540; give "[Name]Stone - Item_Ingredient_Stone - Guid: -1531666018" 420; give "[Prefab]Item_NewBag_T03 - Guid: -261654929" ; give "[Prefab]Item_Ingredient_StoneBrick - Guid: 1788016417" 500; give "[Prefab]Item_Ingredient_Plank - Guid: -1017402979" 500; give "[Name]Scourgestone - Item_Ingredient_Scourgestone - Guid: 1005440012" 20; give "[Name]Reinforced Plank - Item_Ingredient_ReinforcedPlank - Guid: -1397591435" 70; give "[Name]Silk - Item_Ingredient_Silk - Guid: 702067317" 50; givespell2; Console.TempBind Shift+A tp_cur; Console.TempBind Shift+M TeleportToMapMarker; Console.TempBind Shift+B base; Console.TempBind Shift+N goboss; Console.TempBind Shift+S givespell; Console.TempBind Shift+R repeat; 
+ready Console.MultiCommand teleport self WorldPosition -1500 0 -1233; give "[Name]Blood Essence - Item_BloodEssence_T01 - Guid: 862477668" 540; give "[Name]Stone - Item_Ingredient_Stone - Guid: -1531666018" 420; give "[Prefab]Item_NewBag_T03 - Guid: -261654929" ; give "[Prefab]Item_Ingredient_StoneBrick - Guid: 1788016417" 500; give "[Prefab]Item_Ingredient_Plank - Guid: -1017402979" 500; give "[Name]Scourgestone - Item_Ingredient_Scourgestone - Guid: 1005440012" 20; give "[Name]Reinforced Plank - Item_Ingredient_ReinforcedPlank - Guid: -1397591435" 70; give "[Name]Silk - Item_Ingredient_Silk - Guid: 702067317" 50; givespell2; Console.TempBind Shift+A tp_cur; Console.TempBind Shift+M TeleportToMapMarker; Console.TempBind Shift+B base; Console.TempBind Shift+N goboss; Console.TempBind Shift+S givespell; Console.TempBind Shift+R repeat; gear; give "[Name]Gem Dust - Item_Ingredient_Gemdust - Guid: 820932258" 500;
 base Console.MultiCommand teleport self WorldPosition -1500 0 -1233; givespell2; gear;
 gear Console.MultiCommand give_rf_armour; give_rf_all; give_vermin 10; Console.RemoveAlias gear;
 goboss nextboss
@@ -14,33 +14,57 @@ jewel_lvl GenerateJewelAtUnitLevel 55 0.0
 give_color GenerateJewelAtUnitLevel 100 0.0
 tp_stone Console.MultiCommand Teleport Self chunk:10,10; Console.RemoveAlias nextboss; Console.Alias nextboss tp_rufus; Console.RemoveAlias repeat; Console.Alias repeat Teleport Self chunk:10,10;
 tp_rufus Console.MultiCommand tp_wp_rufus; Console.RemoveAlias nextboss; Console.Alias nextboss tp_kelly; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_rufus;
-tp_wp_rufus teleport self WorldPosition -1220 20 -1550
+tp_wp_rufus teleport self WorldPosition -1220 0 -1550
 tp_kelly Console.MultiCommand tp_wp_kelly; Console.RemoveAlias nextboss; Console.Alias nextboss tp_swine;  Console.RemoveAlias repeat; Console.Alias repeat tp_wp_kelly; Console.RemoveAlias gear; Console.Alias gear give_kelly_set;
-tp_wp_kelly teleport self WorldPosition -1000 20 -1380
+tp_wp_kelly teleport self WorldPosition -1000 0 -1380
 tp_swine Console.MultiCommand tp_wp_Swine; Console.RemoveAlias nextboss; Console.Alias nextboss tp_grayson;  Console.RemoveAlias repeat; Console.Alias repeat tp_wp_swine; Console.RemoveAlias gear; Console.Alias gear give_gdigger;
 tp_wp_swine Console.MultiCommand teleport self WorldPosition -1555 20 -1720; TeleportToNearestUnitOfType CHAR_Undead_BishopOfDeath_VBlood;
 tp_grayson Console.MultiCommand TeleportToNearestUnitOfType CHAR_Bandit_Stalker_VBlood; Console.RemoveAlias nextboss; Console.Alias nextboss tp_clive;  Console.RemoveAlias repeat; Console.Alias repeat TeleportToNearestUnitOfType CHAR_Bandit_Stalker_VBlood;
 tp_clive Console.MultiCommand tp_wp_clive; Console.RemoveAlias nextboss; Console.Alias nextboss tp_chaos;  Console.RemoveAlias repeat; Console.Alias repeat tp_wp_clive; Console.RemoveAlias gear; Console.Alias gear give_rcopper_all;
-tp_wp_clive teleport self WorldPosition -2150 20 -1500
+tp_wp_clive teleport self WorldPosition -2150 0 -1500
 tp_chaos Console.MultiCommand tp_ut_chaos; Console.RemoveAlias nextboss; Console.Alias nextboss tp_fish;  Console.RemoveAlias repeat; Console.Alias repeat tp_ut_chaos;
 tp_ut_chaos TeleportToNearestUnitOfType CHAR_Bandit_Chaosarrow_VBlood
 tp_fish Console.MultiCommand tp_wp_fish;  Console.RemoveAlias nextboss; Console.Alias nextboss tp_bear;  Console.RemoveAlias repeat; Console.Alias repeat tp_wp_fish; Console.RemoveAlias gear; Console.Alias gear Console.MultiCommand give_ring_all; give_vermin 10; give_brew_p; give_brew_s;
 teleport_fish Console.MultiCommand Teleport self chunk:14,12; tp_fish;
-tp_wp_fish teleport self WorldPosition -828 20 -1230
+tp_wp_fish teleport self WorldPosition -828 0 -1230
 tp_bear Console.MultiCommand TeleportToNearestUnitOfType CHAR_Forest_Bear_Dire_Vblood; Console.RemoveAlias nextboss; Console.Alias nextboss tp_nick;  Console.RemoveAlias repeat; Console.Alias repeat TeleportToNearestUnitOfType CHAR_Forest_Bear_Dire_Vblood;
 tp_nick Console.MultiCommand TeleportToNearestUnitOfType CHAR_Undead_Priest_Vblood; Console.RemoveAlias nextboss; Console.Alias nextboss tp_polora;  Console.RemoveAlias repeat; Console.Alias repeat TeleportToNearestUnitOfType CHAR_Undead_Priest_Vblood; Console.RemoveAlias gear; Console.Alias gear give_cloth_all_armour;
 tp_polora Console.MultiCommand teleport_polora; Console.RemoveAlias nextboss; Console.Alias nextboss tp_quincy;  Console.RemoveAlias repeat; Console.Alias repeat teleport_polora;
-teleport_polora teleport self WorldPosition -2000 20 -1200
+teleport_polora teleport self WorldPosition -2000 0 -1200
 tp_quincy Console.MultiCommand TeleportToNearestUnitOfType CHAR_Bandit_Tourok_VBlood;  Console.RemoveAlias nextboss; Console.Alias nextboss tp_deamon; Console.RemoveAlias repeat; Console.Alias repeat TeleportToNearestUnitOfType CHAR_Bandit_Tourok_VBlood; Console.RemoveAlias gear; Console.Alias gear give_iron_all;
-tp_deamon Console.MultiCommand tp_wp_deamon; Console.RemoveAlias nextboss; Console.Alias nextboss tp_vincent; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_deamon; Console.RemoveAlias gear; Console.Alias gear give_cotton_armour;
-tp_wp_deamon teleport self WorldPosition -1020 20 -880
+tp_deamon Console.MultiCommand tp_wp_deamon; Console.RemoveAlias nextboss; Console.Alias nextboss tp_vinc; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_deamon; Console.RemoveAlias gear; Console.Alias gear deamon_loot;
+tp_wp_deamon teleport self WorldPosition -1020 0 -880
 tp_vb_deamon TeleportToNearestUnitOfType CHAR_Village_Tailor_VBlood;
 tp_vinc Console.MultiCommand tp_vb_vinc; Console.RemoveAlias nextboss; Console.Alias nextboss tp_nun; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_vinc; Console.RemoveAlias gear; Console.Alias gear give_vinc_loot;
 tp_nun Console.MultiCommand tp_vb_nun; Console.RemoveAlias nextboss; Console.Alias nextboss tp_horse; Console.RemoveAlias repeat; Console.Alias repeat tp_nun;
+tp_horse Console.MultiCommand tp_vb_horse; Console.RemoveAlias nextboss; Console.Alias nextboss tp_kriig; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_horse;
+tp_kriig Console.MultiCommand tp_vb_mine; Console.RemoveAlias nextboss; Console.Alias nextboss tp_leandr; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_mine;  Console.RemoveAlias gear; Console.Alias gear kriig_loot;
+tp_leandr Console.MultiCommand tp_vb_leandr; Console.RemoveAlias nextboss; Console.Alias nextboss tp_maja; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_leandr; Console.RemoveAlias gear; Console.Alias gear leandr_loot;
+tp_maja Console.MultiCommand tp_vb_maja; Console.RemoveAlias nextboss; Console.Alias nextboss tp_bane; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_maja; Console.RemoveAlias gear; Console.Alias gear maja_loot;
+tp_bane Console.MultiCommand tp_vb_assas; Console.RemoveAlias nextboss; Console.Alias nextboss tp_glass; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_assas; Console.RemoveAlias gear; Console.Alias gear bane_loot;
+tp_glass Console.MultiCommand tp_vb_glass; Console.RemoveAlias nextboss; Console.Alias nextboss tp_bless; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_glass; Console.RemoveAlias gear; Console.Alias gear glass_loot;
+tp_bless Console.MultiCommand tp_wp_bless; Console.RemoveAlias nextboss; Console.Alias nextboss tp_iceranger; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_bless; Console.RemoveAlias gear; Console.Alias gear bless_loot;
+tp_iceranger Console.MultiCommand tp_vb_iceranger; Console.RemoveAlias nextboss; Console.Alias nextboss tp_frost; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_iceranger; Console.RemoveAlias gear; Console.Alias gear elena_loot;
+tp_frost Console.MultiCommand tp_vb_frost; Console.RemoveAlias nextboss; Console.Alias nextboss tp_frost; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_frost; Console.RemoveAlias gear; Console.Alias gear frost_loot;
+tp_tera Console.MultiCommand tp_vb_tera; Console.RemoveAlias nextboss; Console.Alias nextboss tp_arena; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_tera; Console.RemoveAlias gear; Console.Alias gear tera_loot;
+tp_vb_tera TeleportToNearestUnitOfType CHAR_Geomancer_Human_VBlood
+tp_vb_frost TeleportToNearestUnitOfType CHAR_Wendigo_VBlood
+tp_wp_frost Teleport self WorldPosition -600 0 -1090
+tp_vb_iceranger TeleportToNearestUnitOfType CHAR_Vampire_IceRanger_VBlood
+tp_wp_iceranger Teleport self WorldPosition -600 0 -790
+tp_vb_bless TeleportToNearestUnitOfType CHAR_Militia_Longbowman_LightArrow_Vblood 
+tp_wp_bless Teleport self WorldPosition -1368 0 -890
+tp_glass TeleportToNearestUnitOfType CHAR_Militia_Glassblower_VBlood
+tp_vb_glass TeleportToNearestUnitOfType CHAR_Militia_Glassblower_VBlood
+tp_vb_assas TeleportToNearestUnitOfType CHAR_Undead_Infiltrator_Vblood
+tp_assas TeleportToNearestUnitOfType CHAR_Undead_Infiltrator_Vblood
 tp_vb_vinc TeleportToNearestUnitOfType CHAR_Militia_Guard_VBlood
 tp_vb_nun TeleportToNearestUnitOfType CHAR_Militia_Nun_VBlood
-tp_horse TeleportToNearestUnitOfType CHAR_Militia_Fabian_VBlood
-tp_tera TeleportToNearestUnitOfType CHAR_Geomancer_Human_VBlood
+tp_vb_horse TeleportToNearestUnitOfType CHAR_Militia_Fabian_VBlood
+tp_vb_mine TeleportToNearestUnitOfType CHAR_Undead_Leader_Vblood
+tp_wp_mine Teleport self WorldPosition -1368 0 -1050
+tp_vb_leandr TeleportToNearestUnitOfType CHAR_Undead_BishopOfShadows_Vblood
+tp_vb_maja TeleportToNearestUnitOfType CHAR_Militia_Scribe_VBlood
 tp_iva TeleportToNearestUnitOfType CHAR_Gloomrot_Iva_VBlood
 tp_adam TeleportToNearestUnitOfType CHAR_Gloomrot_Monster_VBlood
 tp_angram TeleportToNearestUnitOfType CHAR_Gloomrot_Purifier_VBlood
@@ -50,16 +74,10 @@ tp_domina TeleportToNearestUnitOfType CHAR_Gloomrot_Voltage_VBlood
 tp_harpy TeleportToNearestUnitOfType CHAR_Harpy_Matriarch_VBlood
 tp_horror TeleportToNearestUnitOfType CHAR_Manticore_VBlood
 tp_raziel TeleportToNearestUnitOfType CHAR_Militia_BishopOfDunley_VBlood
-tp_glass TeleportToNearestUnitOfType CHAR_Militia_Glassblower_VBlood
 tp_octav TeleportToNearestUnitOfType CHAR_Militia_Leader_VBlood
-tp_maja TeleportToNearestUnitOfType CHAR_Militia_Scribe_VBlood
-tp_bless TeleportToNearestUnitOfType CHAR_Militia_Longbowman_LightArrow_Vblood 
 tp_spider TeleportToNearestUnitOfType CHAR_Spider_Queen_Vblood
 tp_arena TeleportToNearestUnitOfType CHAR_Undead_ArenaChampion_Vblood
-tp_leandr TeleportToNearestUnitOfType CHAR_Undead_BishopOfShadows_Vblood
 tp_cyril TeleportToNearestUnitOfType CHAR_Undead_CursedSmith_Vblood
-tp_assas TeleportToNearestUnitOfType CHAR_Undead_Infiltrator_Vblood
-tp_mine TeleportToNearestUnitOfType CHAR_Undead_Leader_Vblood
 tp_faul TeleportToNearestUnitOfType CHAR_Undead_ZealousCultist_VBlood 
 tp_sir TeleportToNearestUnitOfType CHAR_ChurchOfLight_Overseer_VBlood
 tp_french TeleportToNearestUnitOfType CHAR_ChurchOfLight_Sommelier_VBlood
@@ -78,10 +96,9 @@ tp_morgana TeleportToNearestUnitOfType CHAR_Blackfang_Valyr_VBlood
 tp_val TeleportToNearestUnitOfType CHAR_Vampire_BloodKnight_VBlood
 tp_drac TeleportToNearestUnitOfType CHAR_Vampire_Dracula_VBlood
 tp_sword TeleportToNearestUnitOfType CHAR_Vampire_HighLord_VBlood
-tp_iceranger TeleportToNearestUnitOfType CHAR_Vampire_IceRanger_VBlood
 tp_jade TeleportToNearestUnitOfType CHAR_VHunter_Jade_VBlood
 tp_claw TeleportToNearestUnitOfType CHAR_Winter_Yeti_VBlood
-tp_frost TeleportToNearestUnitOfType CHAR_Wendigo_VBlood
+
 tp_ben TeleportToNearestUnitOfType CHAR_Villager_CursedWanderer_VBlood
 tp_belmont TeleportToNearestUnitOfType CHAR_VHunter_CastleMan
 tp_tri TeleportToNearestUnitOfType CHAR_VHunter_Leader_VBlood
@@ -220,6 +237,35 @@ give_ring_tea give "[Prefab]Item_MagicSource_General_T04_MistSignet - Guid: -886
 give_ring_yel give "[Prefab]Item_MagicSource_General_T04_Duskwatcher - Guid: -809059551" 
 give_ring_blu give "[Prefab]Item_MagicSource_General_T04_FrozenEye - Guid: 336922685" 
 give_ring_all Console.Multicommand give_ring_red; give_ring_gre; give_ring_pin; give_ring_tea; give_ring_yel; give_ring_blu;
+give_riron_whip give "[Prefab]Item_Weapon_Whip_T06_Iron_Reinforced - Guid: 1393113320"
+give_riron_tblade give "[Prefab]Item_Weapon_TwinBlades_T06_Iron_Reinforced - Guid: -1651990235"
+give_riron_sword give "[Prefab]Item_Weapon_Sword_T06_Iron_Reinforced - Guid: -435501075"  
+give_riron_spear give "[Prefab]Item_Weapon_Spear_T06_Iron_Reinforced - Guid: 1065194820" 
+give_riron_slash give "[Prefab]Item_Weapon_Slashers_T06_Iron_Reinforced - Guid: 866934844" 
+give_riron_reap give "[Prefab]Item_Weapon_Reaper_T06_Iron_Reinforced - Guid: 1778128946" 
+give_riron_pistol give "[Prefab]Item_Weapon_Pistols_T06_Iron_Reinforced - Guid: 1850870666" 
+give_riron_mace give "[Prefab]Item_Weapon_Mace_T06_Iron_Reinforced - Guid: -276593802" 
+give_riron_bow give "[Prefab]Item_Weapon_Longbow_T06_Iron_Reinforced - Guid: 1951565953" 
+give_riron_gsword give "[Prefab]Item_Weapon_GreatSword_T06_Iron_Reinforced - Guid: 82781195" 
+give_riron_dagger give "[Prefab]Item_Weapon_Daggers_T06_Iron_Reinforced - Guid: 703783407" 
+give_riron_cros give "[Prefab]Item_Weapon_Crossbow_T06_Iron_Reinforced - Guid: 1221976097" 
+give_riron_claws give "[Prefab]Item_Weapon_Claws_T06_Iron_Reinforced - Guid: 1748886117" 
+give_riron_axe give "[Prefab]Item_Weapon_Axe_T06_Iron_Reinforced - Guid: 198951695" 
+give_riron_all Console.Multicommand give_riron_whip; give_riron_tblade; give_riron_sword; give_riron_spear; give_riron_slash; give_riron_reap; give_riron_pistol; give_riron_mace; give_riron_bow; give_riron_gsword; give_riron_dagger; give_riron_cros; give_riron_claws; give_riron_axe;
+leandr_loot Console.Multicommand give "[Name]Scourgestone - Item_Ingredient_Scourgestone - Guid: 1005440012" 100; give "[Prefab]Item_Ingredient_Scourgestone - Guid: 1005440012" ; give "[Prefab]Item_Consumable_DuskCaller - Guid: 1128262258" 10;
+deamon_loot Console.Multicommand give_cotton_armour; give "[Prefab]Item_Cloak_Main_T02_Hunter - Guid: 786585343"; give "[Name]Minor Sun Resistance Brew - Item_Consumable_SunResistancePotion_T01 - Guid: -38051433" 10; give_brew_p; give_brew_s; give_brew_hp 20;
+kriig_loot Console.Multicommand give "[Prefab]Item_Weapon_Reaper_T01_Bone - Guid: -152327780"; give "[Name]Hell’s Clarion - Item_Ingredient_Plant_HellsClarion - Guid: 813370507" 200; give "[Name]Undead General Helmet - Item_Headgear_GeneralHelmet - Guid: 409678749";
+maja_loot Console.Multicommand give "[Prefab]Item_Ingredient_Research_Scroll - Guid: 2065714452" 1000;
+bane_loot Console.Multicommand give "[Name]Immortal King's Greathelm - Item_Headgear_DraculaHelmet - Guid: 238268650"; give_silver_cash 100;
+glass_loot Console.Multicommand give "[Name]Empty Glass Bottle - Item_Consumable_EmptyBottle - Guid: -437611596" 10; give_pot_hp 10; give "[Name]Blood Rose - Item_Ingredient_Plant_BloodRose - Guid: 1726420644" 200;
+bless_loot  Console.Multicommand give "[Name]Holy Resistance Potion - Item_Consumable_HolyResistancePotion_T01 - Guid: 890484447" 10; give "[Name]Elixir of the Prowler - Item_Elixir_Prowler_T01 - Guid: 1186268870" 10; give_riron_all;
+elena_loot Console.Multicommand give "[Name]Elixir of the Raven - Item_Elixir_Raven_T01 - Guid: -1561468105" 10; give "[Name]Stygian Shard - Item_NetherShard_T01 - Guid: 2103989354" 5000; GenerateLegendaryWeapon Item_Weapon_Crossbow_Legendary_T06_Shattered;
+frost_loot Console.Multicommand give "[Name]Mountain Peak Bag - Item_NewBag_T04 - Guid: -1922998918"; give "[Prefab]Item_Ingredient_ThickLeather - Guid: -305160765" 200; give "[Name]Elixir of the Beast - Item_Elixir_Beast_T01 - Guid: 98952351" 10; GenerateLegendaryWeapon Item_Weapon_Claws_Legendary_T06_Shattered;
+tera_loot Console.Multicommand GenerateJewelAtUnitLevel 60; GenerateJewelAtUnitLevel 60; GenerateJewelAtUnitLevel 60; GenerateLegendaryWeapon Item_Weapon_Mace_Legendary_T06_Shattered; 
+give_brew_hp give "[Name]Blood Rose Brew - Item_Consumable_HealingPotion_T01 - Guid: 800879747"
+give_pot_hp give "[Name]Blood Rose Potion - Item_Consumable_HealingPotion_T02 - Guid: 429052660"
+give_silver_cash give "[Name]Silver Coin - Item_Ingredient_Coin_Silver - Guid: -949672483" 
+give_copper_cash give "[Name]Copper Coin - Item_Ingredient_Coin_Copper - Guid: 28625845" 
 cbb ConsumeBlood BloodType_Brute 
 cbc ConsumeBlood BloodType_Corruption 
 cbw ConsumeBlood BloodType_Warrior

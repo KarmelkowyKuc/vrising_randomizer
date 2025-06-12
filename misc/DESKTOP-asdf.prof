@@ -2,12 +2,13 @@ BaaaProfile
 #
 #
 ready Console.MultiCommand teleport self WorldPosition -1500 0 -1233; give "[Name]Blood Essence - Item_BloodEssence_T01 - Guid: 862477668" 540; give "[Name]Stone - Item_Ingredient_Stone - Guid: -1531666018" 420; give "[Prefab]Item_NewBag_T03 - Guid: -261654929" ; give "[Prefab]Item_Ingredient_StoneBrick - Guid: 1788016417" 500; give "[Prefab]Item_Ingredient_Plank - Guid: -1017402979" 500; give "[Name]Scourgestone - Item_Ingredient_Scourgestone - Guid: 1005440012" 20; give "[Name]Reinforced Plank - Item_Ingredient_ReinforcedPlank - Guid: -1397591435" 70; give "[Name]Silk - Item_Ingredient_Silk - Guid: 702067317" 50; givespell2; Console.TempBind Shift+A tp_cur; Console.TempBind Shift+M TeleportToMapMarker; Console.TempBind Shift+B base; Console.TempBind Shift+N goboss; Console.TempBind Shift+S givespell; Console.TempBind Shift+R repeat; gear; give "[Name]Gem Dust - Item_Ingredient_Gemdust - Guid: 820932258" 500;
-base Console.MultiCommand teleport self WorldPosition -1500 0 -1233; givespell2; gear;
+base Console.MultiCommand teleport self WorldPosition -1500 0 -1233; base_givespell; gear; Console.RemoveAlias gear;
 gear Console.MultiCommand give_rf_armour; give_rf_all; give_vermin 10; Console.RemoveAlias gear;
 goboss nextboss
 nextboss tp_stone
 repeat tp_stone
 givespell jewel_lvl
+base_givespell givespell2
 givespell2 Console.Multicommand jewel_lvl; jewel_lvl;
 givespell3 Console.Multicommand jewel_lvl; jewel_lvl; jewel_lvl;
 jewel_lvl GenerateJewelAtUnitLevel 55 0.0
@@ -47,6 +48,24 @@ tp_bless Console.MultiCommand tp_wp_bless; Console.RemoveAlias nextboss; Console
 tp_iceranger Console.MultiCommand tp_vb_iceranger; Console.RemoveAlias nextboss; Console.Alias nextboss tp_frost; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_iceranger; Console.RemoveAlias gear; Console.Alias gear elena_loot;
 tp_frost Console.MultiCommand tp_vb_frost; Console.RemoveAlias nextboss; Console.Alias nextboss tp_frost; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_frost; Console.RemoveAlias gear; Console.Alias gear frost_loot;
 tp_tera Console.MultiCommand tp_vb_tera; Console.RemoveAlias nextboss; Console.Alias nextboss tp_arena; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_tera; Console.RemoveAlias gear; Console.Alias gear tera_loot;
+tp_arena Console.MultiCommand tp_vb_arena; Console.RemoveAlias nextboss; Console.Alias nextboss tp_sword; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_arena; Console.RemoveAlias gear; Console.Alias gear arena_loot;
+tp_sword Console.MultiCommand tp_vb_sword; Console.RemoveAlias nextboss; Console.Alias nextboss tp_jade; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_sword; Console.RemoveAlias gear; Console.Alias gear sword_loot;
+tp_jade Console.MultiCommand tp_vb_jade; Console.RemoveAlias nextboss; Console.Alias nextboss tp_raziel; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_jade; Console.RemoveAlias gear; Console.Alias gear jade_loot;
+tp_raziel Console.MultiCommand tp_vb_raziel; Console.RemoveAlias nextboss; Console.Alias nextboss tp_octav; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_raziel; Console.RemoveAlias gear; Console.Alias gear raziel_loot;
+tp_octav Console.MultiCommand tp_vb_octav; Console.RemoveAlias nextboss; Console.Alias nextboss tp_domina; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_octav; Console.RemoveAlias gear; Console.Alias gear octav_loot; Console.RemoveAlias base_givespell; Console.Alias base_givespell givespell3;
+tp_domina Console.MultiCommand tp_vp_domina; Console.RemoveAlias nextboss; Console.Alias nextboss tp_iva; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_domina; Console.RemoveAlias gear; Console.Alias gear domina_loot;
+tp_iva Console.MultiCommand tp_vb_iva; Console.RemoveAlias nextboss; Console.Alias nextboss tp_angram; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_iva; Console.RemoveAlias gear; Console.Alias gear iva_loot;
+tp_angram Console.MultiCommand tp_vb_angram; Console.RemoveAlias nextboss; Console.Alias nextboss tp_spider; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_angram; Console.RemoveAlias gear; Console.Alias gear angram_loot;
+tp_vb_angram TeleportToNearestUnitOfType CHAR_Gloomrot_Purifier_VBlood
+tp_wp_angram Teleport self WorldPosition -1670 0 -5
+tp_vb_iva TeleportToNearestUnitOfType CHAR_Gloomrot_Iva_VBlood
+tp_vp_domina TeleportToNearestUnitOfType CHAR_Gloomrot_Voltage_VBlood
+tp_wp_domina Teleport self WorldPosition -1670 0 -200
+tp_vb_octav TeleportToNearestUnitOfType CHAR_Militia_Leader_VBlood
+tp_vb_raziel TeleportToNearestUnitOfType CHAR_Militia_BishopOfDunley_VBlood
+tp_vb_jade TeleportToNearestUnitOfType CHAR_VHunter_Jade_VBlood
+tp_vb_sword TeleportToNearestUnitOfType CHAR_Vampire_HighLord_VBlood
+tp_wp_sword Teleport self WorldPosition -655 0 -350
 tp_vb_tera TeleportToNearestUnitOfType CHAR_Geomancer_Human_VBlood
 tp_vb_frost TeleportToNearestUnitOfType CHAR_Wendigo_VBlood
 tp_wp_frost Teleport self WorldPosition -600 0 -1090
@@ -65,18 +84,13 @@ tp_vb_mine TeleportToNearestUnitOfType CHAR_Undead_Leader_Vblood
 tp_wp_mine Teleport self WorldPosition -1368 0 -1050
 tp_vb_leandr TeleportToNearestUnitOfType CHAR_Undead_BishopOfShadows_Vblood
 tp_vb_maja TeleportToNearestUnitOfType CHAR_Militia_Scribe_VBlood
-tp_iva TeleportToNearestUnitOfType CHAR_Gloomrot_Iva_VBlood
 tp_adam TeleportToNearestUnitOfType CHAR_Gloomrot_Monster_VBlood
-tp_angram TeleportToNearestUnitOfType CHAR_Gloomrot_Purifier_VBlood
 tp_volt TeleportToNearestUnitOfType CHAR_Gloomrot_RailgunSergeant_VBlood
 tp_prof TeleportToNearestUnitOfType CHAR_Gloomrot_TheProfessor_VBlood
-tp_domina TeleportToNearestUnitOfType CHAR_Gloomrot_Voltage_VBlood
 tp_harpy TeleportToNearestUnitOfType CHAR_Harpy_Matriarch_VBlood
 tp_horror TeleportToNearestUnitOfType CHAR_Manticore_VBlood
-tp_raziel TeleportToNearestUnitOfType CHAR_Militia_BishopOfDunley_VBlood
-tp_octav TeleportToNearestUnitOfType CHAR_Militia_Leader_VBlood
 tp_spider TeleportToNearestUnitOfType CHAR_Spider_Queen_Vblood
-tp_arena TeleportToNearestUnitOfType CHAR_Undead_ArenaChampion_Vblood
+tp_vb_arena TeleportToNearestUnitOfType CHAR_Undead_ArenaChampion_Vblood
 tp_cyril TeleportToNearestUnitOfType CHAR_Undead_CursedSmith_Vblood
 tp_faul TeleportToNearestUnitOfType CHAR_Undead_ZealousCultist_VBlood 
 tp_sir TeleportToNearestUnitOfType CHAR_ChurchOfLight_Overseer_VBlood
@@ -95,8 +109,6 @@ tp_morgana TeleportToNearestUnitOfType CHAR_Blackfang_Morgana_VBlood
 tp_morgana TeleportToNearestUnitOfType CHAR_Blackfang_Valyr_VBlood
 tp_val TeleportToNearestUnitOfType CHAR_Vampire_BloodKnight_VBlood
 tp_drac TeleportToNearestUnitOfType CHAR_Vampire_Dracula_VBlood
-tp_sword TeleportToNearestUnitOfType CHAR_Vampire_HighLord_VBlood
-tp_jade TeleportToNearestUnitOfType CHAR_VHunter_Jade_VBlood
 tp_claw TeleportToNearestUnitOfType CHAR_Winter_Yeti_VBlood
 tp_ben TeleportToNearestUnitOfType CHAR_Villager_CursedWanderer_VBlood
 tp_belmont TeleportToNearestUnitOfType CHAR_VHunter_CastleMan
@@ -251,20 +263,57 @@ give_riron_cros give "[Prefab]Item_Weapon_Crossbow_T06_Iron_Reinforced - Guid: 1
 give_riron_claws give "[Prefab]Item_Weapon_Claws_T06_Iron_Reinforced - Guid: 1748886117" 
 give_riron_axe give "[Prefab]Item_Weapon_Axe_T06_Iron_Reinforced - Guid: 198951695" 
 give_riron_all Console.Multicommand give_riron_whip; give_riron_tblade; give_riron_sword; give_riron_spear; give_riron_slash; give_riron_reap; give_riron_pistol; give_riron_mace; give_riron_bow; give_riron_gsword; give_riron_dagger; give_riron_cros; give_riron_claws; give_riron_axe;
+give_rcotton_war_b give "[Name]Blood Hunter Boots - Item_Boots_T06_Iron_Warrior - Guid: 666433583" 
+give_rcotton_sch_b give "[Prefab]Item_Boots_T06_Iron_Scholar - Guid: 138060378" 
+give_rcotton_rog_b give "[Prefab]Item_Boots_T06_Iron_Rogue - Guid: 51576788" 
+give_rcotton_bru_b give give "[Prefab]Item_Boots_T06_Iron_Brute - Guid: -1329744719" 
+give_rcotton_bru_c give "[Prefab]Item_Chest_T06_Iron_Brute - Guid: -1641042717" 
+give_rcotton_rog_c give "[Prefab]Item_Chest_T06_Iron_Rogue - Guid: -69916288" 
+give_rcotton_sch_c give "[Prefab]Item_Chest_T06_Iron_Scholar - Guid: -2127687996" 
+give_rcotton_war_c give "[Prefab]Item_Chest_T06_Iron_Warrior - Guid: -2102875089" 
+give_rcotton_bru_l give "[Prefab]Item_Legs_T06_Iron_Brute - Guid: 680112231" 
+give_rcotton_rog_l give "[Prefab]Item_Legs_T06_Iron_Rogue - Guid: 744344540" 
+give_rcotton_sch_l give "[Prefab]Item_Legs_T06_Iron_Scholar - Guid: -454576348" 
+give_rcotton_war_l give "[Prefab]Item_Legs_T06_Iron_Warrior - Guid: 206495029" 
+give_rcotton_bru_g give "[Prefab]Item_Gloves_T06_Iron_Brute - Guid: -327754127" 
+give_rcotton_rog_g give "[Prefab]Item_Gloves_T06_Iron_Rogue - Guid: 322804535" 
+give_rcotton_sch_g give "[Prefab]Item_Gloves_T06_Iron_Scholar - Guid: 1247389106" 
+give_rcotton_war_g give "[Prefab]Item_Gloves_T06_Iron_Warrior - Guid: 1067300584"
+give_rcotton_war_all Console.Multicommand give_rcotton_war_b; give_rcotton_war_c; give_rcotton_war_l; give_rcotton_war_g;
+give_rcotton_bru_all Console.Multicommand give_rcotton_bru_b; give_rcotton_bru_c; give_rcotton_bru_l; give_rcotton_bru_g;
+give_rcotton_rog_all Console.Multicommand give_rcotton_rog_b; give_rcotton_rog_c; give_rcotton_rog_l; give_rcotton_rog_g;
+give_rcotton_sch_all Console.Multicommand give_rcotton_sch_b; give_rcotton_sch_c; give_rcotton_sch_l; give_rcotton_sch_g;
+give_rcotton_all Console.Multicommand give_rcotton_war_all; give_rcotton_bru_all; give_rcotton_rog_all; give_rcotton_sch_all;
+give_rpendant_red give "[Name]Pendant of the Warrior - Item_MagicSource_General_T06_RubyPendant - Guid: -425306671" 
+give_rpendant_yel give "[Name]Pendant of the Dawnrunner - Item_MagicSource_General_T06_EmeraldNecklace - Guid: -1046748791" 
+give_rpendant_gre give "[Name]Pendant of the Dawnrunner - Item_MagicSource_General_T06_EmeraldNecklace - Guid: -1046748791" 
+give_rpendant_tea give "[Name]Pendant of the Spellweaver - Item_MagicSource_General_T06_MistStoneNecklace - Guid: 1012837641" 
+give_rpendant_blu give "[Name]Pendant of the Warlock - Item_MagicSource_General_T06_SapphirePendant - Guid: -651554566" 
+give_rpendant_vio give "[Name]Pendant of the Sorcerer - Item_MagicSource_General_T06_AmethystPendant - Guid: 199425997" 
+give_rpendant_all Console.Multicommand give_rpendant_red; give_rpendant_yel; give_rpendant_gre; give_rpendant_tea; give_rpendant_blu; give_rpendant_vio;
 leandr_loot Console.Multicommand give "[Name]Scourgestone - Item_Ingredient_Scourgestone - Guid: 1005440012" 100; give "[Prefab]Item_Ingredient_Scourgestone - Guid: 1005440012" ; give "[Prefab]Item_Consumable_DuskCaller - Guid: 1128262258" 10;
 deamon_loot Console.Multicommand give_cotton_armour; give "[Prefab]Item_Cloak_Main_T02_Hunter - Guid: 786585343"; give "[Name]Minor Sun Resistance Brew - Item_Consumable_SunResistancePotion_T01 - Guid: -38051433" 10; give_brew_p; give_brew_s; give_brew_hp 20;
-kriig_loot Console.Multicommand give "[Prefab]Item_Weapon_Reaper_T01_Bone - Guid: -152327780"; give "[Name]Hell’s Clarion - Item_Ingredient_Plant_HellsClarion - Guid: 813370507" 200; give "[Name]Undead General Helmet - Item_Headgear_GeneralHelmet - Guid: 409678749";
-maja_loot Console.Multicommand give "[Prefab]Item_Ingredient_Research_Scroll - Guid: 2065714452" 1000;
-bane_loot Console.Multicommand give "[Name]Immortal King's Greathelm - Item_Headgear_DraculaHelmet - Guid: 238268650"; give_silver_cash 100;
-glass_loot Console.Multicommand give "[Name]Empty Glass Bottle - Item_Consumable_EmptyBottle - Guid: -437611596" 10; give_pot_hp 10; give "[Name]Blood Rose - Item_Ingredient_Plant_BloodRose - Guid: 1726420644" 200;
-bless_loot  Console.Multicommand give "[Name]Holy Resistance Potion - Item_Consumable_HolyResistancePotion_T01 - Guid: 890484447" 10; give "[Name]Elixir of the Prowler - Item_Elixir_Prowler_T01 - Guid: 1186268870" 10; give_riron_all;
+kriig_loot Console.Multicommand give "[Prefab]Item_Weapon_Reaper_T01_Bone - Guid: -152327780"; give "[Name]Hell’s Clarion - Item_Ingredient_Plant_HellsClarion - Guid: 813370507" 200; give "[Name]Undead General Helmet - Item_Headgear_GeneralHelmet - Guid: 409678749"; GenerateLegendaryWeapon Item_Weapon_Reaper_Legendary_T06_Shattered;
+maja_loot Console.Multicommand give "[Prefab]Item_Ingredient_Research_Scroll - Guid: 2065714452" 1000; GenerateLegendaryWeapon Item_Weapon_Sword_Legendary_T06_Shattered;
+bane_loot Console.Multicommand give "[Name]Immortal King's Greathelm - Item_Headgear_DraculaHelmet - Guid: 238268650"; give_silver_cash 100; GenerateLegendaryWeapon Item_Weapon_Daggers_Legendary_T06_Shattered; GenerateLegendaryWeapon Item_Weapon_Slashers_Legendary_T06_Shattered;
+glass_loot Console.Multicommand give "[Name]Empty Glass Bottle - Item_Consumable_EmptyBottle - Guid: -437611596" 10; give_pot_hp 10; give "[Name]Blood Rose - Item_Ingredient_Plant_BloodRose - Guid: 1726420644" 200; GenerateLegendaryWeapon Item_Weapon_Axes_Legendary_T06_Shattered;
+bless_loot  Console.Multicommand give "[Name]Holy Resistance Potion - Item_Consumable_HolyResistancePotion_T01 - Guid: 890484447" 10; give "[Name]Elixir of the Prowler - Item_Elixir_Prowler_T01 - Guid: 1186268870" 10; give_riron_all; GenerateLegendaryWeapon Item_Weapon_Longbow_Legendary_T06_Shattered;
 elena_loot Console.Multicommand give "[Name]Elixir of the Raven - Item_Elixir_Raven_T01 - Guid: -1561468105" 10; give "[Name]Stygian Shard - Item_NetherShard_T01 - Guid: 2103989354" 5000; GenerateLegendaryWeapon Item_Weapon_Crossbow_Legendary_T06_Shattered;
 frost_loot Console.Multicommand give "[Name]Mountain Peak Bag - Item_NewBag_T04 - Guid: -1922998918"; give "[Prefab]Item_Ingredient_ThickLeather - Guid: -305160765" 200; give "[Name]Elixir of the Beast - Item_Elixir_Beast_T01 - Guid: 98952351" 10; GenerateLegendaryWeapon Item_Weapon_Claws_Legendary_T06_Shattered;
-tera_loot Console.Multicommand GenerateJewelAtUnitLevel 60; GenerateJewelAtUnitLevel 60; GenerateJewelAtUnitLevel 60; GenerateLegendaryWeapon Item_Weapon_Mace_Legendary_T06_Shattered; 
+tera_loot Console.Multicommand GenerateJewelAtUnitLevel 60; GenerateJewelAtUnitLevel 60; GenerateJewelAtUnitLevel 60; GenerateLegendaryWeapon Item_Weapon_Mace_Legendary_T06_Shattered; give_rpendant_all;
+arena_loot Console.Multicommand GenerateLegendaryWeapon Item_Weapon_TwinBlades_Legendary_T06_Shattered; give_rcotton_all;
+sword_loot Console.Multicommand GenerateLegendaryWeapon Item_Weapon_GreatSword_Legendary_T06_Shattered ; give "[Name]Scourgestone - Item_Ingredient_Scourgestone - Guid: 1005440012" 10; give "[Name]Elixir of the Bat - Item_Elixir_Bat_T01 - Guid: -2102469163" 10;
+jade_loot Console.Multicommand GenerateLegendaryWeapon Item_Weapon_Pistols_Legendary_T06_Shattered; give "[Name]Elixir of the Crow - Item_Elixir_Crow_T01 - Guid: 904226111" 10; give "[Name]Primal Blood Essence - Item_BloodEssence_T03_Primal - Guid: 1566989408" 10; give "[Name]Glass - Item_Ingredient_Glass - Guid: -1233716303" 100; give "[Name]Iron Ingot - Item_Ingredient_Mineral_IronBar - Guid: -1750550553" 100; give "[Name]Holy Resistance Potion - Item_Consumable_HolyResistancePotion_T01 - Guid: 890484447";
+raziel_loot Console.Multicommand give "[Name]Greater Blood Essence - Item_BloodEssence_T02_Greater - Guid: 271594022" 4; give "[Name]Scourgestone - Item_Ingredient_Scourgestone - Guid: 1005440012" 8; give "[Name]Gem Dust - Item_Ingredient_Gemdust - Guid: 820932258" 64; give_regular_gems; GenerateLegendaryWeapon Item_Weapon_Spear_Legendary_T06_Shattered;
+octav_loot Console.Multicommand give "[Prefab]Item_Ingredient_RadiumAlloy - Guid: 2116142390" 200; give "[Name]Greater Blood Essence - Item_BloodEssence_T02_Greater - Guid: 271594022" 14; give "[Name]Iron Ingot - Item_Ingredient_Mineral_IronBar - Guid: -1750550553" 16;  give "[Name]Primal Blood Essence - Item_BloodEssence_T03_Primal - Guid: 1566989408"; give_pot_hp 10;
+domina_loot Console.Multicommand give "[Name]Elixir of the Blasphemous - Item_Elixir_Blasphemous_T01 - Guid: -978856806" 10; GenerateJewelAtUnitLevel 63; GenerateJewelAtUnitLevel 63; GenerateJewelAtUnitLevel 63;
+iva_loot Console.Multicommand GenerateJewelAtUnitLevel 63; GenerateJewelAtUnitLevel 63; GenerateJewelAtUnitLevel 63;
+angram_loot Console.Multicommand GenerateJewelAtUnitLevel 63; GenerateJewelAtUnitLevel 63; GenerateJewelAtUnitLevel 63; give "[Name]Irradiant Gruel - Item_Consumable_IrradiantGruel - Guid: 1851490036" 20;
 give_brew_hp give "[Name]Blood Rose Brew - Item_Consumable_HealingPotion_T01 - Guid: 800879747"
 give_pot_hp give "[Name]Blood Rose Potion - Item_Consumable_HealingPotion_T02 - Guid: 429052660"
 give_silver_cash give "[Name]Silver Coin - Item_Ingredient_Coin_Silver - Guid: -949672483" 
 give_copper_cash give "[Name]Copper Coin - Item_Ingredient_Coin_Copper - Guid: 28625845" 
+give_regular_gems Console.Multicommand give "[Name]Regular Amethyst - Item_Ingredient_Gem_Amethyst_T02 - Guid: -1962855117" 30; give "[Prefab]Item_Ingredient_Gem_Ruby_T02 - Guid: 51046573" 30; give "[Prefab]Item_Ingredient_Gem_Emerald_T02 - Guid: 357608868" 30; give "[Name]Regular Topaz - Item_Ingredient_Gem_Topaz_T02 - Guid: -2118441460" 30; give "[Name]Regular Sapphire - Item_Ingredient_Gem_Sapphire_T02 - Guid: 131015492" 30; give "[Name]Regular Miststone - Item_Ingredient_Gem_Miststone_T02 - Guid: 802050789" 30; 
 cbb ConsumeBlood BloodType_Brute 
 cbc ConsumeBlood BloodType_Corruption 
 cbw ConsumeBlood BloodType_Warrior

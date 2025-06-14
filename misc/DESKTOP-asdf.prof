@@ -3,6 +3,7 @@ BaaaProfile
 #
 ready Console.MultiCommand teleport self WorldPosition -1500 0 -1233; give "[Name]Blood Essence - Item_BloodEssence_T01 - Guid: 862477668" 540; give "[Name]Stone - Item_Ingredient_Stone - Guid: -1531666018" 420; give "[Prefab]Item_NewBag_T03 - Guid: -261654929" ; give "[Prefab]Item_Ingredient_StoneBrick - Guid: 1788016417" 500; give "[Prefab]Item_Ingredient_Plank - Guid: -1017402979" 500; give "[Name]Scourgestone - Item_Ingredient_Scourgestone - Guid: 1005440012" 20; give "[Name]Reinforced Plank - Item_Ingredient_ReinforcedPlank - Guid: -1397591435" 70; give "[Name]Silk - Item_Ingredient_Silk - Guid: 702067317" 50; givespell2; Console.TempBind Shift+A tp_cur; Console.TempBind Shift+M TeleportToMapMarker; Console.TempBind Shift+B base; Console.TempBind Shift+N goboss; Console.TempBind Shift+S givespell; Console.TempBind Shift+R repeat; gear; give "[Name]Gem Dust - Item_Ingredient_Gemdust - Guid: 820932258" 500;
 base Console.MultiCommand teleport self WorldPosition -1500 0 -1233; base_givespell; gear; Console.RemoveAlias gear;
+set_binds Console.MultiCommand Console.TempBind Shift+A tp_cur; Console.TempBind Shift+M TeleportToMapMarker; Console.TempBind Shift+B base; Console.TempBind Shift+N goboss; Console.TempBind Shift+S givespell; Console.TempBind Shift+R repeat;
 gear Console.MultiCommand give_rf_armour; give_rf_all; give_vermin 10; Console.RemoveAlias gear;
 goboss nextboss
 nextboss tp_stone

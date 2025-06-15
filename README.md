@@ -1,8 +1,71 @@
-#Randomizer V rising without mods
+# BossRush/Randomizer for V rising without mods
 
-==============================================================================
+kuc.karmelkowy@gmail.com
 
-Current work status of randomizer, so far basic list and *.prof to put it into.
+Author: Karmelkowy Kuc
+
+Basically, this is the script that allows you to fight bosses one after another with minimal downtime, wihtout
+usage of external mods - just clean AdminAuth script using command line.
+
+Due to the limitation with usage of internal alias scriptint, it is as far as I want to get with this code.
+
+It is meant to be played on brutal server settings, single player only. Written for V rising 1.1 version.
+
+GL&HF
+
+!!!IMPORTANT!!! 
+
+START YOUR SERVER FROM AT LEAST LEVEL 30 OF STORY PROGRESSION - SO YOU CAN BUILD WALS AND YOUR CASTLE 
+
+!!!IMPORTANT!!! 
+
+============================================================================
+
+# How does it work?
+
+You become admin on your private local server, use commands and key shortcuts (binds) to teleport and 
+fight bosses and get gear. The amount of farming is 0, you will get proper amount of resources
+after each and every boss (at least from Act2 on).
+
+    1. After you spawn, use AdminAuth command. 
+
+    2. Wake up from coffin.
+
+    3. Use command ready.
+    
+    4. Build your basic castle, with some chects, put unnecesary gear there.
+    
+    5. Press Shift+N to teleport to the next boss (or type console command nextboss).
+        If you have teleported to the bottom teleporter - means you have to teleport manually.
+        Open your map, press Ctrl+Shift+left click to teleport to the pointed location.
+        If you can't find boss you want to kill, use vblood track blood - use Shift+A to teleport to the 
+        mouse location.
+    
+    6. If you died to a boss, press Shift+R (or type console command repeat).
+        If you have teleported to the bottom teleporter - means you have to teleport manually.
+        Open your map, press Ctrl+Shift+left click to teleport to the pointed location.
+    
+    7. After you kill the boss, loot whatever you want in the area, press Shift+B (or type console command base).
+    
+    8. Script should give you proper gear to fight next boss, or additional loot. Use it as you want, improve your character,
+        make your base bigger, go crazy.
+        
+    9. Repeat steps 5-9 until you kill drac.
+
+For additional rules, after every boss kill/base teleport you will get 2/3 bad jewels - 
+it is a form of a skill randomizer. You can follow the rule to use acquired random skills for the next boss,
+or just use skills you want. Same goes with weapon or blood type. 
+
+It is up to you how do you want to use this script, you can make your own rules and play how you like.
+It is more or less framework to teleport to bosses.
+
+============================================================================
+
+# How To run it
+
+Every used command is stored inside .prof file - it is where admin commands and aliases are usually stored, as well as their binds.
+
+The .prof script is loaded after you start the game (from steam).
 
 Go under:
 
@@ -12,13 +75,15 @@ in file DefaultProfile should have one that it is going to run after restart:
 
 open that *.prof
 
-copy below contents of ./misc/DESKTOP-asdf.prof under your ConsoleProfile default
+copy below contents of ./misc/DESKTOP-asdf.prof under your *.prof
 
-==============================================================================
+============================================================================
+
+# Misc
 
 The config should load after you boot your game (check console for the profile name and amount of aliases (should be alot))
 
-Run private brutal server (just set lvl to 100) with some fun settings,
+Run private brutal server (just set lvl to 30-100) with some fun settings,
 
 Adminauth after you join, wake from your grave, type in console:
     
@@ -87,10 +152,11 @@ Should be even smoother now, if looking for a boss just mapmarker and shift+M af
 =============================================================================
 
 TODO:
-    - finish scripting gear and boss progression, with usage of world position whenever it can be used
-    - add progression - let's say random jewel after some bosses, or mats like ember bars to be able to smelt some nice gems
-    - ENDGAME content - after killing drac, increase levels of bosses and start over with gear (except from jewels)
-    - decide how to random passives and when add em
+    Think there is not much to do within this script to randomize the game more, it clearly needs external sources.
+    Will think to add some sort of random drops, by modyfing <bossname>_loot, but it is only possible with external programs.
+    For now it is the version I will stick with. GL & HF.
+    For issues regarding this script, contact me
+    kuc.karmelkowy@gmail.com
 
 =============================================================================
 The idea to look for traveling vbloods is like this, after you press Shift+V should look for it:

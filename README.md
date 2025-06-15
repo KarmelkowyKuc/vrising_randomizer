@@ -19,6 +19,10 @@ START YOUR SERVER FROM AT LEAST LEVEL 30 OF STORY PROGRESSION - SO YOU CAN BUILD
 
 !!!IMPORTANT!!! 
 
+Example gameplay:
+
+https://youtu.be/d5CZ7qxizdE
+
 ============================================================================
 
 # How does it work?

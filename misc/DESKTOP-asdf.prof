@@ -14,32 +14,22 @@ givespell2 Console.Multicommand jewel_lvl; jewel_lvl;
 givespell3 Console.Multicommand jewel_lvl; jewel_lvl; jewel_lvl;
 jewel_lvl GenerateJewelAtUnitLevel 55 0.0
 give_color GenerateJewelAtUnitLevel 100 0.0
-tp_stone Console.MultiCommand Teleport Self chunk:10,10; Console.RemoveAlias nextboss; Console.Alias nextboss tp_rufus; Console.RemoveAlias repeat; Console.Alias repeat Teleport Self chunk:10,10;
-tp_rufus Console.MultiCommand tp_wp_rufus; Console.RemoveAlias nextboss; Console.Alias nextboss tp_kelly; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_rufus;
-tp_wp_rufus teleport self WorldPosition -1220 0 -1550
-tp_kelly Console.MultiCommand tp_wp_kelly; Console.RemoveAlias nextboss; Console.Alias nextboss tp_swine;  Console.RemoveAlias repeat; Console.Alias repeat tp_wp_kelly; Console.RemoveAlias gear; Console.Alias gear give_kelly_set;
-tp_wp_kelly teleport self WorldPosition -1000 0 -1380
-tp_swine Console.MultiCommand tp_wp_Swine; Console.RemoveAlias nextboss; Console.Alias nextboss tp_grayson;  Console.RemoveAlias repeat; Console.Alias repeat tp_wp_swine; Console.RemoveAlias gear; Console.Alias gear give_gdigger;
-tp_wp_swine Console.MultiCommand teleport self WorldPosition -1555 20 -1720; TeleportToNearestUnitOfType CHAR_Undead_BishopOfDeath_VBlood;
-tp_grayson Console.MultiCommand TeleportToNearestUnitOfType CHAR_Bandit_Stalker_VBlood; Console.RemoveAlias nextboss; Console.Alias nextboss tp_clive;  Console.RemoveAlias repeat; Console.Alias repeat TeleportToNearestUnitOfType CHAR_Bandit_Stalker_VBlood;
-tp_clive Console.MultiCommand tp_wp_clive; Console.RemoveAlias nextboss; Console.Alias nextboss tp_chaos;  Console.RemoveAlias repeat; Console.Alias repeat tp_wp_clive; Console.RemoveAlias gear; Console.Alias gear give_rcopper_all;
-tp_wp_clive teleport self WorldPosition -2150 0 -1500
-tp_chaos Console.MultiCommand tp_ut_chaos; Console.RemoveAlias nextboss; Console.Alias nextboss tp_fish;  Console.RemoveAlias repeat; Console.Alias repeat tp_ut_chaos;
-tp_ut_chaos TeleportToNearestUnitOfType CHAR_Bandit_Chaosarrow_VBlood
-tp_fish Console.MultiCommand tp_wp_fish;  Console.RemoveAlias nextboss; Console.Alias nextboss tp_bear;  Console.RemoveAlias repeat; Console.Alias repeat tp_wp_fish; Console.RemoveAlias gear; Console.Alias gear Console.MultiCommand give_ring_all; give_vermin 10; give_brew_p; give_brew_s;
-teleport_fish Console.MultiCommand Teleport self chunk:14,12; tp_fish;
-tp_wp_fish teleport self WorldPosition -828 0 -1230
-tp_bear Console.MultiCommand TeleportToNearestUnitOfType CHAR_Forest_Bear_Dire_Vblood; Console.RemoveAlias nextboss; Console.Alias nextboss tp_nick;  Console.RemoveAlias repeat; Console.Alias repeat TeleportToNearestUnitOfType CHAR_Forest_Bear_Dire_Vblood;
-tp_nick Console.MultiCommand TeleportToNearestUnitOfType CHAR_Undead_Priest_Vblood; Console.RemoveAlias nextboss; Console.Alias nextboss tp_polora;  Console.RemoveAlias repeat; Console.Alias repeat TeleportToNearestUnitOfType CHAR_Undead_Priest_Vblood; Console.RemoveAlias gear; Console.Alias gear give_cloth_all_armour;
-tp_polora Console.MultiCommand teleport_polora; Console.RemoveAlias nextboss; Console.Alias nextboss tp_quincy;  Console.RemoveAlias repeat; Console.Alias repeat teleport_polora;
-teleport_polora teleport self WorldPosition -2000 0 -1200
-tp_quincy Console.MultiCommand TeleportToNearestUnitOfType CHAR_Bandit_Tourok_VBlood;  Console.RemoveAlias nextboss; Console.Alias nextboss tp_deamon; Console.RemoveAlias repeat; Console.Alias repeat TeleportToNearestUnitOfType CHAR_Bandit_Tourok_VBlood; Console.RemoveAlias gear; Console.Alias gear give_iron_all;
+tp_stone Console.MultiCommand Teleport Self chunk:10,10; Console.RemoveAlias nextboss; Console.Alias nextboss tp_rufus; Console.RemoveAlias repeat; Console.Alias repeat Teleport Self chunk:10,10; Console.RemoveAlias gear; Console.Alias gear stone_loot;
+tp_rufus Console.MultiCommand tp_wp_rufus; Console.RemoveAlias nextboss; Console.Alias nextboss tp_kelly; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_rufus; Console.RemoveAlias gear; Console.Alias gear rufus_loot;
+tp_kelly Console.MultiCommand tp_wp_kelly; Console.RemoveAlias nextboss; Console.Alias nextboss tp_swine; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_kelly; Console.RemoveAlias gear; Console.Alias gear kelly_loot;
+tp_swine Console.MultiCommand tp_wp_Swine; Console.RemoveAlias nextboss; Console.Alias nextboss tp_grayson; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_swine; Console.RemoveAlias gear; Console.Alias gear swine_loot;
+tp_grayson Console.MultiCommand tp_vb_grayson; Console.RemoveAlias nextboss; Console.Alias nextboss tp_clive; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_grayson; Console.RemoveAlias gear; Console.Alias gear grayson_loot;
+tp_clive Console.MultiCommand tp_wp_clive; Console.RemoveAlias nextboss; Console.Alias nextboss tp_chaos; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_clive; Console.RemoveAlias gear; Console.Alias gear clive_loot;
+tp_chaos Console.MultiCommand tp_vb_chaos; Console.RemoveAlias nextboss; Console.Alias nextboss tp_fish; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_chaos; Console.RemoveAlias gear; Console.Alias gear chaos_loot;
+tp_fish Console.MultiCommand tp_wp_fish;  Console.RemoveAlias nextboss; Console.Alias nextboss tp_bear; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_fish; Console.RemoveAlias gear; Console.Alias gear fish_loot;
+tp_bear Console.MultiCommand tp_vb_bear; Console.RemoveAlias nextboss; Console.Alias nextboss tp_nick; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_bear; Console.RemoveAlias gear; Console.Alias gear bear_loot;
+tp_nick Console.MultiCommand tp_vb_nick; Console.RemoveAlias nextboss; Console.Alias nextboss tp_polora; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_nick; Console.RemoveAlias gear; Console.Alias gear nick_loot;
+tp_polora Console.MultiCommand tp_wp_polora; Console.RemoveAlias nextboss; Console.Alias nextboss tp_quincy; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_polora; Console.RemoveAlias gear; Console.Alias gear polora_loot;
+tp_quincy Console.MultiCommand tp_vb_quincy;  Console.RemoveAlias nextboss; Console.Alias nextboss tp_deamon; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_quincy; Console.RemoveAlias gear; Console.Alias gear quincy_loot;
 tp_deamon Console.MultiCommand tp_wp_deamon; Console.RemoveAlias nextboss; Console.Alias nextboss tp_vinc; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_deamon; Console.RemoveAlias gear; Console.Alias gear deamon_loot;
-tp_wp_deamon teleport self WorldPosition -1020 0 -880
-tp_vb_deamon TeleportToNearestUnitOfType CHAR_Village_Tailor_VBlood;
-tp_vinc Console.MultiCommand tp_vb_vinc; Console.RemoveAlias nextboss; Console.Alias nextboss tp_nun; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_vinc; Console.RemoveAlias gear; Console.Alias gear give_vinc_loot;
-tp_nun Console.MultiCommand tp_vb_nun; Console.RemoveAlias nextboss; Console.Alias nextboss tp_horse; Console.RemoveAlias repeat; Console.Alias repeat tp_nun;
-tp_horse Console.MultiCommand tp_vb_horse; Console.RemoveAlias nextboss; Console.Alias nextboss tp_kriig; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_horse; 
+tp_vinc Console.MultiCommand tp_vb_vinc; Console.RemoveAlias nextboss; Console.Alias nextboss tp_nun; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_vinc; Console.RemoveAlias gear; Console.Alias gear vinc_loot;
+tp_nun Console.MultiCommand tp_vb_nun; Console.RemoveAlias nextboss; Console.Alias nextboss tp_horse; Console.RemoveAlias repeat; Console.Alias repeat tp_nun; Console.RemoveAlias gear; Console.Alias gear nun_loot;
+tp_horse Console.MultiCommand tp_vb_horse; Console.RemoveAlias nextboss; Console.Alias nextboss tp_kriig; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_horse; Console.RemoveAlias gear; Console.Alias gear horse_loot;
 tp_kriig Console.MultiCommand tp_vb_mine; Console.RemoveAlias nextboss; Console.Alias nextboss tp_leandr; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_mine;  Console.RemoveAlias gear; Console.Alias gear kriig_loot;
 tp_leandr Console.MultiCommand tp_vb_leandr; Console.RemoveAlias nextboss; Console.Alias nextboss tp_maja; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_leandr; Console.RemoveAlias gear; Console.Alias gear leandr_loot;
 tp_maja Console.MultiCommand tp_vb_maja; Console.RemoveAlias nextboss; Console.Alias nextboss tp_bane; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_maja; Console.RemoveAlias gear; Console.Alias gear maja_loot;
@@ -86,6 +76,7 @@ tp_adam Console.MultiCommand tp_vb_adam; Console.RemoveAlias nextboss; Console.A
 tp_morgana Console.MultiCommand tp_vb_morgana; Console.RemoveAlias nextboss; Console.Alias nextboss tp_drac; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_morgana; Console.RemoveAlias gear; Console.Alias gear morgana_loot;
 tp_drac Console.MultiCommand tp_vb_drac; Console.RemoveAlias nextboss; Console.Alias nextboss tp_alpha; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_drac; Console.RemoveAlias gear; Console.Alias gear drac_loot;
 tp_alpha Console.MultiCommand tp_wp_alpha; Console.RemoveAlias nextboss; Console.Alias nextboss tp_stone; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_alpha; Console.RemoveAlias gear; Console.Alias gear alpha_loot;
+tp_vb_quincy TeleportToNearestUnitOfType CHAR_Bandit_Tourok_VBlood
 tp_wp_alpha teleport self WorldPosition -1480 0 -1650
 tp_vb_horror TeleportToNearestUnitOfType CHAR_Manticore_VBlood
 tp_vb_val TeleportToNearestUnitOfType CHAR_Vampire_BloodKnight_VBlood
@@ -149,10 +140,22 @@ tp_vb_leandr TeleportToNearestUnitOfType CHAR_Undead_BishopOfShadows_Vblood
 tp_vb_maja TeleportToNearestUnitOfType CHAR_Militia_Scribe_VBlood
 tp_vb_arena TeleportToNearestUnitOfType CHAR_Undead_ArenaChampion_Vblood
 tp_faul TeleportToNearestUnitOfType CHAR_Undead_ZealousCultist_VBlood
+tp_wp_rufus teleport self WorldPosition -1220 0 -1550
+tp_wp_kelly teleport self WorldPosition -1000 0 -1380
+tp_wp_clive teleport self WorldPosition -2150 0 -1500
+teleport_fish Console.MultiCommand Teleport self chunk:14,12; tp_fish;
+tp_wp_fish teleport self WorldPosition -828 0 -1230
+tp_wp_polora teleport self WorldPosition -2000 0 -1200
+tp_vb_bear TeleportToNearestUnitOfType CHAR_Forest_Bear_Dire_Vblood
+tp_vb_nick TeleportToNearestUnitOfType CHAR_Undead_Priest_Vblood
+tp_wp_deamon teleport self WorldPosition -1020 0 -880
+tp_vb_deamon TeleportToNearestUnitOfType CHAR_Village_Tailor_VBlood;
+tp_wp_swine Console.MultiCommand teleport self WorldPosition -1555 20 -1720;
+tp_vb_chaos TeleportToNearestUnitOfType CHAR_Bandit_Chaosarrow_VBlood
+tp_vb_grayson TeleportToNearestUnitOfType CHAR_Bandit_Stalker_VBlood
 tp_tri TeleportToNearestUnitOfType CHAR_VHunter_Leader_VBlood
 give_rf_armour Console.MultiCommand give "[Name]Plated Boneguard Leggings - Item_Legs_T02_BoneReinforced - Guid: -2036196416"  ; give "[Name]Plated Boneguard Boots - Item_Boots_T02_BoneReinforced - Guid: 1241831522" ; give "[Name]Plated Boneguard Chestguard - Item_Chest_T02_BoneReinforced - Guid: -958936382" ; give "[Name]Plated Boneguard Gloves - Item_Gloves_T02_BoneReinforced - Guid: 1746537832" ; give "[Name]Blood Bone Ring - Item_MagicSource_General_T02_BloodBoneRing - Guid: -652069131" ;
 give_cloth_armour Console.MultiCommand give "[Prefab]Item_Boots_T03_Cloth - Guid: -1354920908" ; give "[Name]Nightstalker Leggings - Item_Legs_T03_Cloth - Guid: 1925394440"; give "[Name]Nightstalker Vest - Item_Chest_T03_Cloth - Guid: -957963240"; give "[Name]Nightstalker Gloves - Item_Gloves_T03_Cloth - Guid: -1183157751";
-give_kelly_set Console.MultiCommand give_copper_all; give_cloth_armour;
 give_cloth_r_gl give "[Prefab]Item_Gloves_T04_Copper_Rogue - Guid: 181112381" 
 give_cloth_r_bo give "[Prefab]Item_Boots_T04_Copper_Rogue - Guid: 1101206623"  
 give_cloth_r_ch give "[Prefab]Item_Chest_T04_Copper_Rogue - Guid: 763326246" 
@@ -249,7 +252,6 @@ give_rf_spear give "[Prefab]Item_Weapon_Spear_T02_Bone_Reinforced - Guid: 124418
 give_rf_crossbow give "[Prefab]Item_Weapon_Crossbow_T02_Bone_Reinforced - Guid: 898159697"
 give_rf_all Console.Multicommand give_rf_sword; give_rf_axe; give_rf_spear; give_rf_crossbow; give_rf_mace;
 give_vermin give "[Name]Vermin Salve - Item_Consumable_Salve_Vermin - Guid: -1885959251"
-give_gdigger give "[Name]Gravedigger Ring - Item_MagicSource_General_T03_GravediggerRing - Guid: -1588051702"
 give_brew_p give "[Name]Brew of Ferocity - Item_Consumable_PhysicalPowerPotion_T01 - Guid: -269326085" 
 give_brew_s give "[Name]Enchanted Brew - Item_Consumable_SpellPowerPotion_T01 - Guid: 248289327" 
 give_copper_sword give "[Name]Copper Sword - Item_Weapon_Sword_T03_Copper - Guid: -2037272000" 
@@ -281,7 +283,6 @@ give_iron_pistol give "[Prefab]Item_Weapon_Pistols_T05_Iron - Guid: 769603740"
 give_iron_slashers give "[Prefab]Item_Weapon_Slashers_T05_Iron - Guid: -314614708" 
 give_iron_tblade give "[Prefab]Item_Weapon_TwinBlades_T05_Iron - Guid: -1122389049" 
 give_iron_all Console.Multicommand give_iron_sword; give_iron_axe; give_iron_cros; give_iron_bow; give_iron_mace; give_iron_spear; give_iron_gsword; give_iron_reaper; give_iron_claws; give_iron_whip; give_iron_daggers; give_iron_pistol; give_iron_slashers; give_iron_tblade;
-give_vinc_loot Console.Multicommand give "[Name]Iron Ingot - Item_Ingredient_Mineral_IronBar - Guid: -1750550553" 16; give "[Name]Reinforced Plank - Item_Ingredient_ReinforcedPlank - Guid: -1397591435" 4;
 give_ring_red give "[Prefab]Item_MagicSource_General_T04_RubyRing - Guid: 341837267" 
 give_ring_gre give "[Prefab]Item_MagicSource_General_T04_EmberChain - Guid: 50824544" 
 give_ring_pin give "[Prefab]Item_MagicSource_General_T04_SorcererRing - Guid: -1184863500" 
@@ -384,6 +385,19 @@ give_rsan_cb GenerateLegendaryWeapon Item_Weapon_Crossbow_Legendary_T08
 give_rsan_cl GenerateLegendaryWeapon Item_Weapon_Claws_Legendary_T08 
 give_rsan_ax GenerateLegendaryWeapon Item_Weapon_Axe_Legendary_T08
 give_rsan_all Console.Multicommand give_rsan_wh; give_rsan_tb; give_rsan_sw; give_rsan_sp; give_rsan_sl; give_rsan_re; give_rsan_pi; give_rsan_mc; give_rsan_lb; give_rsan_gs; give_rsan_dg; give_rsan_cb; give_rsan_cl; give_rsan_ax;
+kelly_loot Console.MultiCommand give_copper_all; give_cloth_armour;
+swine_loot Console.MultiCommand give "[Name]Gravedigger Ring - Item_MagicSource_General_T03_GravediggerRing - Guid: -1588051702"
+grayson_loot Console.MultiCommand give_vermin; give_vermin;
+clive_loot Console.MultiCommand give_vermin; give_vermin;
+chaos_loot Console.MultiCommand give_vermin 10; give_brew_p; give_brew_s;
+fish_loot Console.MultiCommand give_vermin; give_ring_all; 
+bear_loot Console.MultiCommand give_vermin; give_vermin;
+nick_loot Console.MultiCommand give_vermin; give_cloth_all_armour;
+polora_loot Console.MultiCommand give_vermin; give_vermin;
+quincy_loot Console.MultiCommand give_iron_all; give_vermin;
+vinc_loot Console.Multicommand give "[Name]Iron Ingot - Item_Ingredient_Mineral_IronBar - Guid: -1750550553" 16; give "[Name]Reinforced Plank - Item_Ingredient_ReinforcedPlank - Guid: -1397591435" 4;
+nun_loot Console.MultiCommand give_vermin; give_vermin;
+horse_loot Console.MultiCommand give_vermin; give_vermin;
 leandr_loot Console.Multicommand give "[Name]Scourgestone - Item_Ingredient_Scourgestone - Guid: 1005440012" 100; give "[Name]Scourgestone Pendant - Item_MagicSource_General_T05_Relic - Guid: -650855520"; give "[Prefab]Item_Consumable_DuskCaller - Guid: 1128262258" 10; give "[Name]Sulphur - Item_Ingredient_Mineral_Sulfur - Guid: 880699252" 200;
 deamon_loot Console.Multicommand give_cotton_armour; give "[Prefab]Item_Cloak_Main_T02_Hunter - Guid: 786585343"; give "[Name]Minor Sun Resistance Brew - Item_Consumable_SunResistancePotion_T01 - Guid: -38051433" 10; give_brew_p; give_brew_s; give_brew_hp 20;
 kriig_loot Console.Multicommand give "[Prefab]Item_Weapon_Reaper_T01_Bone - Guid: -152327780"; give "[Name]Hell’s Clarion - Item_Ingredient_Plant_HellsClarion - Guid: 813370507" 200; give "[Name]Undead General Helmet - Item_Headgear_GeneralHelmet - Guid: 409678749"; GenerateLegendaryWeapon Item_Weapon_Reaper_Legendary_T06_Shattered;
@@ -436,8 +450,8 @@ give_silver_cash give "[Name]Silver Coin - Item_Ingredient_Coin_Silver - Guid: -
 give_copper_cash give "[Name]Copper Coin - Item_Ingredient_Coin_Copper - Guid: 28625845" 
 give_goldsun_cash give "[Name]Goldsun Coin - Item_Ingredient_Coin_Royal - Guid: -571562864"
 give_regular_gems Console.Multicommand give "[Name]Regular Amethyst - Item_Ingredient_Gem_Amethyst_T02 - Guid: -1962855117" 30; give "[Prefab]Item_Ingredient_Gem_Ruby_T02 - Guid: 51046573" 30; give "[Prefab]Item_Ingredient_Gem_Emerald_T02 - Guid: 357608868" 30; give "[Name]Regular Topaz - Item_Ingredient_Gem_Topaz_T02 - Guid: -2118441460" 30; give "[Name]Regular Sapphire - Item_Ingredient_Gem_Sapphire_T02 - Guid: 131015492" 30; give "[Name]Regular Miststone - Item_Ingredient_Gem_Miststone_T02 - Guid: 802050789" 30; 
-cbb ConsumeBlood BloodType_Brute 
-cbc ConsumeBlood BloodType_Corruption 
+cbb ConsumeBlood BloodType_Brute
+cbc ConsumeBlood BloodType_Corruption
 cbw ConsumeBlood BloodType_Warrior
 cbs ConsumeBlood BloodType_Scholar
 cbd ConsumeBlood BloodType_Draculin

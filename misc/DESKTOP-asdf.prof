@@ -2,80 +2,83 @@ BaaaProfile
 #
 #
 ready Console.MultiCommand teleport self WorldPosition -1500 0 -1233; give "[Name]Blood Essence - Item_BloodEssence_T01 - Guid: 862477668" 540; give "[Name]Stone - Item_Ingredient_Stone - Guid: -1531666018" 420; give "[Prefab]Item_NewBag_T03 - Guid: -261654929" ; give "[Prefab]Item_Ingredient_StoneBrick - Guid: 1788016417" 500; give "[Prefab]Item_Ingredient_Plank - Guid: -1017402979" 500; give "[Name]Scourgestone - Item_Ingredient_Scourgestone - Guid: 1005440012" 20; give "[Name]Reinforced Plank - Item_Ingredient_ReinforcedPlank - Guid: -1397591435" 70; give "[Name]Silk - Item_Ingredient_Silk - Guid: 702067317" 50; givespell2; Console.TempBind Shift+A tp_cur; Console.TempBind Shift+M TeleportToMapMarker; Console.TempBind Shift+B base; Console.TempBind Shift+N goboss; Console.TempBind Shift+S givespell; Console.TempBind Shift+R repeat; gear; give "[Name]Gem Dust - Item_Ingredient_Gemdust - Guid: 820932258" 500;
-base Console.MultiCommand teleport self WorldPosition -1500 0 -1233; base_givespell; gear; Console.RemoveAlias gear;
+base Console.MultiCommand teleport self WorldPosition -1500 0 -1233; base_givespell; gear; Console.RemoveAlias gear; cb_boss; Console.RemoveAlias nextblood;
 set_binds Console.MultiCommand Console.TempBind Shift+A tp_cur; Console.TempBind Shift+M TeleportToMapMarker; Console.TempBind Shift+B base; Console.TempBind Shift+N goboss; Console.TempBind Shift+S givespell; Console.TempBind Shift+R repeat;
 gear Console.MultiCommand give_rf_armour; give_rf_all; give_vermin 10; Console.RemoveAlias gear;
 goboss nextboss
 nextboss tp_stone
 repeat tp_stone
+cb_boss nextblood
+nextblood Console.MultiCommand cbcr 20; 
 givespell jewel_lvl
 base_givespell givespell2
 givespell2 Console.Multicommand jewel_lvl; jewel_lvl;
 givespell3 Console.Multicommand jewel_lvl; jewel_lvl; jewel_lvl;
 jewel_lvl GenerateJewelAtUnitLevel 55 0.0
 give_color GenerateJewelAtUnitLevel 100 0.0
-tp_stone Console.MultiCommand Teleport Self chunk:10,10; Console.RemoveAlias nextboss; Console.Alias nextboss tp_rufus; Console.RemoveAlias repeat; Console.Alias repeat Teleport Self chunk:10,10; Console.RemoveAlias gear; Console.Alias gear stone_loot;
-tp_rufus Console.MultiCommand tp_wp_rufus; Console.RemoveAlias nextboss; Console.Alias nextboss tp_kelly; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_rufus; Console.RemoveAlias gear; Console.Alias gear rufus_loot;
-tp_kelly Console.MultiCommand tp_wp_kelly; Console.RemoveAlias nextboss; Console.Alias nextboss tp_swine; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_kelly; Console.RemoveAlias gear; Console.Alias gear kelly_loot;
-tp_swine Console.MultiCommand tp_wp_Swine; Console.RemoveAlias nextboss; Console.Alias nextboss tp_grayson; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_swine; Console.RemoveAlias gear; Console.Alias gear swine_loot;
-tp_grayson Console.MultiCommand tp_vb_grayson; Console.RemoveAlias nextboss; Console.Alias nextboss tp_clive; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_grayson; Console.RemoveAlias gear; Console.Alias gear grayson_loot;
-tp_clive Console.MultiCommand tp_wp_clive; Console.RemoveAlias nextboss; Console.Alias nextboss tp_chaos; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_clive; Console.RemoveAlias gear; Console.Alias gear clive_loot;
-tp_chaos Console.MultiCommand tp_vb_chaos; Console.RemoveAlias nextboss; Console.Alias nextboss tp_fish; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_chaos; Console.RemoveAlias gear; Console.Alias gear chaos_loot;
-tp_fish Console.MultiCommand tp_wp_fish;  Console.RemoveAlias nextboss; Console.Alias nextboss tp_bear; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_fish; Console.RemoveAlias gear; Console.Alias gear fish_loot;
-tp_bear Console.MultiCommand tp_vb_bear; Console.RemoveAlias nextboss; Console.Alias nextboss tp_nick; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_bear; Console.RemoveAlias gear; Console.Alias gear bear_loot;
-tp_nick Console.MultiCommand tp_vb_nick; Console.RemoveAlias nextboss; Console.Alias nextboss tp_polora; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_nick; Console.RemoveAlias gear; Console.Alias gear nick_loot;
-tp_polora Console.MultiCommand tp_wp_polora; Console.RemoveAlias nextboss; Console.Alias nextboss tp_quincy; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_polora; Console.RemoveAlias gear; Console.Alias gear polora_loot;
-tp_quincy Console.MultiCommand tp_vb_quincy;  Console.RemoveAlias nextboss; Console.Alias nextboss tp_deamon; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_quincy; Console.RemoveAlias gear; Console.Alias gear quincy_loot;
-tp_deamon Console.MultiCommand tp_wp_deamon; Console.RemoveAlias nextboss; Console.Alias nextboss tp_vinc; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_deamon; Console.RemoveAlias gear; Console.Alias gear deamon_loot;
-tp_vinc Console.MultiCommand tp_vb_vinc; Console.RemoveAlias nextboss; Console.Alias nextboss tp_nun; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_vinc; Console.RemoveAlias gear; Console.Alias gear vinc_loot;
-tp_nun Console.MultiCommand tp_vb_nun; Console.RemoveAlias nextboss; Console.Alias nextboss tp_horse; Console.RemoveAlias repeat; Console.Alias repeat tp_nun; Console.RemoveAlias gear; Console.Alias gear nun_loot;
-tp_horse Console.MultiCommand tp_vb_horse; Console.RemoveAlias nextboss; Console.Alias nextboss tp_kriig; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_horse; Console.RemoveAlias gear; Console.Alias gear horse_loot;
-tp_kriig Console.MultiCommand tp_vb_mine; Console.RemoveAlias nextboss; Console.Alias nextboss tp_leandr; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_mine;  Console.RemoveAlias gear; Console.Alias gear kriig_loot;
-tp_leandr Console.MultiCommand tp_vb_leandr; Console.RemoveAlias nextboss; Console.Alias nextboss tp_maja; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_leandr; Console.RemoveAlias gear; Console.Alias gear leandr_loot;
-tp_maja Console.MultiCommand tp_vb_maja; Console.RemoveAlias nextboss; Console.Alias nextboss tp_bane; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_maja; Console.RemoveAlias gear; Console.Alias gear maja_loot;
-tp_bane Console.MultiCommand tp_vb_assas; Console.RemoveAlias nextboss; Console.Alias nextboss tp_glass; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_assas; Console.RemoveAlias gear; Console.Alias gear bane_loot;
-tp_glass Console.MultiCommand tp_vb_glass; Console.RemoveAlias nextboss; Console.Alias nextboss tp_bless; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_glass; Console.RemoveAlias gear; Console.Alias gear glass_loot;
-tp_bless Console.MultiCommand tp_wp_bless; Console.RemoveAlias nextboss; Console.Alias nextboss tp_iceranger; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_bless; Console.RemoveAlias gear; Console.Alias gear bless_loot;
-tp_iceranger Console.MultiCommand tp_vb_iceranger; Console.RemoveAlias nextboss; Console.Alias nextboss tp_frost; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_iceranger; Console.RemoveAlias gear; Console.Alias gear elena_loot;
-tp_frost Console.MultiCommand tp_vb_frost; Console.RemoveAlias nextboss; Console.Alias nextboss tp_tera; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_frost; Console.RemoveAlias gear; Console.Alias gear frost_loot;
-tp_tera Console.MultiCommand tp_vb_tera; Console.RemoveAlias nextboss; Console.Alias nextboss tp_arena; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_tera; Console.RemoveAlias gear; Console.Alias gear tera_loot;
-tp_arena Console.MultiCommand tp_vb_arena; Console.RemoveAlias nextboss; Console.Alias nextboss tp_sword; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_arena; Console.RemoveAlias gear; Console.Alias gear arena_loot;
-tp_sword Console.MultiCommand tp_vb_sword; Console.RemoveAlias nextboss; Console.Alias nextboss tp_jade; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_sword; Console.RemoveAlias gear; Console.Alias gear sword_loot;
-tp_jade Console.MultiCommand tp_vb_jade; Console.RemoveAlias nextboss; Console.Alias nextboss tp_raziel; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_jade; Console.RemoveAlias gear; Console.Alias gear jade_loot;
-tp_raziel Console.MultiCommand tp_vb_raziel; Console.RemoveAlias nextboss; Console.Alias nextboss tp_octav; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_raziel; Console.RemoveAlias gear; Console.Alias gear raziel_loot;
-tp_octav Console.MultiCommand tp_vb_octav; Console.RemoveAlias nextboss; Console.Alias nextboss tp_domina; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_octav; Console.RemoveAlias gear; Console.Alias gear octav_loot; Console.RemoveAlias base_givespell; Console.Alias base_givespell givespell3;
-tp_domina Console.MultiCommand tp_vp_domina; Console.RemoveAlias nextboss; Console.Alias nextboss tp_iva; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_domina; Console.RemoveAlias gear; Console.Alias gear domina_loot;
-tp_iva Console.MultiCommand tp_vb_iva; Console.RemoveAlias nextboss; Console.Alias nextboss tp_angram; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_iva; Console.RemoveAlias gear; Console.Alias gear iva_loot;
-tp_angram Console.MultiCommand tp_vb_angram; Console.RemoveAlias nextboss; Console.Alias nextboss tp_spider; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_angram; Console.RemoveAlias gear; Console.Alias gear angram_loot;
-tp_spider Console.MultiCommand tp_vb_spider; Console.RemoveAlias nextboss; Console.Alias nextboss tp_ben; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_spider; Console.RemoveAlias gear; Console.Alias gear spider_loot;
-tp_ben Console.MultiCommand tp_vb_ben; Console.RemoveAlias nextboss; Console.Alias nextboss tp_faul; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_ben; Console.RemoveAlias gear; Console.Alias gear ben_loot;
-tp_faul Console.MultiCommand tp_vb_faul; Console.RemoveAlias nextboss; Console.Alias nextboss tp_frog; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_faul; Console.RemoveAlias gear; Console.Alias gear faul_loot;
-tp_frog Console.MultiCommand tp_vb_frog; Console.RemoveAlias nextboss; Console.Alias nextboss tp_will; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_frog; Console.RemoveAlias gear; Console.Alias gear frog_loot;
-tp_will Console.MultiCommand tp_wp_will; Console.RemoveAlias nextboss; Console.Alias nextboss tp_cyril; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_will; Console.RemoveAlias gear; Console.Alias gear will_loot;
-tp_cyril Console.MultiCommand tp_vb_cyril; Console.RemoveAlias nextboss; Console.Alias nextboss tp_sir; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_cyril; Console.RemoveAlias gear; Console.Alias gear cyril_loot;
-tp_sir Console.MultiCommand tp_vb_sir; Console.RemoveAlias nextboss; Console.Alias nextboss tp_french; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_sir; Console.RemoveAlias gear; Console.Alias gear sir_loot;
-tp_french Console.MultiCommand tp_vb_french; Console.RemoveAlias nextboss; Console.Alias nextboss tp_harpy; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_french; Console.RemoveAlias gear; Console.Alias gear french_loot;
-tp_harpy Console.MultiCommand tp_vb_harpy; Console.RemoveAlias nextboss; Console.Alias nextboss tp_element; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_harpy; Console.RemoveAlias gear; Console.Alias gear harpy_loot;
-tp_element Console.MultiCommand tp_vb_element; Console.RemoveAlias nextboss; Console.Alias nextboss tp_prof; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_element; Console.RemoveAlias gear; Console.Alias gear element_loot;
-tp_prof Console.MultiCommand tp_wp_prof; Console.RemoveAlias nextboss; Console.Alias nextboss tp_jamila; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_prof; Console.RemoveAlias gear; Console.Alias gear prof_loot;
-tp_jamila Console.MultiCommand tp_vp_jamila; Console.RemoveAlias nextboss; Console.Alias nextboss tp_carver; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_jamila; Console.RemoveAlias gear; Console.Alias gear jamila_loot;
-tp_carver Console.MultiCommand tp_vb_carver; Console.RemoveAlias nextboss; Console.Alias nextboss tp_alch; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_carver; Console.RemoveAlias gear; Console.Alias gear carver_loot;
-tp_alch Console.MultiCommand tp_vb_alch; Console.RemoveAlias nextboss; Console.Alias nextboss tp_matka; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_alch; Console.RemoveAlias gear; Console.Alias gear alch_loot;
-tp_matka Console.MultiCommand tp_vb_matka; Console.RemoveAlias nextboss; Console.Alias nextboss tp_claw; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_matka; Console.RemoveAlias gear; Console.Alias gear matka_loot;
-tp_claw Console.MultiCommand tp_vb_claw; Console.RemoveAlias nextboss; Console.Alias nextboss tp_gold; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_claw; Console.RemoveAlias gear; Console.Alias gear claw_loot;
-tp_gold Console.MultiCommand tp_vb_gold; Console.RemoveAlias nextboss; Console.Alias nextboss tp_volt; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_gold; Console.RemoveAlias gear; Console.Alias gear gold_loot;
-tp_volt Console.MultiCommand tp_vb_volt; Console.RemoveAlias nextboss; Console.Alias nextboss tp_belmont; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_volt; Console.RemoveAlias gear; Console.Alias gear volt_loot;
-tp_belmont Console.MultiCommand tp_vb_belmont; Console.RemoveAlias nextboss; Console.Alias nextboss tp_dantos; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_belmont; Console.RemoveAlias gear; Console.Alias gear belmont_loot;
-tp_dantos Console.MultiCommand tp_vb_dantos; Console.RemoveAlias nextboss; Console.Alias nextboss tp_styx; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_dantos; Console.RemoveAlias gear; Console.Alias gear dantos_loot;
-tp_styx Console.MultiCommand tp_vb_styx; Console.RemoveAlias nextboss; Console.Alias nextboss tp_val; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_styx; Console.RemoveAlias gear; Console.Alias gear styx_loot;
-tp_val Console.MultiCommand tp_vb_val; Console.RemoveAlias nextboss; Console.Alias nextboss tp_gore; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_val; Console.RemoveAlias gear; Console.Alias gear val_loot;
-tp_gore Console.MultiCommand tp_vb_gore; Console.RemoveAlias nextboss; Console.Alias nextboss tp_horror; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_ben; Console.RemoveAlias gear; Console.Alias gear gore_loot;
-tp_horror Console.MultiCommand tp_vb_horror; Console.RemoveAlias nextboss; Console.Alias nextboss tp_solarus; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_horror; Console.RemoveAlias gear; Console.Alias gear horror_loot;
-tp_solarus Console.MultiCommand tp_vb_solarus; Console.RemoveAlias nextboss; Console.Alias nextboss tp_adam; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_solarus; Console.RemoveAlias gear; Console.Alias gear solarus_loot;
-tp_adam Console.MultiCommand tp_vb_adam; Console.RemoveAlias nextboss; Console.Alias nextboss tp_morgana; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_adam; Console.RemoveAlias gear; Console.Alias gear adam_loot;
-tp_morgana Console.MultiCommand tp_vb_morgana; Console.RemoveAlias nextboss; Console.Alias nextboss tp_drac; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_morgana; Console.RemoveAlias gear; Console.Alias gear morgana_loot;
-tp_drac Console.MultiCommand tp_vb_drac; Console.RemoveAlias nextboss; Console.Alias nextboss tp_alpha; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_drac; Console.RemoveAlias gear; Console.Alias gear drac_loot;
-tp_alpha Console.MultiCommand tp_wp_alpha; Console.RemoveAlias nextboss; Console.Alias nextboss tp_stone; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_alpha; Console.RemoveAlias gear; Console.Alias gear alpha_loot;
+tp_stone Console.MultiCommand tp_wp_stone; Console.RemoveAlias nextboss; Console.Alias nextboss tp_rufus; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_stone; Console.Alias gear stone_loot;
+tp_rufus Console.MultiCommand tp_wp_rufus; Console.RemoveAlias nextboss; Console.Alias nextboss tp_kelly; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_rufus; Console.Alias gear rufus_loot;
+tp_kelly Console.MultiCommand tp_wp_kelly; Console.RemoveAlias nextboss; Console.Alias nextboss tp_swine; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_kelly; Console.Alias gear kelly_loot;
+tp_swine Console.MultiCommand tp_wp_swine; Console.RemoveAlias nextboss; Console.Alias nextboss tp_grayson; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_swine; Console.Alias gear swine_loot;
+tp_grayson Console.MultiCommand tp_vb_grayson; Console.RemoveAlias nextboss; Console.Alias nextboss tp_clive; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_grayson; Console.Alias gear grayson_loot;
+tp_clive Console.MultiCommand tp_wp_clive; Console.RemoveAlias nextboss; Console.Alias nextboss tp_chaos; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_clive; Console.Alias gear clive_loot;
+tp_chaos Console.MultiCommand tp_vb_chaos; Console.RemoveAlias nextboss; Console.Alias nextboss tp_fish; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_chaos; Console.Alias gear chaos_loot;
+tp_fish Console.MultiCommand tp_wp_fish;  Console.RemoveAlias nextboss; Console.Alias nextboss tp_bear; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_fish; Console.Alias gear fish_loot;
+tp_bear Console.MultiCommand tp_vb_bear; Console.RemoveAlias nextboss; Console.Alias nextboss tp_nick; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_bear; Console.Alias gear bear_loot;
+tp_nick Console.MultiCommand tp_vb_nick; Console.RemoveAlias nextboss; Console.Alias nextboss tp_polora; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_nick; Console.Alias gear nick_loot;
+tp_polora Console.MultiCommand tp_wp_polora; Console.RemoveAlias nextboss; Console.Alias nextboss tp_quincy; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_polora; Console.Alias gear polora_loot;
+tp_quincy Console.MultiCommand tp_vb_quincy;  Console.RemoveAlias nextboss; Console.Alias nextboss tp_deamon; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_quincy; Console.Alias gear quincy_loot;
+tp_deamon Console.MultiCommand tp_wp_deamon; Console.RemoveAlias nextboss; Console.Alias nextboss tp_vinc; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_deamon; Console.Alias gear deamon_loot;
+tp_vinc Console.MultiCommand tp_vb_vinc; Console.RemoveAlias nextboss; Console.Alias nextboss tp_nun; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_vinc; Console.Alias gear vinc_loot;
+tp_nun Console.MultiCommand tp_vb_nun; Console.RemoveAlias nextboss; Console.Alias nextboss tp_horse; Console.RemoveAlias repeat; Console.Alias repeat tp_nun; Console.Alias gear nun_loot;
+tp_horse Console.MultiCommand tp_vb_horse; Console.RemoveAlias nextboss; Console.Alias nextboss tp_kriig; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_horse; Console.Alias gear horse_loot;
+tp_kriig Console.MultiCommand tp_vb_mine; Console.RemoveAlias nextboss; Console.Alias nextboss tp_leandr; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_mine;  Console.Alias gear kriig_loot;
+tp_leandr Console.MultiCommand tp_vb_leandr; Console.RemoveAlias nextboss; Console.Alias nextboss tp_maja; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_leandr; Console.Alias gear leandr_loot;
+tp_maja Console.MultiCommand tp_vb_maja; Console.RemoveAlias nextboss; Console.Alias nextboss tp_bane; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_maja; Console.Alias gear maja_loot;
+tp_bane Console.MultiCommand tp_vb_assas; Console.RemoveAlias nextboss; Console.Alias nextboss tp_glass; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_assas; Console.Alias gear bane_loot;
+tp_glass Console.MultiCommand tp_vb_glass; Console.RemoveAlias nextboss; Console.Alias nextboss tp_bless; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_glass; Console.Alias gear glass_loot;
+tp_bless Console.MultiCommand tp_wp_bless; Console.RemoveAlias nextboss; Console.Alias nextboss tp_elena; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_bless; Console.Alias gear bless_loot;
+tp_elena Console.MultiCommand tp_vb_elena; Console.RemoveAlias nextboss; Console.Alias nextboss tp_frost; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_elena; Console.Alias gear elena_loot;
+tp_frost Console.MultiCommand tp_vb_frost; Console.RemoveAlias nextboss; Console.Alias nextboss tp_tera; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_frost; Console.Alias gear frost_loot;
+tp_tera Console.MultiCommand tp_vb_tera; Console.RemoveAlias nextboss; Console.Alias nextboss tp_arena; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_tera; Console.Alias gear tera_loot;
+tp_arena Console.MultiCommand tp_vb_arena; Console.RemoveAlias nextboss; Console.Alias nextboss tp_sword; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_arena; Console.Alias gear arena_loot;
+tp_sword Console.MultiCommand tp_vb_sword; Console.RemoveAlias nextboss; Console.Alias nextboss tp_jade; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_sword; Console.Alias gear sword_loot;
+tp_jade Console.MultiCommand tp_vb_jade; Console.RemoveAlias nextboss; Console.Alias nextboss tp_raziel; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_jade; Console.Alias gear jade_loot;
+tp_raziel Console.MultiCommand tp_vb_raziel; Console.RemoveAlias nextboss; Console.Alias nextboss tp_octav; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_raziel; Console.Alias gear raziel_loot;
+tp_octav Console.MultiCommand tp_vb_octav; Console.RemoveAlias nextboss; Console.Alias nextboss tp_domina; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_octav; Console.Alias gear octav_loot; Console.RemoveAlias base_givespell; Console.Alias base_givespell givespell3;
+tp_domina Console.MultiCommand tp_vp_domina; Console.RemoveAlias nextboss; Console.Alias nextboss tp_iva; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_domina; Console.Alias gear domina_loot;
+tp_iva Console.MultiCommand tp_vb_iva; Console.RemoveAlias nextboss; Console.Alias nextboss tp_angram; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_iva; Console.Alias gear iva_loot;
+tp_angram Console.MultiCommand tp_vb_angram; Console.RemoveAlias nextboss; Console.Alias nextboss tp_spider; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_angram; Console.Alias gear angram_loot;
+tp_spider Console.MultiCommand tp_vb_spider; Console.RemoveAlias nextboss; Console.Alias nextboss tp_ben; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_spider; Console.Alias gear spider_loot;
+tp_ben Console.MultiCommand tp_vb_ben; Console.RemoveAlias nextboss; Console.Alias nextboss tp_faul; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_ben; Console.Alias gear ben_loot;
+tp_faul Console.MultiCommand tp_vb_faul; Console.RemoveAlias nextboss; Console.Alias nextboss tp_frog; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_faul; Console.Alias gear faul_loot;
+tp_frog Console.MultiCommand tp_vb_frog; Console.RemoveAlias nextboss; Console.Alias nextboss tp_will; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_frog; Console.Alias gear frog_loot;
+tp_will Console.MultiCommand tp_wp_will; Console.RemoveAlias nextboss; Console.Alias nextboss tp_cyril; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_will; Console.Alias gear will_loot;
+tp_cyril Console.MultiCommand tp_vb_cyril; Console.RemoveAlias nextboss; Console.Alias nextboss tp_sir; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_cyril; Console.Alias gear cyril_loot;
+tp_sir Console.MultiCommand tp_vb_sir; Console.RemoveAlias nextboss; Console.Alias nextboss tp_french; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_sir; Console.Alias gear sir_loot;
+tp_french Console.MultiCommand tp_vb_french; Console.RemoveAlias nextboss; Console.Alias nextboss tp_harpy; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_french; Console.Alias gear french_loot;
+tp_harpy Console.MultiCommand tp_vb_harpy; Console.RemoveAlias nextboss; Console.Alias nextboss tp_element; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_harpy; Console.Alias gear harpy_loot;
+tp_element Console.MultiCommand tp_vb_element; Console.RemoveAlias nextboss; Console.Alias nextboss tp_prof; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_element; Console.Alias gear element_loot;
+tp_prof Console.MultiCommand tp_wp_prof; Console.RemoveAlias nextboss; Console.Alias nextboss tp_jamila; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_prof; Console.Alias gear prof_loot;
+tp_jamila Console.MultiCommand tp_vp_jamila; Console.RemoveAlias nextboss; Console.Alias nextboss tp_carver; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_jamila; Console.Alias gear jamila_loot;
+tp_carver Console.MultiCommand tp_vb_carver; Console.RemoveAlias nextboss; Console.Alias nextboss tp_alch; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_carver; Console.Alias gear carver_loot;
+tp_alch Console.MultiCommand tp_vb_alch; Console.RemoveAlias nextboss; Console.Alias nextboss tp_matka; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_alch; Console.Alias gear alch_loot;
+tp_matka Console.MultiCommand tp_vb_matka; Console.RemoveAlias nextboss; Console.Alias nextboss tp_claw; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_matka; Console.Alias gear matka_loot;
+tp_claw Console.MultiCommand tp_vb_claw; Console.RemoveAlias nextboss; Console.Alias nextboss tp_gold; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_claw; Console.Alias gear claw_loot;
+tp_gold Console.MultiCommand tp_vb_gold; Console.RemoveAlias nextboss; Console.Alias nextboss tp_volt; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_gold; Console.Alias gear gold_loot;
+tp_volt Console.MultiCommand tp_vb_volt; Console.RemoveAlias nextboss; Console.Alias nextboss tp_belmont; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_volt; Console.Alias gear volt_loot;
+tp_belmont Console.MultiCommand tp_vb_belmont; Console.RemoveAlias nextboss; Console.Alias nextboss tp_dantos; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_belmont; Console.Alias gear belmont_loot;
+tp_dantos Console.MultiCommand tp_vb_dantos; Console.RemoveAlias nextboss; Console.Alias nextboss tp_styx; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_dantos; Console.Alias gear dantos_loot;
+tp_styx Console.MultiCommand tp_vb_styx; Console.RemoveAlias nextboss; Console.Alias nextboss tp_val; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_styx; Console.Alias gear styx_loot;
+tp_val Console.MultiCommand tp_vb_val; Console.RemoveAlias nextboss; Console.Alias nextboss tp_gore; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_val; Console.Alias gear val_loot;
+tp_gore Console.MultiCommand tp_vb_gore; Console.RemoveAlias nextboss; Console.Alias nextboss tp_horror; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_ben; Console.Alias gear gore_loot;
+tp_horror Console.MultiCommand tp_vb_horror; Console.RemoveAlias nextboss; Console.Alias nextboss tp_solarus; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_horror; Console.Alias gear horror_loot;
+tp_solarus Console.MultiCommand tp_vb_solarus; Console.RemoveAlias nextboss; Console.Alias nextboss tp_adam; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_solarus; Console.Alias gear solarus_loot;
+tp_adam Console.MultiCommand tp_vb_adam; Console.RemoveAlias nextboss; Console.Alias nextboss tp_morgana; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_adam; Console.Alias gear adam_loot;
+tp_morgana Console.MultiCommand tp_vb_morgana; Console.RemoveAlias nextboss; Console.Alias nextboss tp_drac; Console.RemoveAlias repeat; Console.Alias repeat tp_vb_morgana; Console.Alias gear morgana_loot;
+tp_drac Console.MultiCommand tp_vb_drac; Console.RemoveAlias nextboss; Console.Alias nextboss tp_alpha; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_drac; Console.Alias gear drac_loot;
+tp_alpha Console.MultiCommand tp_wp_alpha; Console.RemoveAlias nextboss; Console.Alias nextboss tp_stone; Console.RemoveAlias repeat; Console.Alias repeat tp_wp_alpha; Console.Alias gear alpha_loot;
+tp_wp_stone Teleport Self chunk:10,10
 tp_vb_quincy TeleportToNearestUnitOfType CHAR_Bandit_Tourok_VBlood
 tp_wp_alpha teleport self WorldPosition -1480 0 -1650
 tp_vb_horror TeleportToNearestUnitOfType CHAR_Manticore_VBlood
@@ -124,8 +127,8 @@ tp_wp_sword Teleport self WorldPosition -655 0 -350
 tp_vb_tera TeleportToNearestUnitOfType CHAR_Geomancer_Human_VBlood
 tp_vb_frost TeleportToNearestUnitOfType CHAR_Wendigo_VBlood
 tp_wp_frost Teleport self WorldPosition -600 0 -1090
-tp_vb_iceranger TeleportToNearestUnitOfType CHAR_Vampire_IceRanger_VBlood
-tp_wp_iceranger Teleport self WorldPosition -600 0 -790
+tp_vb_elena TeleportToNearestUnitOfType CHAR_Vampire_IceRanger_VBlood
+tp_wp_elena Teleport self WorldPosition -600 0 -790
 tp_vb_bless TeleportToNearestUnitOfType CHAR_Militia_Longbowman_LightArrow_Vblood 
 tp_wp_bless Teleport self WorldPosition -1368 0 -890
 tp_vb_glass TeleportToNearestUnitOfType CHAR_Militia_Glassblower_VBlood
@@ -385,6 +388,25 @@ give_rsan_cb GenerateLegendaryWeapon Item_Weapon_Crossbow_Legendary_T08
 give_rsan_cl GenerateLegendaryWeapon Item_Weapon_Claws_Legendary_T08 
 give_rsan_ax GenerateLegendaryWeapon Item_Weapon_Axe_Legendary_T08
 give_rsan_all Console.Multicommand give_rsan_wh; give_rsan_tb; give_rsan_sw; give_rsan_sp; give_rsan_sl; give_rsan_re; give_rsan_pi; give_rsan_mc; give_rsan_lb; give_rsan_gs; give_rsan_dg; give_rsan_cb; give_rsan_cl; give_rsan_ax;
+give_brew_hp give "[Name]Blood Rose Brew - Item_Consumable_HealingPotion_T01 - Guid: 800879747"
+give_pot_hp give "[Name]Blood Rose Potion - Item_Consumable_HealingPotion_T02 - Guid: 429052660"
+give_silver_cash give "[Name]Silver Coin - Item_Ingredient_Coin_Silver - Guid: -949672483" 
+give_copper_cash give "[Name]Copper Coin - Item_Ingredient_Coin_Copper - Guid: 28625845" 
+give_goldsun_cash give "[Name]Goldsun Coin - Item_Ingredient_Coin_Royal - Guid: -571562864"
+give_regular_gems Console.Multicommand give "[Name]Regular Amethyst - Item_Ingredient_Gem_Amethyst_T02 - Guid: -1962855117" 30; give "[Prefab]Item_Ingredient_Gem_Ruby_T02 - Guid: 51046573" 30; give "[Prefab]Item_Ingredient_Gem_Emerald_T02 - Guid: 357608868" 30; give "[Name]Regular Topaz - Item_Ingredient_Gem_Topaz_T02 - Guid: -2118441460" 30; give "[Name]Regular Sapphire - Item_Ingredient_Gem_Sapphire_T02 - Guid: 131015492" 30; give "[Name]Regular Miststone - Item_Ingredient_Gem_Miststone_T02 - Guid: 802050789" 30; 
+cbb ConsumeBlood BloodType_Brute
+cbc ConsumeBlood BloodType_Corruption
+cbw ConsumeBlood BloodType_Warrior
+cbs ConsumeBlood BloodType_Scholar
+cbd ConsumeBlood BloodType_Draculin
+cbcr ConsumeBlood BloodType_Creature
+cbn ConsumeBlood BloodType_None
+cbn ConsumeBlood BloodType_Worker
+cbr ConsumeBlood BloodType_Rogue
+cbm ConsumeBlood BloodType_Mutant
+tp_cur Teleport Self Cursor
+stone_loot Console.MultiCommand give_vermin; give_vermin;
+rufus_loot Console.MultiCommand give_vermin; give_vermin;
 kelly_loot Console.MultiCommand give_copper_all; give_cloth_armour;
 swine_loot Console.MultiCommand give "[Name]Gravedigger Ring - Item_MagicSource_General_T03_GravediggerRing - Guid: -1588051702"
 grayson_loot Console.MultiCommand give_vermin; give_vermin;
@@ -444,20 +466,3 @@ solarus_loot Console.Multicommand GenerateJewelAtUnitLevel 89; give "[Name]Dark 
 adam_loot Console.Multicommand GenerateJewelAtUnitLevel 91; give "[Name]Dark Silver Ingot - Item_Ingredient_Mineral_DarkSilverBar - Guid: -762000259" 100; give "[Prefab]Item_Ingredient_OnyxTear - Guid: -651878258" 10; give "[Name]Greater Stygian Shard - Item_NetherShard_T02 - Guid: 576389135" 2000; give_drac_chest;
 morgana_loot Console.Multicommand GenerateJewelAtUnitLevel 91; give "[Name]Dark Silver Ingot - Item_Ingredient_Mineral_DarkSilverBar - Guid: -762000259" 100; give "[Prefab]Item_Ingredient_OnyxTear - Guid: -651878258" 10; give "[Name]Greater Stygian Shard - Item_NetherShard_T02 - Guid: 576389135" 2000; give "[Name]Blood Key - Item_MagicSource_BloodKey_T01 - Guid: 1655869633"; give_drac_legs;
 drac_loot Console.Multicommand GenerateJewelAtUnitLevel 94; give "[Name]Dark Silver Ingot - Item_Ingredient_Mineral_DarkSilverBar - Guid: -762000259" 100; give "[Prefab]Item_Ingredient_OnyxTear - Guid: -651878258" 10; give "[Name]Greater Stygian Shard - Item_NetherShard_T02 - Guid: 576389135" 10000;
-give_brew_hp give "[Name]Blood Rose Brew - Item_Consumable_HealingPotion_T01 - Guid: 800879747"
-give_pot_hp give "[Name]Blood Rose Potion - Item_Consumable_HealingPotion_T02 - Guid: 429052660"
-give_silver_cash give "[Name]Silver Coin - Item_Ingredient_Coin_Silver - Guid: -949672483" 
-give_copper_cash give "[Name]Copper Coin - Item_Ingredient_Coin_Copper - Guid: 28625845" 
-give_goldsun_cash give "[Name]Goldsun Coin - Item_Ingredient_Coin_Royal - Guid: -571562864"
-give_regular_gems Console.Multicommand give "[Name]Regular Amethyst - Item_Ingredient_Gem_Amethyst_T02 - Guid: -1962855117" 30; give "[Prefab]Item_Ingredient_Gem_Ruby_T02 - Guid: 51046573" 30; give "[Prefab]Item_Ingredient_Gem_Emerald_T02 - Guid: 357608868" 30; give "[Name]Regular Topaz - Item_Ingredient_Gem_Topaz_T02 - Guid: -2118441460" 30; give "[Name]Regular Sapphire - Item_Ingredient_Gem_Sapphire_T02 - Guid: 131015492" 30; give "[Name]Regular Miststone - Item_Ingredient_Gem_Miststone_T02 - Guid: 802050789" 30; 
-cbb ConsumeBlood BloodType_Brute
-cbc ConsumeBlood BloodType_Corruption
-cbw ConsumeBlood BloodType_Warrior
-cbs ConsumeBlood BloodType_Scholar
-cbd ConsumeBlood BloodType_Draculin
-cbcr ConsumeBlood BloodType_Creature
-cbn ConsumeBlood BloodType_None
-cbn ConsumeBlood BloodType_Worker
-cbr ConsumeBlood BloodType_Rogue
-cbm ConsumeBlood BloodType_Mutant
-tp_cur Teleport Self Cursor

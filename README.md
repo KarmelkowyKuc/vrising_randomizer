@@ -19,11 +19,15 @@ START YOUR SERVER FROM AT LEAST LEVEL 30 OF STORY PROGRESSION - SO YOU CAN BUILD
 
 !!!IMPORTANT!!! 
 
+ADDED FULLY RANDOM PLAYTHROUGH GENERATED THROUGH ./python/randomizer.py - NEED PYTHON3 INSTALLED AND ADDED TO PATH
+
+!!!IMPORTANT!!! 
+
 Example gameplay:
 
 https://www.twitch.tv/videos/2487108499
 
-============================================================================
+==========================================================================
 
 # How does it work?
 
@@ -63,7 +67,7 @@ or just use skills you want. Same goes with weapon or blood type.
 It is up to you how do you want to use this script, you can make your own rules and play how you like.
 It is more or less framework to teleport to bosses.
 
-============================================================================
+==========================================================================
 
 # How To run it
 
@@ -81,9 +85,32 @@ open that *.prof
 
 copy below contents of ./misc/DESKTOP-asdf.prof under your *.prof
 
-============================================================================
+==========================================================================
 
 # Misc
+
+Added python script that randomnizes addidtional things by overwriting current loot/gear after each boss:
+
+    1) requires python3 installed
+
+    2) go under ""./python"" and run python ./randmize.py
+
+    3) new file should show be created under ""./misc/random.prof
+
+    4) copy contents of random.prof to your profile pointed by C:/Users/<USER>/AppData/LocalLow/Stunlock Studios/VRising/ConsoleProfile/DefaultProfile
+
+What does it randomize?:
+
+    Weapons, bloodtype, armour sets.
+
+    Don't think there is much to randomize than that :)
+
+    (maybe additional loot, but I am not that desperate yet)
+
+    If you want to get new random profile file, just remove ./misc/random.prof and rerun the python script.
+
+==========================================================================
+
 
 The config should load after you boot your game (check console for the profile name and amount of aliases (should be alot))
 
@@ -153,7 +180,7 @@ Added binds:
 
 Should be even smoother now, if looking for a boss just mapmarker and shift+M afterwards or follow the blood trail with Shift+A until you find it.
 
-=============================================================================
+==========================================================================
 
 TODO:
     Think there is not much to do within this script to randomize the game more, it clearly needs external sources.
@@ -162,7 +189,7 @@ TODO:
     For issues regarding this script, contact me
     kuc.karmelkowy@gmail.com
 
-=============================================================================
+==========================================================================
 The idea to look for traveling vbloods is like this, after you press Shift+V should look for it:
 
     swine0pos Console.MultiCommand teleport self WorldPosition -1552 0 -1730; Console.RemoveAlias find_vblood; Console.Alias find_vblood swine1pos;

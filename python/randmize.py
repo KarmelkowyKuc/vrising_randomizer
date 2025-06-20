@@ -4,9 +4,15 @@ import os
 import shutil
 import random
 import math
+import datetime
 
 # user settings here
-generate_spells=1
+# give 2 spell after every base
+generate_spells=0
+# remove weapon from the pool before next roll
+unique_weapons=1
+# one weapon for whole thing
+one_weapon=0
 #
 
 blood=["BloodType_Brute", "BloodType_Corruption", "BloodType_Warrior", "BloodType_Scholar", "BloodType_Draculin", "BloodType_Creature", "BloodType_Worker", "BloodType_Rogue", "BloodType_Mutant", "BloodType_None"]
@@ -30,8 +36,11 @@ t1_magic=["give_ring_red;", "give_ring_gre;", "give_ring_pin;", "give_ring_tea;"
 t2_magic=["give_rpendant_red;", "give_rpendant_yel;", "give_rpendant_gre;", "give_rpendant_tea;", "give_rpendant_blu;", "give_rpendant_vio;"]
 t3_magic=["give_amu_red;", "give_amu_yel;", "give_amu_gre;", "give_amu_tea;", "give_amu_blu;", "give_amu_vio;"]
 
+config=one_weapon*4+unique_weapons*2+generate_spells*1
+x = datetime.datetime.now()
+now=str(x.year)+"_"+str(x.month)+"_"+str(x.day)+"_"+str(x.hour)+"_"+str(x.minute)+"_"+str(x.second);
 template_prof_path="./../misc/DESKTOP-asdf.prof"
-random_prof_path="./../misc/random.prof"
+random_prof_path="./../examples/random_"+str(config)+"_"+now+".prof"
 
 def add_blood(boss_loot, level_local):
     random_blood_lvl = level_local+random.randrange(math.ceil(-level/2),level)
@@ -43,22 +52,87 @@ def add_blood(boss_loot, level_local):
     return(boss_loot)
 
 def add_weapon(boss_loot, level_local):
+    global copper_weapon, rcopper_weapon, iron_weapon, riron_weapon, sriron_weapon, silver_weapon, rsilver_weapon, srsilver_weapon
     if(level_local>= 27 and level_local<30):
-        boss_loot=boss_loot+random.choice(copper_weapon)
+        if(unique_weapons==0):
+            boss_loot=boss_loot+copper_weapon.remove(random.choice(copper_weapon))
+        else:
+            if(len(copper_weapon)>1):
+                boss_loot=boss_loot+copper_weapon.pop(random.randrange(1,len(copper_weapon)))
+            elif(len(copper_weapon)==1):
+                boss_loot=boss_loot+copper_weapon.pop()
+        if(one_weapon==1):
+                copper_weapon=[]
     elif(level_local>= 30 and level_local<40):
-        boss_loot=boss_loot+random.choice(rcopper_weapon)
+        if(unique_weapons==0):
+            boss_loot=boss_loot+rcopper_weapon.remove(random.choice(rcopper_weapon))
+        else:
+            if(len(rcopper_weapon)>1):
+                boss_loot=boss_loot+rcopper_weapon.pop(random.randrange(1,len(rcopper_weapon)))
+            elif(len(rcopper_weapon)==1):
+                boss_loot=boss_loot+rcopper_weapon.pop()
+        if(one_weapon==1):
+                rcopper_weapon=[]
     elif(level_local>= 40 and level_local<53):
-        boss_loot=boss_loot+random.choice(iron_weapon)
+        if(unique_weapons==0):
+            boss_loot=boss_loot+iron_weapon.remove(random.choice(iron_weapon))
+        else:
+            if(len(iron_weapon)>1):
+                boss_loot=boss_loot+iron_weapon.pop(random.randrange(1,len(iron_weapon)))
+            elif(len(iron_weapon)==1):
+                boss_loot=boss_loot+iron_weapon.pop()
+        if(one_weapon==1):
+                iron_weapon=[]
     elif(level_local>= 53 and level_local<63):
-        boss_loot=boss_loot+random.choice(riron_weapon)
+        if(unique_weapons==0):
+            boss_loot=boss_loot+riron_weapon.remove(random.choice(riron_weapon))
+        else:
+            if(len(riron_weapon)>1):
+                boss_loot=boss_loot+riron_weapon.pop(random.randrange(1,len(riron_weapon)))
+            elif(len(riron_weapon)==1):
+                boss_loot=boss_loot+riron_weapon.pop()
+        if(one_weapon==1):
+                riron_weapon=[]
     elif(level_local>= 63 and level_local<70):
-        boss_loot=boss_loot+random.choice(sriron_weapon)
+        if(unique_weapons==0):
+            boss_loot=boss_loot+sriron_weapon.remove(random.choice(sriron_weapon))
+        else:
+            if(len(sriron_weapon)>1):
+                boss_loot=boss_loot+sriron_weapon.pop(random.randrange(1,len(sriron_weapon)))
+            elif(len(sriron_weapon)==1):
+                boss_loot=boss_loot+sriron_weapon.pop()
+        if(one_weapon==1):
+                sriron_weapon=[]
     elif(level_local>= 70 and level_local<80):
-        boss_loot=boss_loot+random.choice(silver_weapon)
+        if(unique_weapons==0):
+            boss_loot=boss_loot+silver_weapon.remove(random.choice(silver_weapon))
+        else:
+            if(len(silver_weapon)>1):
+                boss_loot=boss_loot+silver_weapon.pop(random.randrange(1,len(silver_weapon)))
+            elif(len(silver_weapon)==1):
+                boss_loot=boss_loot+silver_weapon.pop()
+        if(one_weapon==1):
+                silver_weapon=[]
     elif(level_local>= 80 and level_local<88):
-        boss_loot=boss_loot+random.choice(rsilver_weapon)
+        if(unique_weapons==0):
+            boss_loot=boss_loot+rsilver_weapon.remove(random.choice(rsilver_weapon))
+        else:
+            if(len(rsilver_weapon)>1):
+                boss_loot=boss_loot+rsilver_weapon.pop(random.randrange(1,len(rsilver_weapon)))
+            elif(len(rsilver_weapon)==1):
+                boss_loot=boss_loot+rsilver_weapon.pop()
+        if(one_weapon==1):
+                rsilver_weapon=[]
     elif(level_local>= 88):
-        boss_loot=boss_loot+random.choice(srsilver_weapon)
+        if(unique_weapons==0):
+            boss_loot=boss_loot+srsilver_weapon.remove(random.choice(srsilver_weapon))
+        else:
+            if(len(srsilver_weapon)>1):
+                boss_loot=boss_loot+srsilver_weapon.pop(random.randrange(1,len(srsilver_weapon)))
+            elif(len(srsilver_weapon)==1):
+                boss_loot=boss_loot+srsilver_weapon.pop()
+        if(one_weapon==1):
+                srsilver_weapon=[]
     return(boss_loot)
 
 def add_thing(boss_loot, the_thing):

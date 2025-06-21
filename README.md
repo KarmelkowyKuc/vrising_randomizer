@@ -23,9 +23,13 @@ ADDED FULLY RANDOM PLAYTHROUGH GENERATED THROUGH ./python/randomizer.py - NEED P
 
 !!!IMPORTANT!!! 
 
-Example gameplay:
+Example gameplay (basic script):
 
 https://www.twitch.tv/videos/2487108499
+
+Example gameplay with randomizer.py (unique weapon for each boss and random blood):
+
+https://youtu.be/S2x88qiBJQA
 
 ==========================================================================
 
@@ -83,11 +87,13 @@ in file DefaultProfile should have one that it is going to run after restart:
 
 open that *.prof
 
-copy below contents of ./misc/DESKTOP-asdf.prof under your *.prof
+copy below contents of ./misc/DESKTOP-asdf.prof or any profiles from ./examples/*.prof under profile pointed in DeafaultProfile
+
+(in my case it was DESKTOP-CL112.prof).
 
 ==========================================================================
 
-# Misc
+# Python randomizer
 
 Added python script that randomnizes addidtional things by overwriting current loot/gear after each boss:
 
@@ -95,7 +101,7 @@ Added python script that randomnizes addidtional things by overwriting current l
 
     2) go under ""./python"" and run python ./randmize.py
 
-    3) new file should show be created under ""./misc/random.prof
+    3) new file should show be created under ./examples/random<config+date+time>.prof
 
     4) copy contents of random.prof to your profile pointed by C:/Users/<USER>/AppData/LocalLow/Stunlock Studios/VRising/ConsoleProfile/DefaultProfile
 
@@ -111,6 +117,34 @@ What does it randomize?:
 
 ==========================================================================
 
+# TODO
+
+There are coule of things that can be added:
+
+    - add array of spell , and an option to give one spell after each boss (starting lvl 100 tho)
+    so that spell progression is random (give useless lvl 1 jewel as indicator)
+
+    - give 2 spells from aviable for the next boss fight (give 2 useles jewels as indicator)
+
+    - copy generated .prof file under ConsoleProfile without need to do manual copy
+
+    - increase game difficulty through .json files - like ng+ brutal difficulty
+
+    - add possibility to generate randomizer with seeding (not sure if neccesary if there are files for it)
+
+==========================================================================
+
+==========================================================================
+
+==========================================================================
+
+==========================================================================
+
+# Misc
+
+Below are stored notes from different part of developement
+
+==========================================================================
 
 The config should load after you boot your game (check console for the profile name and amount of aliases (should be alot))
 

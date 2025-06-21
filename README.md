@@ -99,7 +99,7 @@ Added python script that randomnizes addidtional things by overwriting current l
 
     2) go under ""./python"" and run python ./randmize.py
 
-    3) new file should show be created under ""./misc/random.prof
+    3) new file should show be created under ./examples/random<config+date+time>.prof
 
     4) copy contents of random.prof to your profile pointed by C:/Users/<USER>/AppData/LocalLow/Stunlock Studios/VRising/ConsoleProfile/DefaultProfile
 

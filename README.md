@@ -23,9 +23,13 @@ ADDED FULLY RANDOM PLAYTHROUGH GENERATED THROUGH ./python/randomizer.py - NEED P
 
 !!!IMPORTANT!!! 
 
-Example gameplay:
+Example gameplay (basic script):
 
 https://www.twitch.tv/videos/2487108499
+
+Example gameplay with randomizer.py (unique weapon for each boss):
+
+https://youtu.be/S2x88qiBJQA
 
 ==========================================================================
 

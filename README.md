@@ -115,14 +115,53 @@ What does it randomize?:
 
     If you want to get new random profile file, just remove ./misc/random.prof and rerun the python script.
 
+There are couple of configuration for the randomizer (check below "# user settings here" in randomizer.py):
+
+    1) generate_spells (0) - give 2 spells after each boss in a form of random tier 2 jewels -
+        using it as an idicator which skills to use for the next boss
+        need to start from level 100 tho - it might just give you 2 same spells etc.
+        Use Shift+S to instantly generate a spell. Does not give you ults - up to you.
+
+    2) unique weapons (1) - after every boss you get a new weapon to fight another one - 
+        if you won't want to have to fight with the same weapon 2 times in a row 
+        (in a weapon tier) go for it. Otherwise you can get 3 copper swords in a row.
+        Python random number generator isn't that great.
+    
+    3) one_weapon (0) - give one weapon at for the weapon tier (one copper, one merc copper, one iron etc)
+        Randomizes weapons only at the start of each weapon tier. If you don't want to change weapons too much.
+
+    4) unlock_spell (1) - if it is '1' the scrip will generate one tier 1 jewel as a reward for beating each boss.
+        This jewel won't repeat for entire run. It is meant to be an inicator which spell you can unlock after 
+        each boss you have beaten. For tier 1,2 and veil you will get tier 1 jewel. For ults you will get tier 3 and 4
+        (use the skill color and jewel tier to unlock and use that one ultimate). Need lvl 100 server start for this setting.
+
+Game rules for this configuration (at least for me) is:
+
+    - start lvl 100,
+
+    - you have to use last skill you got, until you beat styx, afterwards you can use whatever you like,
+
+    - can use whatever pot/coating/elixir you need,
+
+    - if you die too many times, change to the skill you want,
+
+    - use and build whanever you need in your base (2x3) seems enough with treasure floor,
+
+    - after you kill passive point boss (Elena, Cassius, Cyril, Jamila, Belmont) you can use a passive.
+        I guess you can discover 5 minor/major at altar of stygian awakening and only use these.
+        I would say it is difficult as it is.
+        
+    - with spare stygian shards I usually go for legendary weapon (at vamire merchant), 
+        using fusion forge you can get yourself nice weapon and jewells for shard bosses.
+        You get couple of gems and ember glass after dantos.
+
+    - the goal is to beat the dracula (deathless is a bloody impossible task)
+
 ==========================================================================
 
 # TODO
 
 There are coule of things that can be added:
-
-    - add array of spell , and an option to give one spell after each boss (starting lvl 100 tho)
-    so that spell progression is random (give useless lvl 1 jewel as indicator)
 
     - give 2 spells from aviable for the next boss fight (give 2 useles jewels as indicator)
 
@@ -132,6 +171,9 @@ There are coule of things that can be added:
 
     - add possibility to generate randomizer with seeding (not sure if neccesary if there are files for it)
 
+    - does make to fight every boss, just a random number with increased difficulty
+
+    - 
 ==========================================================================
 
 ==========================================================================

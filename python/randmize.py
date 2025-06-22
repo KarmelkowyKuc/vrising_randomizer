@@ -63,7 +63,7 @@ def add_weapon(boss_loot, level_local):
                 boss_loot=boss_loot+copper_weapon.pop()
         if(one_weapon==1):
                 copper_weapon=[]
-    elif(level_local>= 30 and level_local<40):
+    elif(level_local>= 30 and level_local<41):
         if(unique_weapons==0):
             boss_loot=boss_loot+rcopper_weapon.remove(random.choice(rcopper_weapon))
         else:
@@ -73,7 +73,7 @@ def add_weapon(boss_loot, level_local):
                 boss_loot=boss_loot+rcopper_weapon.pop()
         if(one_weapon==1):
                 rcopper_weapon=[]
-    elif(level_local>= 40 and level_local<53):
+    elif(level_local>= 41 and level_local<53):
         if(unique_weapons==0):
             boss_loot=boss_loot+iron_weapon.remove(random.choice(iron_weapon))
         else:

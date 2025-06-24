@@ -28,7 +28,7 @@ unlock_spells=1
 # need to create or copy generated json profile under
 # %AppData%\..\LocalLow\Stunlock Studios\VRising\Settings\v4\ServerPresets
 # create server with this generated ruleset (via gamesettings>
-boss_shuffle=1
+boss_shuffle=0
 
 # copy generated files - .prof file and json preset
 copy_generated=1

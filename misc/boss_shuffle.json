@@ -1,0 +1,540 @@
+{
+  "Name": "boss_shuffle_<some_number>",
+  "Description": "boss_shuffle generated <date_time> https://github.com/KarmelkowyKuc/vrising_randomizer",
+  "Settings": {
+    "GameDifficulty": 2,
+    "GameModeType": 1,
+    "CastleDamageMode": 0,
+    "SiegeWeaponHealth": 2,
+    "PlayerDamageMode": 0,
+    "CastleHeartDamageMode": 1,
+    "PvPProtectionMode": 3,
+    "DeathContainerPermission": 0,
+    "RelicSpawnType": 0,
+    "CanLootEnemyContainers": true,
+    "BloodBoundEquipment": true,
+    "TeleportBoundItems": true,
+    "BatBoundItems": false,
+    "BatBoundShards": false,
+    "AllowGlobalChat": true,
+    "AllWaypointsUnlocked": false,
+    "FreeCastleRaid": false,
+    "FreeCastleClaim": false,
+    "FreeCastleDestroy": false,
+    "InactivityKillEnabled": true,
+    "InactivityKillTimeMin": 3600,
+    "InactivityKillTimeMax": 604800,
+    "InactivityKillSafeTimeAddition": 172800,
+    "InactivityKillTimerMaxItemLevel": 84,
+    "StartingProgressionLevel": 30,
+    "WeaponSlots": 1,
+    "DisableDisconnectedDeadEnabled": true,
+    "DisableDisconnectedDeadTimer": 60,
+    "DisconnectedSunImmunityTime": 300.0,
+    "InventoryStacksModifier": 1.0,
+    "DropTableModifier_General": 1.25,
+    "DropTableModifier_Missions": 1.0,
+    "DropTableModifier_StygianShards": 1.0,
+    "SoulShard_DurabilityLossRate": 1.0,
+    "MaterialYieldModifier_Global": 1.0,
+    "BloodEssenceYieldModifier": 1.0,
+    "JournalVBloodSourceUnitMaxDistance": 5000.0,
+    "PvPVampireRespawnModifier": 1.0,
+    "CastleMinimumDistanceInFloors": 2,
+    "ClanSize": 1,
+    "BloodDrainModifier": 1.0,
+    "DurabilityDrainModifier": 0.5,
+    "GarlicAreaStrengthModifier": 1.0,
+    "HolyAreaStrengthModifier": 1.0,
+    "SilverStrengthModifier": 1.0,
+    "SunDamageModifier": 1.0,
+    "CastleDecayRateModifier": 1.0,
+    "CastleBloodEssenceDrainModifier": 1.0,
+    "CastleSiegeTimer": 420.0,
+    "CastleUnderAttackTimer": 60.0,
+    "CastleRaidTimer": 600.0,
+    "CastleRaidProtectionTime": 1800.0,
+    "CastleExposedFreeClaimTimer": 300.0,
+    "CastleRelocationCooldown": 10800.0,
+    "CastleRelocationEnabled": true,
+    "AnnounceSiegeWeaponSpawn": true,
+    "ShowSiegeWeaponMapIcon": false,
+    "BuildCostModifier": 1.0,
+    "RecipeCostModifier": 1.0,
+    "CraftRateModifier": 1.0,
+    "ResearchCostModifier": 1.0,
+    "RefinementCostModifier": 1.0,
+    "RefinementRateModifier": 1.0,
+    "ResearchTimeModifier": 1.0,
+    "DismantleResourceModifier": 1.0,
+    "ServantConvertRateModifier": 1.0,
+    "RepairCostModifier": 1.0,
+    "Death_DurabilityFactorLoss": 0.125,
+    "Death_DurabilityLossFactorAsResources": 1.0,
+    "StarterEquipmentId": 0,
+    "StarterResourcesId": 0,
+    "UnlockedAchievements": [],
+    "UnlockedResearchs": [],
+    "GameTimeModifiers": {
+      "DayDurationInSeconds": 1080.0,
+      "DayStartHour": 9,
+      "DayStartMinute": 0,
+      "DayEndHour": 17,
+      "DayEndMinute": 0,
+      "BloodMoonFrequency_Min": 10,
+      "BloodMoonFrequency_Max": 18,
+      "BloodMoonBuff": 0.2
+    },
+    "VampireStatModifiers": {
+      "MaxHealthModifier": 1.0,
+      "PhysicalPowerModifier": 1.0,
+      "SpellPowerModifier": 1.0,
+      "ResourcePowerModifier": 1.0,
+      "SiegePowerModifier": 1.0,
+      "DamageReceivedModifier": 1.0,
+      "ReviveCancelDelay": 5.0
+    },
+    "UnitStatModifiers_Global": {
+      "MaxHealthModifier": 1.0,
+      "PowerModifier": 1.4,
+      "LevelIncrease": 0
+    },
+    "UnitStatModifiers_VBlood": {
+      "MaxHealthModifier": 1.25,
+      "PowerModifier": 1.7,
+      "LevelIncrease": 3
+    },
+    "VBloodUnitSettings": [
+      {
+      "UnitId": -1905691330, // Alpha the White Wolf
+      "UnitLevel": 97,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <kel_id>, // Keely the Frost Archer
+      "UnitLevel": <kel_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <sto_id>, // Errol the Stonebreaker
+      "UnitLevel": <sto_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <ruf_id>, // Rufus the Foreman
+      "UnitLevel": <ruf_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <gra_id>, // Grayson the Armourer
+      "UnitLevel": <gra_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <fis_id>, // Finn the Fisherman
+      "UnitLevel": <fis_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <swi_id>, // Goreswine the Ravager
+      "UnitLevel": <swi_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <cha_id>, // Lidia the Chaos Archer
+      "UnitLevel": <cha_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <cli_id>, // Clive the Firestarter
+      "UnitLevel": <cli_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <pol_id>, // Polora the Feywalker
+      "UnitLevel": <pol_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <bea_id>, // Kodia the Ferocious Bear
+      "UnitLevel": <bea_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <nic_id>, // Nicholaus the Fallen
+      "UnitLevel": <nic_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <qui_id>, // Quincey the Bandit King
+      "UnitLevel": <qui_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <dea_id>, // Beatrice the Tailor
+      "UnitLevel": <dea_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <vin_id>, // Vincent the Frostbringer
+      "UnitLevel": <vin_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <nun_id>, // Christina the Sun Priestess
+      "UnitLevel": <nun_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <tri_id>, // Tristan the Vampire Hunter
+      "UnitLevel": <tri_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <hor_id>, // Sir Erwin the Gallant Cavalier
+      "UnitLevel": <hor_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <maj_id>, // Maja the Dark Savant
+      "UnitLevel": <maj_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <lea_id>, // Leandra the Shadow Priestess
+      "UnitLevel": <lea_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <kri_id>, // Kriig the Undead General
+      "UnitLevel": <kri_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <gla_id>, // Grethel the Glassblower
+      "UnitLevel": <gla_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <ban_id>, // Bane the Shadowblade
+      "UnitLevel": <ban_lvl>,
+      "DefaultUnlocked": false
+      },
+      
+      {
+      "UnitId": <ble_id>, // Meredith the Birght Archer
+      "UnitLevel": <ble_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <fro_id>, // Frostmaw the Mountain Terror
+      "UnitLevel": <fro_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <ele_id>, // General Elena the Hollow
+      "UnitLevel": <ele_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <ter_id>, // Terah the Geomancer
+      "UnitLevel": <ter_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <are_id>, // Gaius the Cursed Champion
+      "UnitLevel": <are_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <jad_id>, // Jade the Vampire Hunter
+      "UnitLevel": <jad_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <swo_id>, // General Cassius the Betrayer
+      "UnitLevel": <swo_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <raz_id>, // Raziel the Shepherd
+      "UnitLevel": <raz_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <oct_id>, // Octavian the Militia Captain
+      "UnitLevel": <oct_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <iva_id>, // Ziva the Engineer
+      "UnitLevel": <iva_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <dom_id>, // Domina the Blade Dancer
+      "UnitLevel": <dom_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <jam_id>, // Jakira the Shadow Huntress
+      "UnitLevel": <jam_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <ang_id>, // Angram the Purifier
+      "UnitLevel": <ang_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <spi_id>, // Ungora the Spider Queen
+      "UnitLevel": <spi_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <ben_id>, // Ben the Old Wanderer
+      "UnitLevel": <ben_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <fau_id>, // Foulrot the Soultaker
+      "UnitLevel": <fau_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <fro_id>, // Albert the Duke of Balaton
+      "UnitLevel": <fro_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <wil_id>, // Willfred the Village Elder
+      "UnitLevel": <wil_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <cyr_id>, // Cyril the Cursed Smith
+      "UnitLevel": <cyr_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <sir_id>, // Sir Magnus the Overseer
+      "UnitLevel": <sir_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <fre_id>, // Baron du Bouchon the Sommelier
+      "UnitLevel": <fre_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <har_id>, // Morian the Stormwing Matriarch
+      "UnitLevel": <har_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <elm_id>, // Mairwyn the Elementalist
+      "UnitLevel": <elm_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <pro_id>, // Henry Blackbrew the Doctor
+      "UnitLevel": <pro_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <car_id>, // Stavros the Carver
+      "UnitLevel": <car_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <mat_id>, // Matka the Curse Weaver
+      "UnitLevel": <mat_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <alc_id>, // Lucile the Venom Alchemist
+      "UnitLevel": <alc_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <cla_id>, // Terrorclaw the Ogre
+      "UnitLevel": <cla_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <vol_id>, // Voltatia the Power Master
+      "UnitLevel": <vol_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <bel_id>, // Simon Belmont the Vampire Hunter
+      "UnitLevel": <bel_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <gol_id>, // Azariel the Sunbringer
+      "UnitLevel": <gol_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <dan_id>, // Dantos the Forgebinder
+      "UnitLevel": <dan_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <stx_id>, // Lord Styx the Night Champion
+      "UnitLevel": <stx_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <gor_id>, // Gorecrusher the Behemoth
+      "UnitLevel": <gor_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <val_id>, // General Valencia the Depraved
+      "UnitLevel": <val_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <hor_id>, // Talzur the Winged Horror
+      "UnitLevel": <hor_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <sol_id>, // Solarus the Immaculate
+      "UnitLevel": <sol_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <meg_id>, // Megara the Serpent Queen
+      "UnitLevel": <meg_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": <ada_id>, // Adam the Firstborn
+      "UnitLevel": <ada_lvl>,
+      "DefaultUnlocked": false
+      },
+      {
+      "UnitId": -327335305, // Drac the immoral
+      "UnitLevel": <dra_lvl>,
+      "DefaultUnlocked": false
+      }
+    ],
+    "EquipmentStatModifiers_Global": {
+      "MaxHealthModifier": 1.0,
+      "ResourceYieldModifier": 1.0,
+      "PhysicalPowerModifier": 1.0,
+      "SpellPowerModifier": 1.0,
+      "SiegePowerModifier": 1.0,
+      "MovementSpeedModifier": 1.0
+    },
+    "CastleStatModifiers_Global": {
+      "TickPeriod": 5.0,
+      "SafetyBoxLimit": 1,
+      "EyeStructuresLimit": 1,
+      "TombLimit": 12,
+      "VerminNestLimit": 4,
+      "PrisonCellLimit": 24,
+      "HeartLimits": {
+        "Level1": {
+          "FloorLimit": 50,
+          "ServantLimit": 1,
+          "HeightLimit": 3
+        },
+        "Level2": {
+          "FloorLimit": 140,
+          "ServantLimit": 3,
+          "HeightLimit": 3
+        },
+        "Level3": {
+          "FloorLimit": 240,
+          "ServantLimit": 5,
+          "HeightLimit": 3
+        },
+        "Level4": {
+          "FloorLimit": 360,
+          "ServantLimit": 7,
+          "HeightLimit": 3
+        },
+        "Level5": {
+          "FloorLimit": 550,
+          "ServantLimit": 8,
+          "HeightLimit": 3
+        }
+      },
+      "CastleHeartLimitType": 0,
+      "CastleLimit": 2,
+      "NetherGateLimit": 1,
+      "ThroneOfDarknessLimit": 1,
+      "ArenaStationLimit": 5,
+      "RoutingStationLimit": 10
+    },
+    "PlayerInteractionSettings": {
+      "TimeZone": 0,
+      "VSPlayerWeekdayTime": {
+        "StartHour": 20,
+        "StartMinute": 0,
+        "EndHour": 22,
+        "EndMinute": 0
+      },
+      "VSPlayerWeekendTime": {
+        "StartHour": 20,
+        "StartMinute": 0,
+        "EndHour": 22,
+        "EndMinute": 0
+      },
+      "VSCastleWeekdayTime": {
+        "StartHour": 20,
+        "StartMinute": 0,
+        "EndHour": 22,
+        "EndMinute": 0
+      },
+      "VSCastleWeekendTime": {
+        "StartHour": 20,
+        "StartMinute": 0,
+        "EndHour": 22,
+        "EndMinute": 0
+      }
+    },
+    "TraderModifiers": {
+      "StockModifier": 1.0,
+      "PriceModifier": 1.0,
+      "RestockTimerModifier": 1.0
+    },
+    "WarEventGameSettings": {
+      "Interval": 1,
+      "MajorDuration": 1,
+      "MinorDuration": 1,
+      "WeekdayTime": {
+        "StartHour": 0,
+        "StartMinute": 0,
+        "EndHour": 23,
+        "EndMinute": 59
+      },
+      "WeekendTime": {
+        "StartHour": 0,
+        "StartMinute": 0,
+        "EndHour": 23,
+        "EndMinute": 59
+      },
+      "ScalingPlayers1": {
+        "PointsModifier": 1.0,
+        "DropModifier": 1.0
+      },
+      "ScalingPlayers2": {
+        "PointsModifier": 0.5,
+        "DropModifier": 0.5
+      },
+      "ScalingPlayers3": {
+        "PointsModifier": 0.25,
+        "DropModifier": 0.25
+      },
+      "ScalingPlayers4": {
+        "PointsModifier": 0.25,
+        "DropModifier": 0.25
+      }
+    }
+  }
+}

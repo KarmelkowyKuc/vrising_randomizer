@@ -22,9 +22,16 @@ one_weapon=0
 # ults (lvl 4 and 3 jewels) and veils are less probable, should start from lvl 100
 # other option is to remove these spells from use, and fight last bunch of bosses 
 # with 2 spells 1 ult and 1 veil
-unlock_spell=1
+unlock_spells=1
 
-# generate loadout for next boss
+# boss shuffle - change order of bosses and their levels
+# need to create or copy generated json profile under
+# %AppData%\..\LocalLow\Stunlock Studios\VRising\Settings\v4\ServerPresets
+# create server with this generated ruleset (via gamesettings>
+boss_shuffle=1
+
+# copy generated files - .prof file and json preset
+copy_generated=1
 
 #################
 
@@ -62,33 +69,34 @@ frost_ult=["CreateJewel AB_Vampire_VeilOfFrost_Group 3 SpellMod_Shared_Veil_Buff
 shock_ult=["CreateJewel AB_Vampire_VeilOfStorm_Group 4 SpellMod_VeilOfStorm_AttackInflictFadingSnare 0;", "CreateJewel AB_Vampire_VeilOfStorm_Group 3 SpellMod_VeilOfStorm_AttackInflictFadingSnare 0;"]
 illus_ult=["CreateJewel AB_Vampire_VeilOfIllusion_AbilityGroup 3 SpellMod_VeilOfIllusion_AttackInflictFadingSnare 0;", "CreateJewel AB_Vampire_VeilOfIllusion_AbilityGroup 4 SpellMod_VeilOfIllusion_AttackInflictFadingSnare 0;"]
 ults=["CreateJewel AB_Vampire_VeilOfBlood_Group 3 SpellMod_VeilOfBlood_AttackInflictFadingSnare 0;","CreateJewel AB_Vampire_VeilOfBlood_Group 4 SpellMod_VeilOfBlood_AttackInflictFadingSnare 0;", "CreateJewel AB_Vampire_VeilOfChaos_Group 3 SpellMod_VeilOfChaos_BonusIllusion 0;", "CreateJewel AB_Vampire_VeilOfChaos_Group 4 SpellMod_VeilOfChaos_BonusIllusion 0;", "CreateJewel AB_Vampire_VeilOfBones_AbilityGroup 3 SpellMod_Shared_Veil_BuffAndIllusionDuration 0;", "CreateJewel AB_Vampire_VeilOfBones_AbilityGroup 4 SpellMod_Shared_Veil_BuffAndIllusionDuration 0;", "CreateJewel AB_Vampire_VeilOfFrost_Group 3 SpellMod_Shared_Veil_BuffAndIllusionDuration 0;", "CreateJewel AB_Vampire_VeilOfFrost_Group 4 SpellMod_Shared_Veil_BuffAndIllusionDuration 0;", "CreateJewel AB_Vampire_VeilOfStorm_Group 4 SpellMod_VeilOfStorm_AttackInflictFadingSnare 0;", "CreateJewel AB_Vampire_VeilOfStorm_Group 3 SpellMod_VeilOfStorm_AttackInflictFadingSnare 0;", "CreateJewel AB_Vampire_VeilOfIllusion_AbilityGroup 3 SpellMod_VeilOfIllusion_AttackInflictFadingSnare 0;", "CreateJewel AB_Vampire_VeilOfIllusion_AbilityGroup 4 SpellMod_VeilOfIllusion_AttackInflictFadingSnare 0;"]
-skil=["CreateJewel AB_Vampire_VeilOfBlood_Group 3 SpellMod_VeilOfBlood_AttackInflictFadingSnare 0;","CreateJewel AB_Vampire_VeilOfBlood_Group 4 SpellMod_VeilOfBlood_AttackInflictFadingSnare 0;", "CreateJewel AB_Vampire_VeilOfChaos_Group 3 SpellMod_VeilOfChaos_BonusIllusion 0;", "CreateJewel AB_Vampire_VeilOfChaos_Group 4 SpellMod_VeilOfChaos_BonusIllusion 0;", "CreateJewel AB_Vampire_VeilOfBones_AbilityGroup 3 SpellMod_Shared_Veil_BuffAndIllusionDuration 0;", "CreateJewel AB_Vampire_VeilOfBones_AbilityGroup 4 SpellMod_Shared_Veil_BuffAndIllusionDuration 0;", "CreateJewel AB_Vampire_VeilOfFrost_Group 3 SpellMod_Shared_Veil_BuffAndIllusionDuration 0;", "CreateJewel AB_Vampire_VeilOfFrost_Group 4 SpellMod_Shared_Veil_BuffAndIllusionDuration 0;", "CreateJewel AB_Vampire_VeilOfStorm_Group 4 SpellMod_VeilOfStorm_AttackInflictFadingSnare 0;", "CreateJewel AB_Vampire_VeilOfStorm_Group 3 SpellMod_VeilOfStorm_AttackInflictFadingSnare 0;", "CreateJewel AB_Vampire_VeilOfIllusion_AbilityGroup 3 SpellMod_VeilOfIllusion_AttackInflictFadingSnare 0;", "CreateJewel AB_Vampire_VeilOfIllusion_AbilityGroup 4 SpellMod_VeilOfIllusion_AttackInflictFadingSnare 0;", "CreateJewel AB_Vampire_VeilOfBlood_Group 1 SpellMod_VeilOfBlood_AttackInflictFadingSnare 0;", "CreateJewel AB_Vampire_VeilOfBones_AbilityGroup 1 SpellMod_Shared_Veil_BuffAndIllusionDuration 0;", "CreateJewel AB_Vampire_VeilOfChaos_Group 1 SpellMod_VeilOfChaos_BonusIllusion 0;", "CreateJewel AB_Vampire_VeilOfFrost_Group 1 SpellMod_Shared_Veil_BuffAndIllusionDuration 0;", "CreateJewel AB_Vampire_VeilOfIllusion_AbilityGroup 1 SpellMod_VeilOfIllusion_AttackInflictFadingSnare 0;", "CreateJewel AB_Vampire_VeilOfStorm_Group 1 SpellMod_VeilOfStorm_AttackInflictFadingSnare 0;", "CreateJewel AB_Blood_BloodFountain_AbilityGroup 1 SpellMod_BloodFountain_RecastLesser 0;", "CreateJewel AB_Blood_BloodRage_AbilityGroup 1 SpellMod_BloodRage_HealOnKill 0;", "CreateJewel AB_Blood_BloodRite_AbilityGroup 1 SpellMod_Shared_IncreaseMoveSpeedDuringChannel_High 0;", "CreateJewel AB_Blood_CarrionSwarm_AbilityGroup 1 SpellMod_Shared_ApplyFadingSnare_Medium 0;","CreateJewel AB_Blood_SanguineCoil_AbilityGroup 1 SpellMod_SanguineCoil_KillRecharge 0;", "CreateJewel AB_Blood_Shadowbolt_AbilityGroup 1 SpellMod_Shared_KnockbackOnHit_Medium 0;", "CreateJewel AB_Chaos_Aftershock_Group 1 SpellMod_Chaos_Aftershock_KnockbackArea 0;", "CreateJewel AB_Chaos_Barrier_AbilityGroup 1 SpellMod_Shared_IncreaseMoveSpeedDuringChannel_Low 0;", "CreateJewel AB_Chaos_PowerSurge_AbilityGroup 1 SpellMod_PowerSurge_IncreaseDurationOnKill 0;", "CreateJewel AB_Chaos_RainOfChaos_AbilityGroup 1 SpellMod_Shared_ApplyFadingSnare_Short 0;", "CreateJewel AB_Chaos_Void_AbilityGroup 1 SpellMod_Shared_TargetAoE_IncreaseRange_Medium 0;", "CreateJewel AB_Chaos_Volley_AbilityGroup 1 SpellMod_Shared_KnockbackOnHit_Light 0;", "CreateJewel AB_Unholy_ChainsOfDeath_AbilityGroup 1 SpellMod_ChainsOfDeath_Slow 0;", "CreateJewel AB_Unholy_CorpseExplosion_AbilityGroup 1 SpellMod_CorpseExplosion_KillingBlow 0;", "CreateJewel AB_Unholy_CorruptedSkull_AbilityGroup 1 SpellMod_Shared_KnockbackOnHit_Medium 0;", "CreateJewel AB_Unholy_DeathKnight_AbilityGroup 1 SpellMod_DeathKnight_SnareEnemiesOnSummon 0;", "CreateJewel AB_Unholy_Soulburn_AbilityGroup 1 SpellMod_Shared_ApplyFadingSnare_Long 0;", "CreateJewel AB_Unholy_WardOfTheDamned_AbilityGroup 1 SpellMod_Shared_Unholy_SkeletonBomb 0;", "CreateJewel AB_Frost_ColdSnap_AbilityGroup 1 SpellMod_ColdSnap_HasteWhileShielded 0;", "CreateJewel AB_Frost_CrystalLance_AbilityGroup 1 SpellMod_Shared_Frost_IncreaseFreezeWhenChill 0;", "CreateJewel AB_Frost_FrostBat_AbilityGroup 1 SpellMod_Shared_Projectile_RangeAndVelocity 0;", "CreateJewel AB_Frost_IceNova_AbilityGroup 1 SpellMod_Shared_TargetAoE_IncreaseRange_Medium 0;", "CreateJewel AB_FrostBarrier_AbilityGroup 1 SpellMod_FrostBarrier_KnockbackOnRecast 0;", "CreateJewel AB_FrostCone_AbilityGroup 1 SpellMod_FrostCone_IncreaseFreeze 0;", ]
+# skil=["CreateJewel AB_Vampire_VeilOfBlood_Group 3 SpellMod_VeilOfBlood_AttackInflictFadingSnare 0;","CreateJewel AB_Vampire_VeilOfBlood_Group 4 SpellMod_VeilOfBlood_AttackInflictFadingSnare 0;", "CreateJewel AB_Vampire_VeilOfChaos_Group 3 SpellMod_VeilOfChaos_BonusIllusion 0;", "CreateJewel AB_Vampire_VeilOfChaos_Group 4 SpellMod_VeilOfChaos_BonusIllusion 0;", "CreateJewel AB_Vampire_VeilOfBones_AbilityGroup 3 SpellMod_Shared_Veil_BuffAndIllusionDuration 0;", "CreateJewel AB_Vampire_VeilOfBones_AbilityGroup 4 SpellMod_Shared_Veil_BuffAndIllusionDuration 0;", "CreateJewel AB_Vampire_VeilOfFrost_Group 3 SpellMod_Shared_Veil_BuffAndIllusionDuration 0;", "CreateJewel AB_Vampire_VeilOfFrost_Group 4 SpellMod_Shared_Veil_BuffAndIllusionDuration 0;", "CreateJewel AB_Vampire_VeilOfStorm_Group 4 SpellMod_VeilOfStorm_AttackInflictFadingSnare 0;", "CreateJewel AB_Vampire_VeilOfStorm_Group 3 SpellMod_VeilOfStorm_AttackInflictFadingSnare 0;", "CreateJewel AB_Vampire_VeilOfIllusion_AbilityGroup 3 SpellMod_VeilOfIllusion_AttackInflictFadingSnare 0;", "CreateJewel AB_Vampire_VeilOfIllusion_AbilityGroup 4 SpellMod_VeilOfIllusion_AttackInflictFadingSnare 0;", "CreateJewel AB_Vampire_VeilOfBlood_Group 1 SpellMod_VeilOfBlood_AttackInflictFadingSnare 0;", "CreateJewel AB_Vampire_VeilOfBones_AbilityGroup 1 SpellMod_Shared_Veil_BuffAndIllusionDuration 0;", "CreateJewel AB_Vampire_VeilOfChaos_Group 1 SpellMod_VeilOfChaos_BonusIllusion 0;", "CreateJewel AB_Vampire_VeilOfFrost_Group 1 SpellMod_Shared_Veil_BuffAndIllusionDuration 0;", "CreateJewel AB_Vampire_VeilOfIllusion_AbilityGroup 1 SpellMod_VeilOfIllusion_AttackInflictFadingSnare 0;", "CreateJewel AB_Vampire_VeilOfStorm_Group 1 SpellMod_VeilOfStorm_AttackInflictFadingSnare 0;", "CreateJewel AB_Blood_BloodFountain_AbilityGroup 1 SpellMod_BloodFountain_RecastLesser 0;", "CreateJewel AB_Blood_BloodRage_AbilityGroup 1 SpellMod_BloodRage_HealOnKill 0;", "CreateJewel AB_Blood_BloodRite_AbilityGroup 1 SpellMod_Shared_IncreaseMoveSpeedDuringChannel_High 0;", "CreateJewel AB_Blood_CarrionSwarm_AbilityGroup 1 SpellMod_Shared_ApplyFadingSnare_Medium 0;","CreateJewel AB_Blood_SanguineCoil_AbilityGroup 1 SpellMod_SanguineCoil_KillRecharge 0;", "CreateJewel AB_Blood_Shadowbolt_AbilityGroup 1 SpellMod_Shared_KnockbackOnHit_Medium 0;", "CreateJewel AB_Chaos_Aftershock_Group 1 SpellMod_Chaos_Aftershock_KnockbackArea 0;", "CreateJewel AB_Chaos_Barrier_AbilityGroup 1 SpellMod_Shared_IncreaseMoveSpeedDuringChannel_Low 0;", "CreateJewel AB_Chaos_PowerSurge_AbilityGroup 1 SpellMod_PowerSurge_IncreaseDurationOnKill 0;", "CreateJewel AB_Chaos_RainOfChaos_AbilityGroup 1 SpellMod_Shared_ApplyFadingSnare_Short 0;", "CreateJewel AB_Chaos_Void_AbilityGroup 1 SpellMod_Shared_TargetAoE_IncreaseRange_Medium 0;", "CreateJewel AB_Chaos_Volley_AbilityGroup 1 SpellMod_Shared_KnockbackOnHit_Light 0;", "CreateJewel AB_Unholy_ChainsOfDeath_AbilityGroup 1 SpellMod_ChainsOfDeath_Slow 0;", "CreateJewel AB_Unholy_CorpseExplosion_AbilityGroup 1 SpellMod_CorpseExplosion_KillingBlow 0;", "CreateJewel AB_Unholy_CorruptedSkull_AbilityGroup 1 SpellMod_Shared_KnockbackOnHit_Medium 0;", "CreateJewel AB_Unholy_DeathKnight_AbilityGroup 1 SpellMod_DeathKnight_SnareEnemiesOnSummon 0;", "CreateJewel AB_Unholy_Soulburn_AbilityGroup 1 SpellMod_Shared_ApplyFadingSnare_Long 0;", "CreateJewel AB_Unholy_WardOfTheDamned_AbilityGroup 1 SpellMod_Shared_Unholy_SkeletonBomb 0;", "CreateJewel AB_Frost_ColdSnap_AbilityGroup 1 SpellMod_ColdSnap_HasteWhileShielded 0;", "CreateJewel AB_Frost_CrystalLance_AbilityGroup 1 SpellMod_Shared_Frost_IncreaseFreezeWhenChill 0;", "CreateJewel AB_Frost_FrostBat_AbilityGroup 1 SpellMod_Shared_Projectile_RangeAndVelocity 0;", "CreateJewel AB_Frost_IceNova_AbilityGroup 1 SpellMod_Shared_TargetAoE_IncreaseRange_Medium 0;", "CreateJewel AB_FrostBarrier_AbilityGroup 1 SpellMod_FrostBarrier_KnockbackOnRecast 0;", "CreateJewel AB_FrostCone_AbilityGroup 1 SpellMod_FrostCone_IncreaseFreeze 0;" ]
 skil_all=[blood_skil, chaos_skil, unhol_skil, frost_skil, shock_skil, illus_skil, veil_skill, ults]
-skil_pop=[]
-skil_list=ults.copy()
-for skil_num in blood_skil:
-    skil_list.append(skil_num)
 
-for skil_num in chaos_skil:
-    skil_list.append(skil_num)
+if(unlock_spells==1):
+    skil_list=ults.copy()
+    for skil_num in blood_skil:
+        skil_list.append(skil_num)
 
-for skil_num in unhol_skil:
-    skil_list.append(skil_num)
+    for skil_num in chaos_skil:
+        skil_list.append(skil_num)
 
-for skil_num in frost_skil:
-    skil_list.append(skil_num)
+    for skil_num in unhol_skil:
+        skil_list.append(skil_num)
 
-for skil_num in shock_skil:
-    skil_list.append(skil_num)
+    for skil_num in frost_skil:
+        skil_list.append(skil_num)
 
-for skil_num in illus_skil:
-    skil_list.append(skil_num)
+    for skil_num in shock_skil:
+        skil_list.append(skil_num)
 
-for skil_num in veil_skill:
-    skil_list.append(skil_num)
+    for skil_num in illus_skil:
+        skil_list.append(skil_num)
 
-ready_spells=[]
-config=unlock_spell*8+one_weapon*4+unique_weapons*2+generate_spells*1
+    for skil_num in veil_skill:
+        skil_list.append(skil_num)
+    ready_spells=[]
+
+config=boss_shuffle*10000+unlock_spells*1000+one_weapon*100+unique_weapons*10+generate_spells*1
 x = datetime.datetime.now()
 now=str(x.year)+"_"+str(x.month)+"_"+str(x.day)+"_"+str(x.hour)+"_"+str(x.minute)+"_"+str(x.second);
 template_prof_path="./../misc/DESKTOP-asdf.prof"
@@ -106,84 +114,71 @@ def add_blood(boss_loot, level_local):
 def add_weapon(boss_loot, level_local):
     global copper_weapon, rcopper_weapon, iron_weapon, riron_weapon, sriron_weapon, silver_weapon, rsilver_weapon, srsilver_weapon
     if(level_local>= 27 and level_local<30):
-        if(unique_weapons==0):
-            boss_loot=boss_loot+random.choice(copper_weapon)
-        else:
-            # if(len(copper_weapon)>1):
-            boss_loot=boss_loot+copper_weapon.pop(random.randrange(0,len(copper_weapon)-1))
-            # elif(len(copper_weapon)==1):
-                # boss_loot=boss_loot+copper_weapon.pop()
-        if(one_weapon==1):
+        if(len(copper_weapon)!=0):
+            if(unique_weapons==0):
+                boss_loot=boss_loot+random.choice(copper_weapon)
+            else:
+                boss_loot=boss_loot+copper_weapon.pop(random.randrange(0,len(copper_weapon)-1))
+            if(one_weapon==1):
                 copper_weapon=[]
     elif(level_local>= 30 and level_local<41):
-        if(unique_weapons==0):
-            boss_loot=boss_loot+random.choice(rcopper_weapon)
-        else:
-            if(len(rcopper_weapon)>1):
-                boss_loot=boss_loot+rcopper_weapon.pop(random.randrange(0,len(rcopper_weapon)-1))
-            # elif(len(rcopper_weapon)==1):
-                # boss_loot=boss_loot+rcopper_weapon.pop()
-        if(one_weapon==1):
+        if(len(rcopper_weapon)!=0):
+            if(unique_weapons==0):
+                boss_loot=boss_loot+random.choice(rcopper_weapon)
+            else:
+                if(len(rcopper_weapon)==1):
+                    boss_loot=boss_loot+rcopper_weapon.pop()
+                else:
+                    boss_loot=boss_loot+rcopper_weapon.pop(random.randrange(0,len(rcopper_weapon)-1))
+            if(one_weapon==1):
                 rcopper_weapon=[]
     elif(level_local>= 41 and level_local<53):
-        if(unique_weapons==0):
-            boss_loot=boss_loot+random.choice(iron_weapon)
-        else:
-            # if(len(iron_weapon)>1):
-            boss_loot=boss_loot+iron_weapon.pop(random.randrange(0,len(iron_weapon)-1))
-            # elif(len(iron_weapon)==1):
-                # boss_loot=boss_loot+iron_weapon.pop()
-        if(one_weapon==1):
+        if(len(iron_weapon)!=0):
+            if(unique_weapons==0):
+                boss_loot=boss_loot+random.choice(iron_weapon)
+            else:
+                boss_loot=boss_loot+iron_weapon.pop(random.randrange(0,len(iron_weapon)-1))
+            if(one_weapon==1):
                 iron_weapon=[]
     elif(level_local>= 53 and level_local<63):
-        if(unique_weapons==0):
-            boss_loot=boss_loot+random.choice(riron_weapon)
-        else:
-            # if(len(riron_weapon)>1):
-            boss_loot=boss_loot+riron_weapon.pop(random.randrange(0,len(riron_weapon)-1))
-            # elif(len(riron_weapon)==1):
-                # boss_loot=boss_loot+riron_weapon.pop()
-        if(one_weapon==1):
+        if(len(riron_weapon)!=0):
+            if(unique_weapons==0):
+                boss_loot=boss_loot+random.choice(riron_weapon)
+            else:
+                boss_loot=boss_loot+riron_weapon.pop(random.randrange(0,len(riron_weapon)-1))
+            if(one_weapon==1):
                 riron_weapon=[]
     elif(level_local>= 63 and level_local<70):
-        if(unique_weapons==0):
-            boss_loot=boss_loot+random.choice(sriron_weapon)
-        else:
-            # if(len(sriron_weapon)>1):
-            boss_loot=boss_loot+sriron_weapon.pop(random.randrange(0,len(sriron_weapon)-1))
-            # elif(len(sriron_weapon)==1):
-                # boss_loot=boss_loot+sriron_weapon.pop()
-        if(one_weapon==1):
+        if(len(sriron_weapon)!=0):
+            if(unique_weapons==0):
+                boss_loot=boss_loot+random.choice(sriron_weapon)
+            else:
+                boss_loot=boss_loot+sriron_weapon.pop(random.randrange(0,len(sriron_weapon)-1))
+            if(one_weapon==1):
                 sriron_weapon=[]
     elif(level_local>= 70 and level_local<80):
-        if(unique_weapons==0):
-            boss_loot=boss_loot+random.choice(silver_weapon)
-        else:
-            # if(len(silver_weapon)>1):
-            boss_loot=boss_loot+silver_weapon.pop(random.randrange(0,len(silver_weapon)-1))
-            # elif(len(silver_weapon)==1):
-                # boss_loot=boss_loot+silver_weapon.pop()
-        if(one_weapon==1):
+        if(len(silver_weapon)!=0):
+            if(unique_weapons==0):
+                boss_loot=boss_loot+random.choice(silver_weapon)
+            else:
+                boss_loot=boss_loot+silver_weapon.pop(random.randrange(0,len(silver_weapon)-1))
+            if(one_weapon==1):
                 silver_weapon=[]
     elif(level_local>= 80 and level_local<88):
-        if(unique_weapons==0):
-            boss_loot=boss_loot+random.choice(rsilver_weapon)
-        else:
-            # if(len(rsilver_weapon)>1):
-            boss_loot=boss_loot+rsilver_weapon.pop(random.randrange(0,len(rsilver_weapon)-1))
-            # elif(len(rsilver_weapon)==1):
-                # boss_loot=boss_loot+rsilver_weapon.pop()
-        if(one_weapon==1):
+        if(len(rsilver_weapon)!=0):
+            if(unique_weapons==0):
+                boss_loot=boss_loot+random.choice(rsilver_weapon)
+            else:
+                boss_loot=boss_loot+rsilver_weapon.pop(random.randrange(0,len(rsilver_weapon)-1))
+            if(one_weapon==1):
                 rsilver_weapon=[]
     elif(level_local>= 88):
-        if(unique_weapons==0):
-            boss_loot=boss_loot+random.choice(srsilver_weapon)
-        else:
-            # if(len(srsilver_weapon)>1):
-            boss_loot=boss_loot+srsilver_weapon.pop(random.randrange(0,len(srsilver_weapon)-1))
-            # elif(len(srsilver_weapon)==1):
-                # boss_loot=boss_loot+srsilver_weapon.pop()
-        if(one_weapon==1):
+        if(len(srsilver_weapon)!=0):
+            if(unique_weapons==0):
+                boss_loot=boss_loot+random.choice(srsilver_weapon)
+            else:
+                boss_loot=boss_loot+srsilver_weapon.pop(random.randrange(0,len(srsilver_weapon)-1))
+            if(one_weapon==1):
                 srsilver_weapon=[]
     return(boss_loot)
 
@@ -192,6 +187,8 @@ def unlock_spell(boss_loot):
     skil_local=""
     if(len(skil_list)>1):
         skil_local=skil_list.pop(random.randrange(0,len(skil_list)-1))
+    elif(len(skil_list)==1):
+        skil_local=skil_list.pop(0)
     ready_spells.append(skil_local)
     boss_loot=boss_loot+skil_local
     return(boss_loot)
@@ -249,8 +246,10 @@ deal="deamon_loot Console.Multicommand give_cotton_armour; give \"[Prefab]Item_C
 add_tofile(file1, unlock_spell(add_blood(add_weapon(deal,level),level)))
 vinl="vinc_loot Console.Multicommand give \"[Name]Iron Ingot - Item_Ingredient_Mineral_IronBar - Guid: -1750550553\" 16; give \"[Name]Reinforced Plank - Item_Ingredient_ReinforcedPlank - Guid: -1397591435\" 4;"
 add_tofile(file1, unlock_spell(add_blood(add_weapon(vinl,level),level)))
-nunl="nun_loot Console.MultiCommand give_vermin; give_vermin;"
+nunl="nun_loot Console.MultiCommand give_vermin; give \"[Name]Fire Resistance Brew - Item_Consumable_FireResistancePotion_T01 - Guid: 970650569\" 10";
 add_tofile(file1, unlock_spell(add_blood(add_weapon(nunl,level),level)))
+tril="tri_loot Console.MultiCommand give_vermin; give_vermin;"
+add_tofile(file1, unlock_spell(add_blood(add_weapon(tril,level),level)))
 horl="horse_loot Console.MultiCommand give_vermin; give_vermin;"
 add_tofile(file1, unlock_spell(add_blood(add_weapon(horl,level),level)))
 level=50
@@ -343,7 +342,7 @@ danl="dantos_loot Console.Multicommand GenerateJewelAtUnitLevel 85; GenerateLege
 add_tofile(file1, unlock_spell(add_blood(add_weapon(danl,level),level)))
 level=88
 styl="styx_loot Console.Multicommand GenerateJewelAtUnitLevel 87; GenerateLegendaryWeapon Item_Weapon_Sword_Legendary_T08_Shattered; give \"[Prefab]Item_Ingredient_OnyxTear - Guid: -651878258\" 50; give \"[Name]Blood Crystal - Item_Ingredient_BloodCrystal - Guid: -1913156733\" 1000; give \"[Name]Greater Stygian Shard - Item_NetherShard_T02 - Guid: 576389135\" 2000;"
-add_tofile(file1, unlock_spell(add_blood(add_weapon(styl,level),level)))
+add_tofile(file1, add_blood(add_weapon(styl,level),level))
 vall="val_loot Console.Multicommand GenerateJewelAtUnitLevel 87; GenerateJewelAtUnitLevel 87; GenerateJewelAtUnitLevel 87; GenerateJewelAtUnitLevel 87; GenerateJewelAtUnitLevel 87; GenerateJewelAtUnitLevel 87; GenerateLegendaryWeapon Item_Weapon_Spear_Legendary_T08_Shattered;  give \"[Name]Greater Stygian Shard - Item_NetherShard_T02 - Guid: 576389135\" 2000; give \"[Name]Shadow Weave - Item_Ingredient_ShadowWeave - Guid: -1458997116\" 50;"
 add_tofile(file1, add_blood(add_weapon(vall,level),level))
 gorl="gore_loot Console.Multicommand GenerateJewelAtUnitLevel 87; give \"[Name]Bat Leather Bag - Item_NewBag_T06 - Guid: -181179773\"; give \"[Name]Bat Leather - Item_Ingredient_BatLeather - Guid: -1886460367\" 50; GenerateLegendaryWeapon Item_Weapon_Axes_Legendary_T08_Shattered; give \"[Name]Greater Stygian Shard - Item_NetherShard_T02 - Guid: 576389135\" 2000; give_pot_hp 100;"
@@ -364,3 +363,75 @@ add_tofile(file1, add_thing(add_blood(add_weapon(dral,level),level), drac_armour
 if(generate_spells==0):
     add_tofile(file1, "givespell3 Console.RemoveAlias givespell3")
     add_tofile(file1, "givespell2 Console.RemoveAlias givespell2")
+
+if(boss_shuffle==1):
+    boss_shuffle_path="./../misc/boss_shuffle.json"
+    boss_lvl_def=[20, 20, 20, 27, 32, 27, 30, 30, 35, 35, 35, 37, 40, 44, 44, 44, 46, 47, 47, 47, 50, 50, 50, 53, 53, 53, 55, 57, 57, 57, 58, 60, 60, 75, 61, 63, 63, 63, 64, 64, 65, 66, 70, 70, 70, 74, 75, 76, 76, 76, 79, 79, 81, 82, 84, 84, 84, 86, 86, 88, 88, 91]
+    boss_lvl_ptr=["<kel_lvl>", "<sto_lvl>", "<ruf_lvl>", "<gra_lvl>", "<fis_lvl>", "<swi_lvl>", "<cha_lvl>", "<cli_lvl>", "<pol_lvl>", "<bea_lvl>", "<nic_lvl>", "<qui_lvl>", "<dea_lvl>", "<vin_lvl>", "<nun_lvl>", "<tri_lvl>", "<hor_lvl>", "<maj_lvl>", "<lea_lvl>", "<kri_lvl>", "<gla_lvl>", "<ban_lvl>", "<ble_lvl>", "<fro_lvl>", "<ele_lvl>", "<ter_lvl>", "<are_lvl>", "<jad_lvl>", "<swo_lvl>", "<raz_lvl>", "<oct_lvl>", "<iva_lvl>", "<dom_lvl>", "<jam_lvl>", "<ang_lvl>", "<spi_lvl>", "<ben_lvl>", "<fau_lvl>", "<fro_lvl>", "<wil_lvl>", "<cyr_lvl>", "<sir_lvl>", "<fre_lvl>", "<har_lvl>", "<elm_lvl>", "<pro_lvl>", "<car_lvl>", "<mat_lvl>", "<alc_lvl>", "<cla_lvl>", "<vol_lvl>", "<bel_lvl>", "<gol_lvl>", "<dan_lvl>", "<stx_lvl>", "<gor_lvl>", "<val_lvl>", "<hor_lvl>", "<sol_lvl>", "<meg_lvl>", "<ada_lvl>", "<dra_lvl>"]
+    boss_id_val=[1124739990, -2025101517, 2122229952, 1106149033, -2122682556, 577478542, 763273073, 1896428751, -484556888, -1391546313, 153390636, -1659822956, -1942352521, -29797003, -99012450, -1449631170, 619948378, 1945956671, 939467639, -1365931036, 910988233, 613251918, 850622034, 24378719, 795262842, -1065970933, -753453016, -1968372384, -496360395, -680831417, 1688478381, 172235178, -1101874342, -1383529374, 106480588, -548489519, 109969450, -1208888966, -203043163, -1505705712, 326378955, -26105228, 192051202, 685266977, -2013903325, 814083983, -1669199769, -910296704, 1295855316, -1347412392, 2054432370, 336560131, 114912615, 173259239, 1112948824, -1936575244, 495971434, -393555055, -740796338, 591725925, 1233988687, -327335305]
+    boss_id_ptr=["<kel_id>", "<sto_id>", "<ruf_id>", "<gra_id>", "<fis_id>", "<swi_id>", "<cha_id>", "<cli_id>", "<pol_id>", "<bea_id>", "<nic_id>", "<qui_id>", "<dea_id>", "<vin_id>", 
+    "<nun_id>", "<tri_id>", "<hor_id>", "<maj_id>", "<lea_id>", "<kri_id>", "<gla_id>", "<ban_id>", "<ble_id>", "<fro_id>", "<ele_id>", "<ter_id>", "<are_id>", "<jad_id>", "<swo_id>", 
+    "<raz_id>", "<oct_id>", "<iva_id>", "<dom_id>", "<jam_id>", "<ang_id>", "<spi_id>", "<ben_id>", "<fau_id>", "<fro_id>", "<wil_id>", "<cyr_id>", "<sir_id>", "<fre_id>", "<har_id>", 
+    "<elm_id>", "<pro_id>", "<car_id>", "<mat_id>", "<alc_id>", "<cla_id>", "<vol_id>", "<bel_id>", "<gol_id>", "<dan_id>", "<stx_id>", "<gor_id>", "<val_id>", "<hor_id>", "<sol_id>", 
+    "<meg_id>", "<ada_id>", "<dra_id>"]
+    boss_lvl_random=[]
+    boss_id_val_copy=boss_id_val.copy()
+    boss_lvl_copy=boss_lvl_def.copy()
+    shuffle_name_ptr="<some_number>"
+    date_time_ptr="<date_time>"
+    boss_rush_file_name="./../examples/boss_shuffle_"+now+".json"
+    if(os.path.isfile(boss_rush_file_name)==False):
+        shutil.copyfile(boss_shuffle_path, boss_rush_file_name)
+    
+    with open(boss_rush_file_name, 'r') as file:
+        filedata = file.read()
+    
+    filedata = filedata.replace(shuffle_name_ptr, now)
+    filedata = filedata.replace(date_time_ptr, now)
+    
+    boss_num_local=0
+    for boss_ptr in boss_lvl_ptr:
+        filedata = filedata.replace(boss_ptr, str(boss_lvl_def[boss_lvl_ptr.index(boss_ptr)]))
+
+    boss_id_local=0
+    boss_random =[]
+    for boss_id_num in boss_id_ptr:
+        if(len(boss_id_val_copy)==1):
+            boss_id_local=boss_id_val_copy.pop()
+        else:
+            boss_num_local=random.randrange(0,len(boss_id_val_copy)-1)
+            boss_id_local=boss_id_val_copy.pop(boss_num_local)
+        boss_random.append(boss_id_val.index(boss_id_local))
+        # print(str(boss_id_val.index(boss_id_local)) + ",  ,")
+        # print(str(boss_id_local) + ",  ,"+ str(boss_id_val.index(boss_id_local)))
+        filedata = filedata.replace(boss_id_num, str(boss_id_local))
+    
+    with open(boss_rush_file_name, 'w') as file:
+        file.write(filedata)
+    boss_tp_arr=["teleport self WorldPosition -1000 0 -1380", "Teleport Self chunk:10,10", "teleport self WorldPosition -1220 0 -1550", "TeleportToNearestUnitOfType CHAR_Bandit_Stalker_VBlood", 
+    "teleport self WorldPosition -828 0 -1230", "teleport self WorldPosition -1555 20 -1720", "TeleportToNearestUnitOfType CHAR_Bandit_Chaosarrow_VBlood", "teleport self WorldPosition -2150 0 -1500",
+    "teleport self WorldPosition -2000 0 -1200", "TeleportToNearestUnitOfType CHAR_Forest_Bear_Dire_Vblood", "TeleportToNearestUnitOfType CHAR_Undead_Priest_Vblood", "TeleportToNearestUnitOfType CHAR_Bandit_Tourok_VBlood",
+    "teleport self WorldPosition -1020 0 -880", "TeleportToNearestUnitOfType CHAR_Militia_Guard_VBlood", "TeleportToNearestUnitOfType CHAR_Militia_Nun_VBlood", "TeleportToNearestUnitOfType CHAR_VHunter_Leader_VBlood",
+    "TeleportToNearestUnitOfType CHAR_Militia_Fabian_VBlood", "TeleportToNearestUnitOfType CHAR_Militia_Scribe_VBlood", "TeleportToNearestUnitOfType CHAR_Undead_BishopOfShadows_Vblood", "Teleport self WorldPosition -1368 0 -1050",
+    "TeleportToNearestUnitOfType CHAR_Militia_Glassblower_VBlood", "TeleportToNearestUnitOfType CHAR_Undead_Infiltrator_Vblood", "Teleport self WorldPosition -1368 0 -890", "Teleport self WorldPosition -600 0 -1090", 
+    "Teleport self WorldPosition -600 0 -790", "TeleportToNearestUnitOfType CHAR_Geomancer_Human_VBlood", "TeleportToNearestUnitOfType CHAR_Undead_ArenaChampion_Vblood", "TeleportToNearestUnitOfType CHAR_VHunter_Jade_VBlood",
+    "TeleportToNearestUnitOfType CHAR_Vampire_HighLord_VBlood", "TeleportToNearestUnitOfType CHAR_Militia_BishopOfDunley_VBlood", "TeleportToNearestUnitOfType CHAR_Militia_Leader_VBlood", "TeleportToNearestUnitOfType CHAR_Gloomrot_Iva_VBlood",
+    "Teleport self WorldPosition -1670 0 -200", "TeleportToNearestUnitOfType CHAR_Blackfang_Livith_VBlood", "Teleport self WorldPosition -1670 0 -5", "TeleportToNearestUnitOfType CHAR_Spider_Queen_Vblood", 
+    "TeleportToNearestUnitOfType CHAR_Villager_CursedWanderer_VBlood", "TeleportToNearestUnitOfType CHAR_Undead_ZealousCultist_VBlood", "TeleportToNearestUnitOfType CHAR_Cursed_ToadKing_VBlood", "teleport self WorldPosition -1050 0 -250",
+    "TeleportToNearestUnitOfType CHAR_Undead_CursedSmith_Vblood", "TeleportToNearestUnitOfType CHAR_ChurchOfLight_Overseer_VBlood", "TeleportToNearestUnitOfType CHAR_ChurchOfLight_Sommelier_VBlood",
+    "TeleportToNearestUnitOfType CHAR_Harpy_Matriarch_VBlood", "TeleportToNearestUnitOfType CHAR_ArchMage_VBlood", "teleport self WorldPosition -1800 0 46", "TeleportToNearestUnitOfType CHAR_Blackfang_CarverBoss_VBlood", 
+    "TeleportToNearestUnitOfType CHAR_Cursed_Witch_VBlood", "TeleportToNearestUnitOfType CHAR_Blackfang_Lucie_VBlood", "TeleportToNearestUnitOfType CHAR_Winter_Yeti_VBlood", "TeleportToNearestUnitOfType CHAR_Gloomrot_RailgunSergeant_VBlood",
+    "TeleportToNearestUnitOfType CHAR_VHunter_CastleMan", "TeleportToNearestUnitOfType CHAR_ChurchOfLight_Cardinal_VBlood", "TeleportToNearestUnitOfType CHAR_Blackfang_Valyr_VBlood", "teleport self WorldPosition -1400 0 -250",
+    "teleport self WorldPosition -700 10 -105", "TeleportToNearestUnitOfType CHAR_Vampire_BloodKnight_VBlood", "TeleportToNearestUnitOfType CHAR_Manticore_VBlood", "TeleportToNearestUnitOfType CHAR_ChurchOfLight_Paladin_VBlood",
+    "TeleportToNearestUnitOfType CHAR_Blackfang_Morgana_VBlood", "TeleportToNearestUnitOfType CHAR_Gloomrot_Monster_VBlood", "teleport self WorldPosition 720 15 -2827"]
+    boss_tp_names=["tp_wp_stone", "tp_wp_rufus", "tp_wp_kelly", "tp_wp_swine", "tp_vb_grayson", "tp_wp_clive", "tp_vb_chaos", "tp_wp_fish",
+    "tp_vb_bear", "tp_vb_nick", "tp_wp_polora", "tp_vb_quincy", "tp_wp_deamon", "tp_vb_vinc", "tp_vb_nun", "tp_vb_tri", "tp_vb_horse", "tp_wp_mine", 
+    "tp_vb_leandr", "tp_vb_maja", "tp_vb_assas", "tp_vb_glass", "tp_wp_bless", "tp_wp_elena", "tp_wp_frost", "tp_vb_tera", "tp_vb_arena", "tp_vb_sword", 
+    "tp_vb_jade", "tp_vb_raziel", "tp_vb_octav", "tp_wp_domina", "tp_vb_iva", "tp_wp_angram", "tp_vb_spider", "tp_vb_ben", "tp_vb_faul", "tp_vb_frog", 
+    "tp_wp_will", "tp_vb_cyril", "tp_vb_sir", "tp_vb_french", "tp_vb_harpy", "tp_vb_element", "tp_wp_prof", "tp_vp_jamila", "tp_vb_matka", "tp_vb_carver", 
+    "tp_vb_alch", "tp_vb_claw", "tp_vb_gold", "tp_vb_volt", "tp_vb_belmont", "tp_vb_dantos", "tp_wp_styx", "tp_vb_val", "tp_wp_gore", "tp_vb_horror", 
+    "tp_vb_solarus", "tp_vb_morgana", "tp_vb_adam", "tp_wp_drac"]
+    file1 = open(random_prof_path, "a+")
+    file1.write("bossshuffle_code_below Console.MultiCommand give_vermin; give_vermin;\n")
+    for random_boss_num in range(0,len(boss_random)):
+        add_tofile(file1, boss_tp_names[random_boss_num]+ " "+boss_tp_arr[boss_random[random_boss_num]])

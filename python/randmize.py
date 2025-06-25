@@ -5,9 +5,14 @@ import shutil
 import random
 import math
 import datetime
+import time
 
 # user settings here
 #################
+# copy generated .prof from ../examples/<name_date_time>.prof
+# under here:
+# %AppData%\..\LocalLow\Stunlock Studios\VRising\ConsoleProfile
+
 # give 2 spell after every base which indicate which next 2 spells should be used
 # for your next boss encounter
 generate_spells=0
@@ -31,7 +36,8 @@ unlock_spells=1
 boss_shuffle=0
 
 # copy generated files - .prof file and json preset
-copy_generated=1
+# under %AppData%\..\LocalLow\Stunlock Studios\VRising\...
+copy_generated=0
 
 #################
 
@@ -100,7 +106,13 @@ config=boss_shuffle*10000+unlock_spells*1000+one_weapon*100+unique_weapons*10+ge
 x = datetime.datetime.now()
 now=str(x.year)+"_"+str(x.month)+"_"+str(x.day)+"_"+str(x.hour)+"_"+str(x.minute)+"_"+str(x.second);
 template_prof_path="./../misc/DESKTOP-asdf.prof"
-random_prof_path="./../examples/random_"+str(config)+"_"+now+".prof"
+user_preset_path="C:/users/"+os.getlogin()+"/AppData/LocalLow/Stunlock Studios/VRising/Settings/v4/ServerPresets/"
+user_profile_path="C:/users/"+os.getlogin()+"/AppData/LocalLow/Stunlock Studios/VRising/ConsoleProfile/"
+if(copy_generated==0):
+    random_prof_path="./../examples/random_"+str(config)+"_"+now+".prof"
+else:
+    random_prof_path=user_profile_path+"random_"+str(config)+"_"+now+".prof"
+default_profile="DefaultProfile"
 
 def add_blood(boss_loot, level_local):
     random_blood_lvl = level_local+random.randrange(math.ceil(-level/2),level)
@@ -203,7 +215,7 @@ def add_tofile(fileptr, boss_string):
 # create random profile if there is none
 if(os.path.isfile(random_prof_path)==False):
     shutil.copyfile(template_prof_path, random_prof_path)
-
+user_preset_path
 file1 = open(random_prof_path, "a+")
 # file1.find
 file1.write("\nrandomizer_code_below Console.MultiCommand give_vermin; give_vermin;\n")
@@ -366,7 +378,7 @@ if(generate_spells==0):
 
 if(boss_shuffle==1):
     boss_shuffle_path="./../misc/boss_shuffle.json"
-    boss_lvl_def=[20, 20, 20, 27, 32, 27, 30, 30, 35, 35, 35, 37, 40, 44, 44, 44, 46, 47, 47, 47, 50, 50, 50, 53, 53, 53, 55, 57, 57, 57, 58, 60, 60, 75, 61, 63, 63, 63, 64, 64, 65, 66, 70, 70, 70, 74, 75, 76, 76, 76, 79, 79, 81, 82, 84, 84, 84, 86, 86, 88, 88, 91]
+    boss_lvl_def=[20, 20, 20, 27, 27, 30, 30, 32, 35, 35, 35, 37, 40, 44, 44, 44, 46, 47, 47, 47, 50, 50, 50, 53, 53, 53, 55, 57, 57, 57, 58, 60, 60, 61, 63, 63, 63, 64, 64, 65, 66, 70, 70, 70, 74, 75, 75, 76, 76, 76, 79, 79, 81, 82, 84, 84, 84, 86, 86, 88, 88, 91]
     boss_lvl_ptr=["<kel_lvl>", "<sto_lvl>", "<ruf_lvl>", "<gra_lvl>", "<fis_lvl>", "<swi_lvl>", "<cha_lvl>", "<cli_lvl>", "<pol_lvl>", "<bea_lvl>", "<nic_lvl>", "<qui_lvl>", "<dea_lvl>", "<vin_lvl>", "<nun_lvl>", "<tri_lvl>", "<hor_lvl>", "<maj_lvl>", "<lea_lvl>", "<kri_lvl>", "<gla_lvl>", "<ban_lvl>", "<ble_lvl>", "<fro_lvl>", "<ele_lvl>", "<ter_lvl>", "<are_lvl>", "<jad_lvl>", "<swo_lvl>", "<raz_lvl>", "<oct_lvl>", "<iva_lvl>", "<dom_lvl>", "<jam_lvl>", "<ang_lvl>", "<spi_lvl>", "<ben_lvl>", "<fau_lvl>", "<fro_lvl>", "<wil_lvl>", "<cyr_lvl>", "<sir_lvl>", "<fre_lvl>", "<har_lvl>", "<elm_lvl>", "<pro_lvl>", "<car_lvl>", "<mat_lvl>", "<alc_lvl>", "<cla_lvl>", "<vol_lvl>", "<bel_lvl>", "<gol_lvl>", "<dan_lvl>", "<stx_lvl>", "<gor_lvl>", "<val_lvl>", "<hor_lvl>", "<sol_lvl>", "<meg_lvl>", "<ada_lvl>", "<dra_lvl>"]
     boss_id_val=[1124739990, -2025101517, 2122229952, 1106149033, -2122682556, 577478542, 763273073, 1896428751, -484556888, -1391546313, 153390636, -1659822956, -1942352521, -29797003, -99012450, -1449631170, 619948378, 1945956671, 939467639, -1365931036, 910988233, 613251918, 850622034, 24378719, 795262842, -1065970933, -753453016, -1968372384, -496360395, -680831417, 1688478381, 172235178, -1101874342, -1383529374, 106480588, -548489519, 109969450, -1208888966, -203043163, -1505705712, 326378955, -26105228, 192051202, 685266977, -2013903325, 814083983, -1669199769, -910296704, 1295855316, -1347412392, 2054432370, 336560131, 114912615, 173259239, 1112948824, -1936575244, 495971434, -393555055, -740796338, 591725925, 1233988687, -327335305]
     boss_id_ptr=["<kel_id>", "<sto_id>", "<ruf_id>", "<gra_id>", "<fis_id>", "<swi_id>", "<cha_id>", "<cli_id>", "<pol_id>", "<bea_id>", "<nic_id>", "<qui_id>", "<dea_id>", "<vin_id>", 
@@ -435,3 +447,14 @@ if(boss_shuffle==1):
     file1.write("bossshuffle_code_below Console.MultiCommand give_vermin; give_vermin;\n")
     for random_boss_num in range(0,len(boss_random)):
         add_tofile(file1, boss_tp_names[random_boss_num]+ " "+boss_tp_arr[boss_random[random_boss_num]])
+    file1.write("bossshuffle_code_ends Console.MultiCommand give_vermin; give_vermin;")
+
+# os.environ['userdomain']
+# os. getlogin()
+
+if(copy_generated==1):
+    shutil.copyfile(boss_rush_file_name, user_preset_path+"boss_shuffle_"+now+".json")
+    # shutil.copyfile(random_prof_path, user_profile_path+"random_"+str(config)+"_"+now+".prof")
+    print("All work and no play makes Python a dull boy")
+    with open(user_profile_path+default_profile, 'w') as file:
+        file.write("random_"+str(config)+"_"+now+"\n")
